@@ -107,14 +107,13 @@
         
             
                  <a title="weixin"
-                  
                     target="_blank"> 
                 
                     <svg class="iconfont-svg" aria-hidden="true">
                         <use xlink:href="#icon-weixin"></use>
                     </svg>
                 
-            </a>
+                 </a>
         
     
     </div>
@@ -657,10 +656,15 @@
 
 
 
-<div id="musicMouseDrag" style="position:fixed; z-index: 9999; bottom: 0; right: 0;">
+<!--音乐插件位置-->
+<div id="musicMouseDrag" style="position:fixed; z-index: 9999; top: 90px; right: 0;">
     <div id="musicDragArea" style="position: absolute; top: 0; left: 0; width: 100%;height: 10px;cursor: move; z-index: 10;"></div>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=1988532821&auto=1&height=32"></iframe>
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=250 height=52 src="//music.163.com/outchain/player?type=2&id=1988532821&auto=1&height=32"></iframe>
 </div>
+<!--放一个天气预报
+<div id="TQ" style="background-color: rgba(177, 188, 192, 0.337); position:fixed; z-index: 9999; bottom: 0; right: 0;" >
+    <iframe width="250" scrolling="no" height="25" frameborder="0" allowtransparency="false" src="http://i.tianqi.com/index.php?c=code&id=34&icon=1&num=3"></iframe>
+</div>-->
 <!--以下代码是为了支持随时拖动音乐控件的位置，如没有需求，可去掉下面代码-->
 <script>
 var $DOC = $(document)
