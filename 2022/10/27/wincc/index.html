@@ -66,16 +66,48 @@
 <div class="author">
     <span>sunRT</span>
 </div>
-<script>
+ <script>
     function  aaa() //定义函数
       {
-         alert("联系微信：SUNRT89");
+        
       }
 </script>
-<div class="icon" onclick="aaa ()">
-    
+<style>
+    /* body {
+       text-align:center;
+    } */
+    .weixin {
+    position: relative;
+    }
+    .weixin img.qrcode {
+    position: absolute;
+    z-index: 99;
+    width: 7.5rem;
+    max-width: none;
+    height: 7.5rem;
+    transform: scale(0);
+    transform-origin: top center;
+    opacity: 0;
+    border: .3125rem solid hsl(169, 94%, 48%);
+    border-radius: .25rem;
+    -webkit-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    margin-top: -130px;
+    margin-left: 0px;
+    }
+    .weixin:hover img.qrcode {
+    transform: scale(1);
+    opacity: 1;
+    }
+    </style>
+<div class="social weixin" href="javascript:">
+        <img class="qrcode" src="img/wxqrcode.jpg" alt="联系方式">
+    <div class="icon" onclick="aaa ()">
         
-            <a title="weixin"  
+            
+                 <a title="weixin"
+                  
                     target="_blank"> 
                 
                     <svg class="iconfont-svg" aria-hidden="true">
@@ -85,7 +117,8 @@
             </a>
         
     
-</div>
+    </div>
+</div>   
 
 
 
