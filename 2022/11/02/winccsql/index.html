@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>我的博客 | 88srt</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="我的博客 | 88srt">
+  <title>wincc归档数据查询 | 88srt</title>
+  <meta name="keywords" content=" wincc ">
+  <meta name="description" content="wincc归档数据查询 | 88srt">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="赠人玫瑰，手留余香。">
 <meta property="og:type" content="website">
@@ -416,24 +416,41 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+        <article id="post-winccsql" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">我的博客</h1>
+        <h1 class="article-title">wincc归档数据查询</h1>
     
     <div class="article-meta">
         
         
+        <span class="author"><a>srt</a></span>
         
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="wincc">wincc</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color1">wincc</a>
+            
+        </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-10-27 14:47:35'>2022-10-25 14:00</time>
+            发布时间 : <time class="date" title='最后更新: 2022-11-02 17:17:27'>2022-11-02 17:15</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:8</span>
+        <span>字数:585</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -452,7 +469,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#WINCC%E6%9F%A5%E8%AF%A2%E8%87%AA%E8%BA%AB%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">WINCC查询自身数据库</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1%E3%80%81OPC-UA"><span class="toc-text">1、OPC UA</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2%E3%80%81ADO%E5%BB%BA%E7%AB%8B%E5%BD%92%E6%A1%A3%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5"><span class="toc-text">2、ADO建立归档数据库连接</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3%E3%80%81%E6%9F%A5%E8%AF%A2%E5%BD%92%E6%A1%A3%E6%95%B0%E6%8D%AE"><span class="toc-text">3、查询归档数据</span></a></li></ol></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -468,7 +485,77 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>赠人玫瑰，手留余香。</p>
+        <h3 id="WINCC查询自身数据库"><a href="#WINCC查询自身数据库" class="headerlink" title="WINCC查询自身数据库"></a>WINCC查询自身数据库</h3><h5 id="1、OPC-UA"><a href="#1、OPC-UA" class="headerlink" title="1、OPC UA"></a>1、OPC UA</h5><p> OPC UA 服务器，可通过地址“opc.tcp://[HostName]:[Port]”访问。</p>
+<table>
+<thead>
+<tr>
+<th>HostName</th>
+<th>计算机名称的占位符；自动插入。</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>端口</td>
+<td>端口号。 默认值为“4864”</td>
+</tr>
+</tbody></table>
+<h5 id="2、ADO建立归档数据库连接"><a href="#2、ADO建立归档数据库连接" class="headerlink" title="2、ADO建立归档数据库连接"></a>2、ADO建立归档数据库连接</h5><p>ConnectionString 的结构</p>
+<pre><code class="vbscript">&quot;Provider = Name of the OLE DB Provider; Catalog=Datebase
+name;Data Source=Server name;&quot;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>提供程序</td>
+<td>OLE DB 提供程序的名称，例如： <br />• WinCCOLEDBProvider</td>
+</tr>
+<tr>
+<td>目录</td>
+<td>WinCC 数据库的名称 <br />使用 WinCC RT 数据库时，将使用以“R”结尾的数据库名称：<br /> • <Database name_R> <br />也可以使用数据库“CC_ExternalBrowsing”。 如果已经通过 WinCC 归档连接器将换出的 WinCC 归档连接到 SQL 服务器，请 使用其符号名称。 <br />注 <br />对于透明访问，为“Catalog”输入 WinCC 项目名称；例如：<br /> • Catalog=WinCC_Project_Name <br />注<br /> 如果通过“CC_ExternalBrowsing”访问消息归档或换出的归档，则该访问可能需 要数分钟的时间。</td>
+</tr>
+<tr>
+<td>数据源</td>
+<td>服务器名称 <br />本地： <br />• “.\WinCC”或“&lt;计算机名称&gt;\WinCC” <br />远程：<br /> • &lt;计算机名称&gt;\WinCC <br />注 <br />如果对归档服务器进行透明访问，或者通过 OLE DB 提供程序访问冗余服务器， 则为“数据源”(Data Source) 输入以下内容： • &lt;符号计算机名&gt;::\WinCC。 注 <br />使用归档变量名称可直接访问包含 8 字节值 ID 的数据库（例如归档服务器上 的数据库）中的归档变量。 在这种情况下，归档服务器会返回服务器 ID 作为 ID， 而不返回归档变量 ID：<br /> • &lt;符号计算机名称&gt;&lt;Archive_Var_Name&gt;</td>
+</tr>
+</tbody></table>
+<p>过程值和消息归档实例：</p>
+<pre><code class="vbscript">Set conn = CreateObject(&quot;ADODB.Connection&quot;)
+conn.open`
+&quot;Provider=WinCCOLEDBProvider.1;Catalog=CC_OpenArch_03_05_27_14_11
+_46R;Data Source=.\WinCC&quot;
+</code></pre>
+<p>用户归档实例：</p>
+<pre><code class="vbscript">Set conn = CreateObject(&quot;ADODB.Connection&quot;)
+conn.open &quot;Provider=SQLNCLI11; Integrated Security=SSPI; Persist
+Security Info=false; Initial
+Catalog=CC_OpenArch_03_05_27_14_11_46R; Data Source=.\WinCC&quot;
+</code></pre>
+<h5 id="3、查询归档数据"><a href="#3、查询归档数据" class="headerlink" title="3、查询归档数据"></a>3、查询归档数据</h5><p>过程值归档：</p>
+<pre><code class="vbscript">Set oRs = CreateObject(&quot;ADODB.Recordset&quot;)
+Set oCom = CreateObject(&quot;ADODB.Command&quot;)
+oCom.CommandType = 1
+Set oCom.ActiveConnection = conn
+oCom.CommandText = &quot;TAG:R,&#39;PVArchive\Tag1&#39;,&#39;0000-00-00
+00:10:00.000&#39;,&#39;0000-00-00 00:00:00.000&#39;&quot;
+</code></pre>
+<p>报警消息归档：</p>
+<pre><code class="vbscript">Set oRs = CreateObject(&quot;ADODB.Recordset&quot;)
+Set oCom = CreateObject(&quot;ADODB.Command&quot;)
+oCom.CommandType = 1
+Set oCom.ActiveConnection = conn
+oCom.CommandText = &quot;ALARMVIEW:Select * FROM AlgViewEnu&quot;
+</code></pre>
+<p>用户归档</p>
+<pre><code class="vbscript">Set oRs = CreateObject(&quot;ADODB.Recordset&quot;)
+Set oCom = CreateObject(&quot;ADODB.Command&quot;)
+oCom.CommandType = 1
+Set oCom.ActiveConnection = conn
+oCom.CommandText = &quot;SELECT * FROM UA#Test&quot;  
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> sunrtnj@163.com </span>
