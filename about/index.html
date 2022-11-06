@@ -705,10 +705,34 @@
         <img style="width:30px; height: 30px;" src="img/muice.png" alt="">
     </div>
 </div>
-<!--放一个天气预报
-<div id="TQ" style="background-color: rgba(177, 188, 192, 0.337); position:fixed; z-index: 9999; bottom: 0; right: 0;" >
-    <iframe width="250" scrolling="no" height="25" frameborder="0" allowtransparency="false" src="http://i.tianqi.com/index.php?c=code&id=34&icon=1&num=3"></iframe>
-</div>-->
+<!--放一个天气预报-->
+<div id="he-plugin-simple"></div>
+<script>
+WIDGET = {
+  "CONFIG": {
+    "modules": "01234",
+    "background": "1",
+    "tmpColor": "FFFFFF",
+    "tmpSize": "16",
+    "cityColor": "FFFFFF",
+    "citySize": "16",
+    "aqiColor": "FFFFFF",
+    "aqiSize": "16",
+    "weatherIconSize": "24",
+    "alertIconSize": "18",
+    "padding": "10px 10px 10px 10px",
+    "shadow": "0",
+    "language": "zh",
+    "fixed": "true",
+    "vertical": "top",
+    "horizontal": "left",
+    "right": "10",
+    "top": "10",
+    "key": "1fb33ab49fc84225a472df94b240d472"
+  }
+}
+</script>
+<script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script>
 <!--以下代码是为了支持随时拖动音乐控件的位置，如没有需求，可去掉下面代码-->
 <script>
 var $DOC = $(document)
@@ -738,30 +762,3 @@ $('#musicDragArea').css('height', '10px');
 })
 </script>
 </html>
-<div id="he-plugin-simple"></div>
-<script>
-WIDGET = {
-  "CONFIG": {
-    "modules": "01234",
-    "background": "1",
-    "tmpColor": "FFFFFF",
-    "tmpSize": "16",
-    "cityColor": "FFFFFF",
-    "citySize": "16",
-    "aqiColor": "FFFFFF",
-    "aqiSize": "16",
-    "weatherIconSize": "24",
-    "alertIconSize": "18",
-    "padding": "10px 10px 10px 10px",
-    "shadow": "0",
-    "language": "zh",
-    "fixed": "true",
-    "vertical": "top",
-    "horizontal": "left",
-    "right": "10",
-    "top": "10",
-    "key": "1fb33ab49fc84225a472df94b240d472"
-  }
-}
-</script>
-<script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script>
