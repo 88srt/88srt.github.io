@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>88srt</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="88srt">
+  <title>SQL命令学习1 | 88srt</title>
+  <meta name="keywords" content=" SQL ">
+  <meta name="description" content="SQL命令学习1 | 88srt">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="赠人玫瑰，手留余香。">
 <meta property="og:type" content="website">
@@ -56,7 +56,7 @@
 
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/"
    class="avatar_target">
@@ -444,12 +444,60 @@
         </div>
     </div>
 </aside>
-<div id="post" class="index">
+<div id="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-SQL命令学习1" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#88srt-%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5"><span class="toc-text">88srt 个人主页</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E88srt"><span class="toc-text">关于88srt</span></a></li></ol></li></ol>
+        <h1 class="article-title">SQL命令学习1</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="SQL">SQL</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color4">SQL</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2022-11-11 11:58:55'>2022-11-11 10:08</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:578</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01"><span class="toc-text">SQL 学习笔记1</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1%E3%80%81%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">1、创建数据库</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2%E3%80%81%E5%88%9B%E5%BB%BA%E8%A1%A8%E6%A0%BC"><span class="toc-text">2、创建表格</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3%E3%80%81%E6%B3%A8%E6%84%8F%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">3、注意类型的区别</span></a></li></ol></li></ol></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -462,13 +510,55 @@
     }
 </style>
 </div>
-            <h1 id="88srt-个人主页"><a href="#88srt-个人主页" class="headerlink" title="88srt 个人主页"></a>88srt 个人主页</h1><h2 id="关于88srt"><a href="#关于88srt" class="headerlink" title="关于88srt"></a>关于88srt</h2><p><strong>88srt</strong> 是自动化方向分享站（个人）。</p>
-<p>到目前为止已经写了<code class="article_number"></code>篇文章， 共<code class="site_word_count"></code>字。</p>
-<p>本站<!--访问人数：<code class="site_uv"></code>人次,-->访问量：<code class="site_pv"></code>次</p>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="SQL-学习笔记1"><a href="#SQL-学习笔记1" class="headerlink" title="SQL 学习笔记1"></a>SQL 学习笔记1</h2><h5 id="1、创建数据库"><a href="#1、创建数据库" class="headerlink" title="1、创建数据库"></a>1、创建数据库</h5><pre><code class="sql">CREATE DATABASE 数据库名称
+</code></pre>
+<h5 id="2、创建表格"><a href="#2、创建表格" class="headerlink" title="2、创建表格"></a>2、创建表格</h5><pre><code class="sql">USE 数据库名称
+GO
+/****** Object:  Table [dbo].[T1]    Script Date: 2022/11/11 11:29:32 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE 表名(
+    [ID] [int] IDENTITY(1,1) NOT NULL,
+    [时间日期] [datetime] NULL,
+    [品名] [nchar](20) NULL,
+    [批号] [nchar](20) NULL,
+    [状态] [int] NULL,
+    [压力] [real] NULL,
+    [温度] [real] NULL,
+    [高度] [real] NULL,
+ CONSTRAINT [索引名] PRIMARY KEY CLUSTERED 
+(
+    [ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+</code></pre>
+<h5 id="3、注意类型的区别"><a href="#3、注意类型的区别" class="headerlink" title="3、注意类型的区别"></a>3、注意类型的区别</h5><p>关联LED 看板显示区别</p>
+<blockquote>
+<p>nchar与char是相似的，nvarchar与varchar是相似的。<br>char类型：<br>对英文(ascii)字符占用1个字节，对一个汉字占用2个字节，char存储定长数据很方便，char字段上的索引效率级高，比如定义<br>char(10)，那么不论你存储的数据是否达到了10个字节，都要占去10个字节的空间，不够的字符用空格去填。因为是固定长度，所以速度效率高。<br>varchar类型：varchar<br>的类型不以空格填满，比如varchar(100)，但它的值只是”qian”,则它的值就是”qian”<br>而char<br>不一样，比如char(100),它的值是”qian”，而实际上它在数据库中是”qian<br>“(qian后共有96个空格，就是把它填满为100个字节)。<br>由于char是以固定长度的，所以它的速度会比varchar快得多！但程序处理起来要麻烦一点，要用trim之类的函数把两边的空格去掉！<br>varchar存储变长数据，但存储效率没有char高。如果一个字段可能的值是不固定长度的，我们只知道它不可能超过10个字符，把它定义为<br>varchar(10)是最合算的。varchar类型的实际长度是它的值的实际长度+1。为什么“+1”呢？这一个字节用于保存实际使用了多大的长度。<br>nchar类型和nvarchar类型是怎么一回事呢？为了与其他多种字符的转换，如中文，音标等，对每个英文(ascii)字符都占用2个字节，对一个汉字也占用两个字节，所有的字符都占用2个字节。<br>关于长度与汉字<br>varchar(100)/char(100)能存50个汉字，nvarchar(100)/nchar(100)能存100个汉字。</p>
+</blockquote>
 
-        </article>
-        
-        
+      
+       <hr><span style="font-style: italic;color: gray;"> sunrtnj@163.com </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">
@@ -477,11 +567,11 @@
 <p class="footer-entry">88srt个人主页</p>
 
     </div>
-</div>
-<div class="full-toc">
-    <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
+    </div>
 </div>
 
 </body>
