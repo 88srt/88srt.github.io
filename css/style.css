@@ -509,7 +509,7 @@
 .nav-left {
   width: 120px;
   height: 100%;
-  background: #2a2935;
+  background: #2a2935 /*左侧颜色*/;
   box-shadow: inset -15px 0 15px -15px #222;
   float: left;
   position: relative;
@@ -524,7 +524,7 @@
   height: 100px;
   margin: 55px auto 15px;
   border-radius: 50%;
-  box-shadow: 0 0 0 4px #fff, 0 0 4px 4px #eee;
+  box-shadow: 0 0 0 4px #44cee0, 0 0 4px 4px #eee;
   background-repeat: no-repeat;
   background-size: 100px 100px;
   display: block;
@@ -967,7 +967,7 @@
   left: 12px;
   z-index: 1;
   font-size: 18px;
-  color: #309e85;
+  color: #44cee0 /*标记颜色*/;
 }
 .nav-right .title-list nav a#top:before,
 .nav-right .title-list #local-search-result a#top:before {
@@ -1193,7 +1193,7 @@
 }
 #post ::selection {
   color: #fff;
-  background: #33caa6;
+  background: #44cee0;
   text-shadow: none;
 }
 #post .pjax {
