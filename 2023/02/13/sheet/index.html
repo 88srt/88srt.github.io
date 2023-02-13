@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>spreadsheet 属性方法事件 | 88srt</title>
+  <meta name="keywords" content=" 属性 ">
+  <meta name="description" content="spreadsheet 属性方法事件 | 88srt">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="赠人玫瑰，手留余香。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="我的主页">
+<meta property="og:url" content="http://88srt.github.io/about/index.html">
+<meta property="og:site_name" content="88srt">
+<meta property="og:description" content="赠人玫瑰，手留余香。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-10-25T06:00:31.000Z">
+<meta property="article:modified_time" content="2023-02-02T02:25:17.059Z">
+<meta property="article:author" content="SunRT">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/srt.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+<script src="/js/custom-iconfont.js?v=1.1.0" ></script>
+<meta name="generator" content="Hexo 5.4.2"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/srt.jpg"/>
+</a>
+<div class="author">
+    <span>SunRT</span>
+</div>
+
+<style>
+    /* body {
+       text-align:center;
+    } */
+    .weixin {
+    position: relative;
+    }
+    .weixin img.qrcode {
+    position: absolute;
+    z-index: 99;
+    width: 7.5rem;
+    max-width: none;
+    height: 7.5rem;
+    transform: scale(0);
+    transform-origin: bottom center;
+    opacity: 0;
+    border: .3125rem solid hsl(169, 94%, 48%);
+    border-radius: .25rem;
+    -webkit-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    margin-top: -130px;
+    margin-left: 0px;
+    }
+    .weixin:hover img.qrcode {
+    transform: scale(1);
+    opacity: 1;
+    }
+    </style>
+<div class="social weixin" href="javascript:">
+    <img class="qrcode" src="img/wxqrcode.jpg" alt="联系方式"> 
+    <div class="icon" >
+        
+        
+            
+                
+                 <a title="weixin"
+                    target="_blank"> 
+                    
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-weixin"></use>
+                    </svg>
+                
+                 </a>
+        
+    
+    </div>
+</div>   
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(11)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                <li>
+                    <div data-rel="下载">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        下载
+                        <small>(6)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="下载<--->EKB">
+                                        
+                                        EKB
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="下载<--->pcs7">
+                                        
+                                        pcs7
+                                        
+                                            <small>(2
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="下载<--->TIA">
+                                        
+                                        TIA
+                                        
+                                            <small>(2
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="下载<--->wincc">
+                                        
+                                        wincc
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="SQL">
+                        
+                        SQL
+                        <small>(2)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="wincc">
+                        
+                        wincc
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="文档">
+                        
+                        文档
+                        <small>(2)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">关于</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="11">
+<input type="hidden" id="yelog_site_word_count" value="10.6k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="https://blog.csdn.net/u013353858?spm=1010.2135.3001.5343">88srt</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>EKB</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>pcs7</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>SQL</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>TIA</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>wincc</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>属性</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>控件</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a id="top" class="全部文章 下载 pcs7 "
+           href="/2022/10/24/pcs7v9.1/"
+           data-tag="pcs7"
+           data-author="srt" >
+            <span class="post-title" title="pcs7 v9.1 sp1">pcs7 v9.1 sp1</span>
+            <span class="post-date" title="2022-10-24 18:11:41">2022/10/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 文档 "
+           href="/2023/02/13/sheet/"
+           data-tag="属性"
+           data-author="" >
+            <span class="post-title" title="spreadsheet 属性方法事件">spreadsheet 属性方法事件</span>
+            <span class="post-date" title="2023-02-13 11:48:31">2023/02/13</span>
+        </a>
+        
+        
+        <a  class="全部文章 下载 TIA "
+           href="/2023/01/13/TIA-18/"
+           data-tag="TIA"
+           data-author="srt" >
+            <span class="post-title" title="TIA 18">TIA 18</span>
+            <span class="post-date" title="2023-01-13 09:14:10">2023/01/13</span>
+        </a>
+        
+        
+        <a  class="全部文章 SQL "
+           href="/2022/11/22/SQL-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02/"
+           data-tag="SQL"
+           data-author="" >
+            <span class="post-title" title="SQL学习笔记2">SQL学习笔记2</span>
+            <span class="post-date" title="2022-11-22 13:46:47">2022/11/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 SQL "
+           href="/2022/11/11/SQL%E5%91%BD%E4%BB%A4%E5%AD%A6%E4%B9%A01/"
+           data-tag="SQL"
+           data-author="" >
+            <span class="post-title" title="SQL学习笔记1">SQL学习笔记1</span>
+            <span class="post-date" title="2022-11-11 10:08:48">2022/11/11</span>
+        </a>
+        
+        
+        <a  class="全部文章 wincc "
+           href="/2022/11/02/winccsql/"
+           data-tag="wincc"
+           data-author="srt" >
+            <span class="post-title" title="wincc归档数据查询">wincc归档数据查询</span>
+            <span class="post-date" title="2022-11-02 17:15:53">2022/11/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 下载 TIA "
+           href="/2022/10/27/TIA/"
+           data-tag="TIA"
+           data-author="srt" >
+            <span class="post-title" title="博图 V17">博图 V17</span>
+            <span class="post-date" title="2022-10-27 16:42:16">2022/10/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 文档 "
+           href="/2022/10/27/index/"
+           data-tag="控件"
+           data-author="srt" >
+            <span class="post-title" title="Formula One 常用函数及属性">Formula One 常用函数及属性</span>
+            <span class="post-date" title="2022-10-27 15:07:43">2022/10/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 下载 EKB "
+           href="/2022/10/27/EKB/"
+           data-tag="EKB"
+           data-author="srt" >
+            <span class="post-title" title="EKB 最新">EKB 最新</span>
+            <span class="post-date" title="2022-10-27 11:23:22">2022/10/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 下载 wincc "
+           href="/2022/10/27/wincc/"
+           data-tag="wincc"
+           data-author="srt" >
+            <span class="post-title" title="WINCC V7.5 SP2">WINCC V7.5 SP2</span>
+            <span class="post-date" title="2022-10-27 11:19:54">2022/10/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 下载 pcs7 "
+           href="/2022/10/26/pcs7v9.0/"
+           data-tag="pcs7"
+           data-author="srt" >
+            <span class="post-title" title="pcs7 v9.0 sp3">pcs7 v9.0 sp3</span>
+            <span class="post-date" title="2022-10-26 09:18:18">2022/10/26</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-sheet" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">spreadsheet 属性方法事件</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="文档">文档</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color3">属性</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2023-02-13 13:30:15'>2023-02-13 11:48</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:5.3k</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Spreadsheet%E8%AF%B4%E6%98%8E"><span class="toc-text">Spreadsheet说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7%EF%BC%9A"><span class="toc-text">************* 属性：*************</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95"><span class="toc-text">************* 方法 *************</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6"><span class="toc-text">***************** 事件 *************</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Spreadsheet说明"><a href="#Spreadsheet说明" class="headerlink" title="Spreadsheet说明"></a>Spreadsheet说明</h3><h3 id="属性："><a href="#属性：" class="headerlink" title="************* 属性：*************"></a>************* 属性：*************</h3><p>1、ActiveCell:返回代表活动单元格的Range只读对象。 </p>
+<p>2、ActiveSheet:返回代表活动工作表的WorkSheet只读对象。 </p>
+<p>3、ActiveWindow:返回表示当前窗口的Window对象。 </p>
+<p>4、ActiveWorkbook:返回表示打开工作簿的Workbook对象。 </p>
+<p>5、AllowPropertyToolbox:确定用户是否可以在运行时显示“命令和选项”对话框。boolean类型。 </p>
+<p>6、Application:有两种情况, a)应用于OWCLanguageSettings对象时，返回表示指定Web Component的Obejct对象； b)返回表示电子表格控件的Spreadsheet对象 </p>
+<p>7、AutoFit:对于Spreadsheet或者PivotTable对象，如果由可见的行列数确定电子表格的总体大小，则设置为True。行高和列宽不能超过电子表格或数据透视表列表的 MaxHeight 和 MaxWidth 属性值。默认值为 True。如果将 AutoFit 属性设置为 False，则电子表格或数据透视表列表的总体大小由 Width 和 Height 属性设置。Boolean 类型 </p>
+<p>8、Build:返回一个Long类型，表示Web Components的编译号，只读。 </p>
+<p>9、BuildNumber:返回内部版本号。String类型，只读。 </p>
+<p>10、Calculation:返回或设定指定计算模式的XlCalculation常量。 </p>
+<p>11、CalculationVersion:返回long型的Web Components版本号 </p>
+<p>12、CanUnd如果有可以撤销的前一步操作，则返回True。只读 </p>
+<p>13、Caption:返回或设定对象的标题，string类型 </p>
+<p>14、Cells:返回一个表示对象中单元格的Range对象 </p>
+<p>15、Columns:应用在Range对象上时表示返回代表指定区域中列的Range对象，只读。应用在spreadsheet和worksheet对象时，返回代表指定工作表上所有列的Range对象 </p>
+<p>16、Commands:返回一个OCCommands对象，表示可用命令集合 </p>
+<p>17、Constants:返回允许脚本用户使用命名常量的对象，只读。在HTML页上是必须的 </p>
+<p>18、CSVData:以逗号分隔列表返回或设置电子表格数据，String类型。 </p>
+<p>19、CSVURL:返回或设置以逗号分隔的电子表格数据文件的URL。 </p>
+<p>20、DataMember:返回或设置数据成员名称（指定控件将从数据源请求获取的记录集名称）,DataMember类型。 </p>
+<p>21、DataSource:返回或设置表示指定控件数据源的ADO DataSource对象。 </p>
+<p>22、DataType:指定电子表格数据格式和来源。HTMLURL,HTMLDATA,CSVURL,CSVDATA </p>
+<p>23、DefaultQueryOnLoad:该属性设置为true时，加载页面时将刷新Purpose属性值为”Query”并且LoadMode属性值为”Normal”的绑定。设置False时，加载页面时不刷新任何绑定。 24、DesignMode:如果电子表格控件当前处于设计模式，则返回True。 </p>
+<p>25、Dirty:如果自上次保存后对电子表格进行了更改，则返回True。可读写 </p>
+<p>26、DisplayDesignTimeUI:设置为True在运行时显示“命令和选项”窗口的设计阶段版本，默认为False。 </p>
+<p>27、DisplayOfficeLog设置为True可在工具栏上显示Office Logo。 </p>
+<p>28、DisplayPropertyToolbox:设置是否可显示“命令和选项”窗口。 </p>
+<p>29、DisplayTitleBar:设置是否可显示标题栏。 </p>
+<p>30、DisplayToolbar:设置是否可显示工具条。 </p>
+<p>31、EnableEvents:如果启用了电子表格工作区的事件，则返回True，可读写。 </p>
+<p>32、EnableUnd设置是否启用电子表格撤销功能。 </p>
+<p>33、HTMLData:返回或设置一个String类型，以正确格式的HTML字符串表示电子表格数据。 </p>
+<p>34、HTMLURL:返回或设置电子表格HTML数据文件的URL。 </p>
+<p>35、International:返回当前国家/地区和国际设置信息。Variant类型，只读。 </p>
+<p>36、LanguageSettings:返回一个OWCLanguageSettings对象，包含语言设置信息。 </p>
+<p>37、MajorVersion:返回对象库德主要版本，只读。 </p>
+<p>38、MaxHeight:返回或设置指定工作表在AutoFit属性值为True时能够达到的最大高度。可用像素表示也可以用百分比表示。Variant类型。 </p>
+<p>39、MaxWidth:返回或设置指定工作表在AutoFit属性值为True时能够达到的最大宽度。 </p>
+<p>40、MinorVersion:返回对象库德次要版本，String类型，只读。 </p>
+<p>41、MoveAfterReturn:确定用户按Enter后是否移动活动单元格。默认为True。使用MoveAfterReturnDirection属性确定移动方向。 </p>
+<p>42、MoveAfterReturnDirection:返回或设置当前用户按Enter且MoveAfterReturn属性设置为True时焦点移动的方向。XlDirection类型。 </p>
+<p>43、Name:返回或设置指定对象的名称。 </p>
+<p>44、Names:应用于Spreadsheet和workbook对象时返回表示活动工作簿中所有名称的Names集合，只读。应用于Worksheet对象时返回表示指定工作表中定义的所有工作表级名称的 Names 集合。只读。 </p>
+<p>45、Range:返回一个Range对象，表示单元格或矩形单元格区域。 </p>
+<p>46、RevisionNumber:返回修订号。 </p>
+<p>47、RightToLeft:如果启用从右到左语言支持，则返回True。 </p>
+<p>48、Rows:应用于Range对象返回一个表示指定区域中所有行的Range对象。应用于spreadsheet对象，返回一个表示活动工作表中所有行的Range对象。应用于Worksheet对象，返回一个表示指定工作表上所有行的Range对象。 </p>
+<p>49、ScreenUpdating:如果屏幕更新处于打开状态，则返回True。可读写。 </p>
+<p>50、Selection:返回一个Range对象，表示选定单元格。 </p>
+<p>51、Sheets:应用于spreadsheet对象，返回表示活动工作簿中所有工作表的Sheets集合。应用于workbook，返回表示指定工作簿中所有工作簿的sheets集合。 </p>
+<p>52、TitleBar:返回表示指定电子表格标题的TitleBar对象。 </p>
+<p>53、ToolBar:返回一个MSComctlLib.Toolbar对象，表示工具栏。 </p>
+<p>54、Value:返回指定对象的名称或值。 </p>
+<p>55、Version:返回版本，String类型。 </p>
+<p>56、ViewOnlyMode:如果处于只读模式，返回True。 </p>
+<p>57、Windows:返回一个windows集合，表示打开工作簿中的窗口。 </p>
+<p>58、Workbooks:返回一个表示打开工作簿的 Workbooks 集合。 </p>
+<p>59、Worksheets:返回一个 Worksheets 集合，表示打开工作簿中的工作表。 </p>
+<p>60、XMLData:返回或设置指定组件的 XML 数据。String 类型，可读写。 </p>
+<p>61、XMLURL:返回或设置一个 String 类型，表示可扩展标记语言 (XML) 文件的 URL。 </p>
+<h3 id="方法"><a href="#方法" class="headerlink" title="************* 方法 *************"></a>************* 方法 *************</h3><p> 1、AddIn:在指定的电子表格中添加加载项。 </p>
+<p>2、BeginUnd指定撤销块的开始。这意味着从该调用到与其相对应的 EndUndo 方法调用之间的所有语句均可在对 Undo 方法的一次调用中撤消。这样可以将整个宏合并为一个语句，以便于撤消。撤消块可以嵌套。 </p>
+<p>3、Calculate:计算打开的工作簿、工作簿中的指定工作表或工作表上的指定单元格区域。 </p>
+<p>4、CalculateFull:强制打开的工作簿上的公式重新计算 </p>
+<p>5、EndUnd指定撤消块的结束。这意味着从该调用到与其相对应的 BeginUndo 方法调用之间的所有语句均可在对 Undo 方法的一次调用中撤消。这样可以将整个宏合并为一个语句，以便于撤消。撤消块可以嵌套。 </p>
+<p>6、Evaluate:计算文本形式的表达式并返回结果。 </p>
+<p>7、Export:将spreadsheet导出到文件 </p>
+<p>8、FireParameterOut:使用此方法可触发 ParametersOutReady 事件。 </p>
+<p>9、RectIntersect:返回表示指定区域之间矩形交集的 Range 对象。 </p>
+<p>10、RectUnion:返回一个 Range 对象，表示指定区域联合中的最小单元格区域。 </p>
+<p>11、Refresh:刷新指定对象。 </p>
+<p>12、Repaint:强制重绘指定对象。 </p>
+<p>13、ShowAbout:显示“关于”对话框。 </p>
+<p>14、ShowContextMenu:在指定屏幕坐标显示自定义上下文菜单。 </p>
+<p>15、ShowHelp:显示 PivotTable 或 Spreadsheet 控件的主帮助主题。 </p>
+<p>16、Und撤消上一次操作或上一个位于 BeginUndo 和 EndUndo 方法调用之间的宏块。 </p>
+<p>17、UpdatePropertyToolbax:以当前选定对象更新“命令 和选项”窗口。 </p>
+<h3 id="事件"><a href="#事件" class="headerlink" title="***************** 事件 *************"></a>***************** 事件 *************</h3><p>1、BeforeContextMenu:在显示上下文菜单之前发生。用户单击鼠标右键或按下应用键将显示上下文菜单。 </p>
+<p>2、BeforeKeyDown:在用户按下键盘上的键之后、控件处理键击之前发生。如果用户将键按住，该事件将按照用户计算机上设置的键击重复间隔重复发生。 </p>
+<p>3、BeforeKeyPress:在用户按下并释放键盘上的键之后、控件处理键击之前发生。如果用户将键按住，该事件将按照用户计算机上设置的键击重复间隔重复发生。 </p>
+<p>4、BeforeKeyUp:在用户释放键盘上某个键之后、控件处理该键击之前发生。 </p>
+<p>5、BindingAdded:在通过 Edit Query 命令添加新的或修改现有的 XmlDataBinding 对象时发生。 </p>
+<p>6、BindingCompleted:在通过 Refresh 或 Update 方法将数据成功地加载到映射中或从映射中导出时发生。 </p>
+<p>7、BindingDeleted:在删除新XmlDataBinding对象时发生。 </p>
+<p>8、BindingError:在由于调用 Refresh 或 Update 方法而从数据源处收到错误时发生。 </p>
+<p>9、BindingUpdated:在现有 XmlDataBinding 对象的 BindingData 属性发生更改时发生。 </p>
+<p>10、Click:在用户单击指定控件时发生。 </p>
+<p>11、CommandBeforeExecute:在执行命令之前发生。如果要在执行命令之前加以指定限制，请使用该事件。 </p>
+<p>12、CommandChecked:在指定Microsoft Office Web Component 确定命令是否选中时发生。 </p>
+<p>13、CommandEnabled:在启用指定 Microsoft Office Web Component 命令时发生。 </p>
+<p>14、CommandExecute:在执行命令之后发生。如果要在执行特定命令之后执行一系列命令，请使用该事件。 </p>
+<p>15、CommandTipText:在指定 Microsoft Office Web Component 查询命令的屏幕提示文本时发生。 </p>
+<p>16、DblClick:在用户双击指定控件时发生。 </p>
+<p>17、EndEdit:当用户从编辑模式切换到指定 Spreadsheet 控件或数据透视表列表时发生。使用该事件可以对工作表或数据透视表列表明细区域中的数据项进行有效性验证。 </p>
+<p>18、Initialize:在 Spreadsheet 组件正在加载、加载完成之前发生。 </p>
+<p>19、KeyDown:在用户按下键盘上的键之后发生。如果用户将键按住，该事件将按照用户计算机上设置的键击重复间隔重复发生。 </p>
+<p>20、KeyPress: 在用户按下并释放键盘上的键后发生。 </p>
+<p>21、KeyUp: 在用户释放键盘上的键之后发生。 </p>
+<p>22、LoadCompleted: 在 Spreadsheet 组件完成加载之后发生。 </p>
+<p>23、MouseDown: 当用户在指针位于电子表格、数据透视表列表或图表工作区上按下鼠标键时发生。 </p>
+<p>24、MouseOut: 当用户将鼠标指针移出电子表格上的单元格时发生。 </p>
+<p>25、MouseOver: 当用户将鼠标指针停留在指定电子表格上的单元格时发生。 </p>
+<p>26、MouseUp: 当用户在指针位于电子表格、数据透视表列表或图表工作区上释放鼠标键时发生。 </p>
+<p>27、MouseWheel: 当用户旋转具有滑轮的鼠标设备上的滑轮时发生。 </p>
+<p>28、ParametersOutReady:在一组参数从所连接的实现 IParametersOutProvider 接口的 Web 部件传递到实现 IParametersOutConsumer 接口的电子表格 Web 部件时，就会发生该 ParametersOutReady 事件。 </p>
+<p>29、RowReady 在将 ListObject 对象加载到电子表格组件中，选中 ListObject 对象中的单行，调用 XmlDataBinding 对象的 Refresh 方法时，不管该方法成功与否，都会调用该组件的 RowReady 事件过程。 </p>
+<p>30、SelectionChange:当用户进行一项新的选择时发生。用户不能取消该事件。 </p>
+<p>31、SelectionChanging 当用户在选择区域时移动鼠标指针时发生。当用户使用键盘选择时不发生该事件。用户不能取消该事件。 </p>
+<p>32、SheetActivate 当激活工作表时发生。 </p>
+<p>33、SheetCalculate 在计算工作表后发生。 </p>
+<p>34、SheetChange 当用户或外部链接更改了任何工作表中的单元格时发生。 </p>
+<p>35、SheetDeactivate 用户在更换工作表时，该事件在 SheetActivate 事件之前调用。 </p>
+<p>36、SheetFollowHyperlink 在单击超链接时发生。 </p>
+<p>37、StartEdit:当用户在指针位于单元格中进入编辑模式时发生。 </p>
+<p>38、ViewChange:在重绘电子表格时发生。二、Names集合 说明:工作簿中所有 Name 对象的集合。每个 Name 对象可表示一个单元格区域、公式或常量值的定义名称。 </p>
+<p>***************** 属性 *****************</p>
+<p> 1、Application:返回表示电子表格控件的 Spreadsheet 对象。 </p>
+<p>2、Count:返回指定集合中的对象数目。Long 类型，只读。 </p>
+<p>3、Parent:返回指定对象的父对象。 </p>
+<p>*************方法 *************</p>
+<p>1、Add:定义新名称。返回一个 Name 对2象。 </p>
+<p>2、Item:返回 Names 集合中的 Name 对象。</p>
+<p>三、Worksheet对象 说明：表示工作簿中的单个工作表。 </p>
+<p>************** 属性 **************</p>
+<p> 1、Application:返回表示电子表格控件的 Spreadsheet 对象。 </p>
+<p>2、AutoFilter:返回指定工作表的 AutoFilter 对象。 </p>
+<p>3、AutoFilterMode: 如果当前显示了“自动筛选”下拉箭头，则返回 True。可以将该属性设置为 False 来隐藏箭头，但不能将其设置为 True。使用 AutoFilter 方法筛选列表并显示下拉箭头。Boolean 类型，可读写。 </p>
+<p>4、Cells:返回一个表示对象中单元格的 Range 对象。 </p>
+<p>5、Columns:返回代表指定区域中列的 Range 对象。只读。或者返回代表指定工作表上所有列的 Range 对象。 </p>
+<p>6、CommandText: 返回或设置指定对象的命令字符串。 </p>
+<p>7、ConnectionString:返回或设置两层数据库连接的 ADO 连接。String 类型，可读写。 </p>
+<p>8、DataMember:返回或设置数据成员名称（指定控件将从数据源请求获取的记录集名称）。DataMember 类型，可读写。 </p>
+<p>9、EnableAutoFilter:如果指定工作表可以筛选，则返回 True。如果 Protection 的 Enabled 属性设置为 False 则该属性无效。Boolean 类型，可读写。 </p>
+<p>10、FilterMode:如果“自动筛选”条件当前隐藏了工作表行，则返回 True。默认值为 False。Boolean 类型，只读。 </p>
+<p>11、Index:返回相似对象集合中指定对象的索引号码。 </p>
+<p>12、IsDataBound:返回或设置一个 Boolean 类型，确定指定工作表是否绑定到外部数据源。可读写。 </p>
+<p>13、ListObjects:返回 Worksheet 对象的 ListObjects 集合。只读。 </p>
+<p>14、Name:返回或设置指定对象的名称。 </p>
+<p>15、Names:返回表示指定工作表中定义的所有工作表级名称的 Names 集合。只读。 </p>
+<p>16、Next:返回表示下一个工作表的 Worksheet 对象。 </p>
+<p>17、Parent:返回指定对象的父对象。 </p>
+<p>18、Previous:返回表示上一个工作表的 Worksheet 对象。 </p>
+<p>19、ProtectContents:如果工作表内容处于保护状态，则返回 True。Boolean 类型，只读。 </p>
+<p>20、Protection:返回一个包含指定工作表保护信息的 Protection 对象。如果 Enabled 属性设置为 False，则忽略保护属性。 </p>
+<p>21、ProtectionMode:如果启用了用户界面专用保护，则返回 True。通常返回 True。Boolean类型，只读。 </p>
+<p>22、Range:返回一个 Range 对象，表示单元格或矩形单元格区域。 </p>
+<p>23、Rows:返回一个表示活动工作表中所有行的 Range 对象。 </p>
+<p>24、StandardHeight:以点数返回工作簿中所有行的标准（默认）高度。Double 类型，只读。 </p>
+<p>25、StandardWidth:返回工作表中所有列的标准（默认）宽度。 </p>
+<p>26、Type:返回 XlSheetType 对象类型，只读。 </p>
+<p>27、UsedRange:返回表示指定工作表上所用区域的 Range 对象。 </p>
+<p>28、Visible:设置可见性 </p>
+<p>************* 方法 ************* </p>
+<p>1、Activate:激活指定工作表。</p>
+<p>一、Spreadsheet 对象<br>说明：表示电子表格的容器。</p>
+<hr>
+<p>属性：</p>
+<hr>
+<p>1、ActiveCell:返回代表活动单元格的Range只读对象。<br>2、ActiveSheet:返回代表活动工作表的WorkSheet只读对象。<br>3、ActiveWindow:返回表示当前窗口的Window对象。<br>4、ActiveWorkbook:返回表示打开工作簿的Workbook对象。<br>5、AllowPropertyToolbox:确定用户是否可以在运行时显示“命令和选项”对话框。boolean类型。<br>6、Application:有两种情况,a)应用于OWCLanguageSettings对象时，返回表示指定Web Component的Obejct对象；b)返回表示电子表格控件的Spreadsheet对象<br>7、AutoFit:对于Spreadsheet或者PivotTable对象，如果由可见的行列数确定电子表格的总体大小，则设置为True。行高和列宽不能超过电子表格或数据透视表列表的 MaxHeight 和 MaxWidth 属性值。默认值为 True。如果将 AutoFit 属性设置为 False，则电子表格或数据透视表列表的总体大小由 Width 和 Height 属性设置。Boolean 类型<br>8、Build:返回一个Long类型，表示Web Components的编译号，只读。<br>9、BuildNumber:返回内部版本号。String类型，只读。<br>10、Calculation:返回或设定指定计算模式的XlCalculation常量。<br>11、CalculationVersion:返回long型的Web Components版本号<br>12、CanUndo:如果有可以撤销的前一步操作，则返回True。只读<br>13、Caption:返回或设定对象的标题，string类型<br>14、Cells:返回一个表示对象中单元格的Range对象<br>15、Columns:应用在Range对象上时表示返回代表指定区域中列的Range对象，只读。应用在spreadsheet和worksheet对象时，返回代表指定工作表上所有列的Range对象<br>16、Commands:返回一个OCCommands对象，表示可用命令集合<br>17、Constants:返回允许脚本用户使用命名常量的对象，只读。在HTML页上是必须的<br>18、CSVData:以逗号分隔列表返回或设置电子表格数据，String类型。<br>19、CSVURL:返回或设置以逗号分隔的电子表格数据文件的URL。<br>20、DataMember:返回或设置数据成员名称（指定控件将从数据源请求获取的记录集名称）,DataMember类型。<br>21、DataSource:返回或设置表示指定控件数据源的ADO DataSource对象。<br>22、DataType:指定电子表格数据格式和来源。HTMLURL,HTMLDATA,CSVURL,CSVDATA<br>23、DefaultQueryOnLoad:该属性设置为true时，加载页面时将刷新Purpose属性值为”Query”并且LoadMode属性值为”Normal”的绑定。设置False时，加载页面时不刷新任何绑定。<br>24、DesignMode:如果电子表格控件当前处于设计模式，则返回True。<br>25、Dirty:如果自上次保存后对电子表格进行了更改，则返回True。可读写<br>26、DisplayDesignTimeUI:设置为True在运行时显示“命令和选项”窗口的设计阶段版本，默认为False。<br>27、DisplayOfficeLogo:设置为True可在工具栏上显示Office Logo。<br>28、DisplayPropertyToolbox:设置是否可显示“命令和选项”窗口。<br>29、DisplayTitleBar:设置是否可显示标题栏。<br>30、DisplayToolbar:设置是否可显示工具条。<br>31、EnableEvents:如果启用了电子表格工作区的事件，则返回True，可读写。<br>32、EnableUndo:设置是否启用电子表格撤销功能。<br>33、HTMLData:返回或设置一个String类型，以正确格式的HTML字符串表示电子表格数据。<br>34、HTMLURL:返回或设置电子表格HTML数据文件的URL。<br>35、International:返回当前国家/地区和国际设置信息。Variant类型，只读。<br>36、LanguageSettings:返回一个OWCLanguageSettings对象，包含语言设置信息。<br>37、MajorVersion:返回对象库德主要版本，只读。<br>38、MaxHeight:返回或设置指定工作表在AutoFit属性值为True时能够达到的最大高度。可用像素表示也可以用百分比表示。Variant类型。<br>39、MaxWidth:返回或设置指定工作表在AutoFit属性值为True时能够达到的最大宽度。<br>40、MinorVersion:返回对象库德次要版本，String类型，只读。<br>41、MoveAfterReturn:确定用户按Enter后是否移动活动单元格。默认为True。使用MoveAfterReturnDirection属性确定移动方向。<br>42、MoveAfterReturnDirection:返回或设置当前用户按Enter且MoveAfterReturn属性设置为True时焦点移动的方向。XlDirection类型。<br>43、Name:返回或设置指定对象的名称。<br>44、Names:应用于Spreadsheet和workbook对象时返回表示活动工作簿中所有名称的Names集合，只读。应用于Worksheet对象时返回表示指定工作表中定义的所有工作表级名称的 Names 集合。只读。<br>45、Range:返回一个Range对象，表示单元格或矩形单元格区域。<br>46、RevisionNumber:返回修订号。<br>47、RightToLeft:如果启用从右到左语言支持，则返回True。<br>48、Rows:应用于Range对象返回一个表示指定区域中所有行的Range对象。应用于spreadsheet对象，返回一个表示活动工作表中所有行的Range对象。应用于Worksheet对象，返回一个表示指定工作表上所有行的Range对象。<br>49、ScreenUpdating:如果屏幕更新处于打开状态，则返回True。可读写。<br>50、Selection:返回一个Range对象，表示选定单元格。<br>51、Sheets:应用于spreadsheet对象，返回表示活动工作簿中所有工作表的Sheets集合。应用于workbook，返回表示指定工作簿中所有工作簿的sheets集合。<br>52、TitleBar:返回表示指定电子表格标题的TitleBar对象。<br>53、ToolBar:返回一个MSComctlLib.Toolbar对象，表示工具栏。<br>54、Value:返回指定对象的名称或值。<br>55、Version:返回版本，String类型。<br>56、ViewOnlyMode:如果处于只读模式，返回True。<br>57、Windows:返回一个windows集合，表示打开工作簿中的窗口。<br>58、Workbooks:返回一个表示打开工作簿的 Workbooks 集合。<br>59、Worksheets:返回一个 Worksheets 集合，表示打开工作簿中的工作表。<br>60、XMLData:返回或设置指定组件的 XML 数据。String 类型，可读写。<br>61、XMLURL:返回或设置一个 String 类型，表示可扩展标记语言 (XML) 文件的 URL。</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> sunrtnj@163.com </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2019-2023
+</p>
+<p class="footer-entry">SunRT个人主页</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+    #post .pjax article .article-entry>ol, #post .pjax article .article-entry>ul, #post .pjax article>ol, #post .pjax article>ul{
+        border: #e2dede solid 1px;
+        border-radius: 10px;
+        padding: 10px 32px 10px 56px;
+    }
+    #post .pjax article .article-entry li>ol, #post .pjax article .article-entry li>ul,#post .pjax article li>ol, #post .pjax article li>ul{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    #post .pjax article .article-entry>ol>li, #post .pjax article .article-entry>ul>li,#post .pjax article>ol>li, #post .pjax article>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    #post .pjax article .article-entry li>ol>li, #post .pjax article .article-entry li>ul>li,#post .pjax article li>ol>li, #post .pjax article li>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("https://i.loli.net/2019/07/22/5d3521411f3f169375.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+<!--音乐插件位置
+<div id="musicMouseDrag" style="position:fixed; z-index: 9999; top: 90px; right: 0;">
+    <div id="musicDragArea" style="position: absolute; top: 0; left: 0; width: 100%;height: 10px;cursor: move; z-index: 10;"></div>
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=250 height=52 src="//music.163.com/outchain/player?type=2&id=1988532821&auto=1&height=32"></iframe>
+</div>-->
+<style>
+    /* body {
+       text-align:center;
+    } */
+    .muice {
+    position: relative;
+    }
+    .muice div.qrcode {
+    position: absolute;
+    z-index: 99;
+    width: 250px;
+    max-width: none;
+    height: 52;
+    transform: scale(0);
+    transform-origin: right center;
+    opacity: 0;
+    border: .1rem solid hsla(211, 88%, 64%, 0.579);
+    border-radius: .25rem;
+    -webkit-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    margin-top: -130px;
+    margin-left: 0px;
+    }
+    .muice:hover div.qrcode {
+    transform: scale(1);
+    opacity: 1;
+    }
+    </style>
+<div class="social muice" href="javascript:"><!--音乐图标-->
+    <div class="qrcode" id="musicMouseDrag" style="position:fixed; z-index: 9999; top: 270px; right: 0;">
+        <div id="musicDragArea" style="position: absolute; top: 0; left: 0; width: 100%;height: 52;cursor: move; z-index: 10;"></div>
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=250 height=52 src="//music.163.com/outchain/player?type=2&id=1988532821&auto=1&height=32"></iframe>
+    </div>
+    <div id="musicMouseDrag" style="position:fixed; z-index: 9999; top: 110px; right: 0;">
+        <div id="musicDragArea" style="position: absolute; top: 0; left: 0; width: 100%;height: 10px;cursor: move; z-index: 10;"></div>
+        <img style="width:30px; height: 30px;" src="img/muice.png" alt="">
+    </div>
+</div>
+<!--放一个天气预报 已测试
+<div id="he-plugin-simple"></div>
+<script>
+WIDGET = {
+  "CONFIG": {
+    "modules": "01234",
+    "background": "1",
+    "tmpColor": "FFFFFF",
+    "tmpSize": "16",
+    "cityColor": "FFFFFF",
+    "citySize": "16",
+    "aqiColor": "FFFFFF",
+    "aqiSize": "16",
+    "weatherIconSize": "24",
+    "alertIconSize": "18",
+    "padding": "10px 10px 10px 10px",
+    "shadow": "0",
+    "language": "zh",
+    "fixed": "true",
+    "vertical": "top",
+    "horizontal": "left",
+    "right": "10",
+    "top": "10",
+    "key": "1fb33ab49fc84225a472df94b240d472"
+  }
+}
+</script>
+<script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script>
+-->
+<!--以下代码是为了支持随时拖动音乐控件的位置，如没有需求，可去掉下面代码-->
+<script>
+var $DOC = $(document)
+$('#musicMouseDrag').on('mousedown', function (e) {
+// 阻止文本选中
+$DOC.bind("selectstart", function () {
+return false;
+});
+$('#musicDragArea').css('height', '100%');
+var $moveTarget = $('#musicMouseDrag');
+$moveTarget.css('border', '1px dashed grey')
+var div_x = e.pageX - $moveTarget.offset().left;
+var div_y = e.pageY - $moveTarget.offset().top;
+$DOC.on('mousemove', function (e) {
+var targetX = e.pageX - div_x;
+var targetY = e.pageY - div_y;
+targetX = targetX < 0 ? 0 : (targetX + $moveTarget.outerWidth() >= window.innerWidth) ? window.innerWidth - $moveTarget.outerWidth() : targetX;
+targetY = targetY < 0 ? 0 : (targetY + $moveTarget.outerHeight() >= window.innerHeight) ? window.innerHeight - $moveTarget.outerHeight() : targetY;
+$moveTarget.css({'left': targetX + 'px', 'top': targetY + 'px', 'bottom': 'inherit', 'right': 'inherit'})
+}).on('mouseup', function () {
+$DOC.unbind("selectstart");
+$DOC.off('mousemove')
+$DOC.off('mouseup')
+$moveTarget.css('border', 'none')
+$('#musicDragArea').css('height', '10px');
+})
+})
+</script>
+</html>
