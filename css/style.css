@@ -695,7 +695,7 @@
 }
 .nav-right .title-list .right-top #default-panel .iconfont.icon-search.active,
 .nav-right .title-list .right-top #outline-panel .iconfont.icon-search.active {
-  color: #007fff;
+  color: #03a6ff;
 }
 .nav-right .title-list .right-top #default-panel .iconfont.icon-file-tree,
 .nav-right .title-list .right-top #outline-panel .iconfont.icon-file-tree {
@@ -889,7 +889,7 @@
 }
 .nav-right .title-list #outline-list .toc a.active {
   background-color: #ebedef;
-  color: #007fff;
+  color: #03a6ff;
 }
 .nav-right .title-list #outline-list .toc a:before {
   content: "";
