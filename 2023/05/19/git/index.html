@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>TIA 18 | 88srt</title>
-  <meta name="keywords" content=" TIA ">
-  <meta name="description" content="TIA 18 | 88srt">
+  <title>git | 88srt</title>
+  <meta name="keywords" content=" git ">
+  <meta name="description" content="git | 88srt">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="赠人玫瑰，手留余香。">
 <meta property="og:type" content="website">
@@ -545,9 +545,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-TIA-18" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-git" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">TIA 18</h1>
+        <h1 class="article-title">git</h1>
     
     <div class="article-meta">
         
@@ -559,9 +559,7 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="下载">下载</a> > 
-            
-            <a  data-rel="下载&lt;---&gt;TIA">TIA</a>
+            <a  data-rel="文档">文档</a>
             
         </span>
         
@@ -569,19 +567,19 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color4">TIA</a>
+            <a class="color4">git</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-01-13 09:17:55'>2023-01-13 09:14</time>
+            发布时间 : <time class="date" title='最后更新: 2023-05-19 13:28:05'>2023-05-19 13:08</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:14</span>
+        <span>字数:186</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -600,7 +598,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5%EF%BC%9Ahttps-pan-baidu-com-s-15LeRw9e2S4mPvZ8h8LVvdw"><span class="toc-text">下载链接：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;15LeRw9e2S4mPvZ8h8LVvdw</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%8F%90%E5%8F%96%E7%A0%81%EF%BC%9A8srt"><span class="toc-text">提取码：8srt</span></a></li></ol>
+        
     
 <style>
     .left-col .switch-btn,
@@ -616,7 +614,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="下载链接：https-pan-baidu-com-s-15LeRw9e2S4mPvZ8h8LVvdw"><a href="#下载链接：https-pan-baidu-com-s-15LeRw9e2S4mPvZ8h8LVvdw" class="headerlink" title="下载链接：https://pan.baidu.com/s/15LeRw9e2S4mPvZ8h8LVvdw"></a>下载链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/15LeRw9e2S4mPvZ8h8LVvdw">https://pan.baidu.com/s/15LeRw9e2S4mPvZ8h8LVvdw</a></h5><h5 id="提取码：8srt"><a href="#提取码：8srt" class="headerlink" title="提取码：8srt"></a>提取码：8srt</h5>
+        <p><strong>git命令从远程仓库复制代码到本地</strong></p>
+<pre><code>git clone -b &lt;branch&gt; &lt;url&gt; 
+&lt;branch&gt; ：连&lt;&gt;一起将&lt;branch&gt;替换为你要拉取的远程分支名称
+&lt;url&gt;：连&lt;&gt;一起将&lt;url&gt;替换为你要拉取的远程仓库代码地址
+</code></pre>
+<p><strong>如果你clone下来一个别人的仓库，在此基础上完成你的代码，推送到自己的仓库可能遇到如下问题：<br>error: remote origin already exists.表示远程仓库已存在。</strong></p>
+<pre><code>1、先输入git remote rm origin 删除关联的origin的远程库
+2、关联自己的仓库 git remote add origin https://gitee.com/xxxxxx.git
+3、最后git push origin master，这样就推送到自己的仓库了。
+</code></pre>
+
       
        <hr><span style="font-style: italic;color: gray;"> sunrtnj@163.com </span>
     </div>
