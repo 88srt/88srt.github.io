@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>我的主页 | 88srt</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="我的主页 | 88srt">
+  <title>siemens触摸屏连接冗余CPU | 88srt</title>
+  <meta name="keywords" content=" HMI ">
+  <meta name="description" content="siemens触摸屏连接冗余CPU | 88srt">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="赠人玫瑰，手留余香。">
 <meta property="og:type" content="website">
@@ -571,24 +571,41 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+        <article id="post-siemens触摸屏连接冗余CPU" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">我的主页</h1>
+        <h1 class="article-title">siemens触摸屏连接冗余CPU</h1>
     
     <div class="article-meta">
         
         
+        <span class="author"><a>srt</a></span>
         
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="文档">文档</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color4">HMI</a>
+            
+        </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-05-12 20:38:51'>2022-10-25 14:00</time>
+            发布时间 : <time class="date" title='最后更新: 2023-05-28 20:33:34'>2023-05-28 20:16</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:8</span>
+        <span>字数:911</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -607,7 +624,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B5%A0%E4%BA%BA%E7%8E%AB%E7%91%B0%EF%BC%8C%E6%89%8B%E7%95%99%E4%BD%99%E9%A6%99%E3%80%82"><span class="toc-text">赠人玫瑰，手留余香。</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E5%8D%9A%E5%9B%BE%E6%96%B0%E5%BB%BA%E8%BF%9E%E6%8E%A5%EF%BC%9A"><span class="toc-text">1、博图新建连接：</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#PLC-Changer-12"><span class="toc-text">PLC_Changer_12</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81%E5%8D%9A%E5%9B%BE%E6%96%B0%E5%BB%BAVB%E8%84%9A%E6%9C%AC%EF%BC%9A"><span class="toc-text">2、博图新建VB脚本：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%E3%80%81%E5%BB%BA%E7%AB%8B%E8%84%9A%E6%9C%AC%E8%A7%A6%E5%8F%91%EF%BC%9A"><span class="toc-text">3、建立脚本触发：</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -623,7 +640,189 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="赠人玫瑰，手留余香。"><a href="#赠人玫瑰，手留余香。" class="headerlink" title="赠人玫瑰，手留余香。"></a><font color="#666600">赠人玫瑰，手留余香。</font><br></h3>
+        <h4 id="1、博图新建连接："><a href="#1、博图新建连接：" class="headerlink" title="1、博图新建连接："></a>1、博图新建连接：</h4><p><strong>PLC_!</strong>  </p>
+<p><strong>PLC_2</strong></p>
+<h6 id="PLC-Changer-12"><a href="#PLC-Changer-12" class="headerlink" title="PLC_Changer_12"></a><strong>PLC_Changer_12</strong></h6><h4 id="2、博图新建VB脚本："><a href="#2、博图新建VB脚本：" class="headerlink" title="2、博图新建VB脚本："></a>2、博图新建VB脚本：</h4><p><img src="/2023/05/28/siemens%E8%A7%A6%E6%91%B8%E5%B1%8F%E8%BF%9E%E6%8E%A5%E5%86%97%E4%BD%99CPU/1.png"></p>
+<p>connection_PLC1</p>
+<pre><code class="vb">Sub connection_PLC1()
+&#39;提示：
+&#39; 1. 使用 &lt;CTRL+SPACE&gt; 或 &lt;CTRL+I&gt; 快捷键打开含所有对象和函数的列表
+&#39; 2. 使用 HMI Runtime 对象写入代码。
+&#39;  示例：HmiRuntime.Screens(&quot;Screen_1&quot;)。
+&#39; 3. 使用 &lt;CTRL+J&gt; 快捷键创建对象引用。
+&#39;从此位置起写入代码：
+
+
+&#39;***************************
+&#39;****    Initialization    ****
+&#39;***************************
+&#39;During initialization the default connection is 
+&#39;saved into the memory of connections (connected_to). 
+
+If SmartTags(&quot;connected_to&quot;) = &quot;&quot; Then
+    SmartTags(&quot;connected_to&quot;) = &quot;PLC_1&quot;
+End If
+
+&#39;*******************
+&#39;****   Reset   ****
+&#39;*******************
+&#39;Reset of connection brake detection for PLC_1
+
+SmartTags(&quot;con_state_PLC1&quot;) = 1
+
+&#39;*****************************
+&#39;****   Fault detection   ****
+&#39;*****************************
+&#39;Incrementation of the brake detection value for the connection to PLC_2
+
+If SmartTags(&quot;con_state_PLC2&quot;) &lt;= 10 Then
+    SmartTags(&quot;con_state_PLC2&quot;) = SmartTags(&quot;con_state_PLC2&quot;) +1
+End If
+
+&#39;**************************
+&#39;****   Switch over    ****
+&#39;**************************
+&#39;is the limit of the status tag for the connection to PLC_2 reached, the connection to PLC_1 will
+&#39;switch the data connection.
+&#39;Function Usage: ChangeConnection Connection, Address, Slot, Rack
+
+If SmartTags(&quot;con_state_PLC2&quot;) &gt;= 11 Then
+    If SmartTags(&quot;connected_to&quot;) = &quot;PLC_2&quot; Then
+        ChangeConnection &quot;PLC_Changer_12&quot;, &quot;172.19.43.2&quot;, 2, 0
+        SmartTags(&quot;con_state_PLC2&quot;) = 100
+        SmartTags(&quot;connected_to&quot;) = &quot;PLC_1&quot;
+    ElseIf SmartTags(&quot;connected_to&quot;) = &quot;PLC_1&quot; Then
+        SmartTags(&quot;con_state_PLC2&quot;) = 100
+    End If
+End If
+
+&#39;***************************
+&#39;****   Reintegration   ****
+&#39;***************************
+&#39;after a full connection brake the first repaired connection will activate the data connection
+
+If SmartTags(&quot;connected_to&quot;) = &quot;connection lost&quot; Then
+    ChangeConnection &quot;PLC_Changer_12&quot;, &quot;172.19.43.2&quot;, 2, 0
+    SmartTags(&quot;con_state_PLC2&quot;) = 100
+    SmartTags(&quot;connected_to&quot;) = &quot;PLC_1&quot;
+End If
+End Sub
+</code></pre>
+<p>connection_PLC2</p>
+<pre><code class="vbscript">Sub connection_PLC2()
+&#39;提示：
+&#39; 1. 使用 &lt;CTRL+SPACE&gt; 或 &lt;CTRL+I&gt; 快捷键打开含所有对象和函数的列表
+&#39; 2. 使用 HMI Runtime 对象写入代码。
+&#39;  示例：HmiRuntime.Screens(&quot;Screen_1&quot;)。
+&#39; 3. 使用 &lt;CTRL+J&gt; 快捷键创建对象引用。
+&#39;从此位置起写入代码：
+
+&#39;***************************
+&#39;****    Initialization    ****
+&#39;***************************
+&#39;During initialization the default connection is 
+&#39;saved into the memory of connections (connected_to). 
+
+If SmartTags(&quot;connected_to&quot;) = &quot;&quot; Then
+    SmartTags(&quot;connected_to&quot;) = &quot;PLC_1&quot;
+End If
+
+
+&#39;*******************
+&#39;****   Reset   ****
+&#39;*******************
+&#39;Reset of connection brake detection for PLC_2
+
+SmartTags(&quot;con_state_PLC2&quot;) = 1
+
+
+&#39;*****************************
+&#39;****   Fault detection   ****
+&#39;*****************************
+&#39;Incrementation of the brake detection value for the connection to PLC_1
+
+If SmartTags(&quot;con_state_PLC1&quot;) &lt;= 10 Then
+    SmartTags(&quot;con_state_PLC1&quot;) = SmartTags(&quot;con_state_PLC1&quot;) +1
+End If
+
+
+&#39;**************************
+&#39;****   switch over    ****
+&#39;**************************
+&#39;Is the limit of the status tag for the connection to PLC_1 reached, 
+&#39;the connection to PLC2 will switch the data connection.
+&#39;Function Usage: ChangeConnection Connection, Address, Slot, Rack
+
+If SmartTags(&quot;con_state_PLC1&quot;) &gt;= 11 Then
+    If SmartTags(&quot;connected_to&quot;) = &quot;PLC_1&quot; Then
+        ChangeConnection &quot;PLC_Changer_12&quot;, &quot;172.19.43.1&quot;, 2, 1
+        SmartTags(&quot;con_state_PLC1&quot;) = 100
+        SmartTags(&quot;connected_to&quot;) = &quot;PLC_2&quot;
+    ElseIf SmartTags(&quot;connected_to&quot;) = &quot;PLC_2&quot; Then
+        SmartTags(&quot;con_state_PLC1&quot;) = 100
+    End If
+End If
+
+
+&#39;***************************
+&#39;****   reintegration   ****
+&#39;***************************
+&#39;After a full connection brake the first repaired connection will activate the data connection.
+
+If SmartTags(&quot;connected_to&quot;) = &quot;connection lost&quot; Then
+    ChangeConnection &quot;PLC_Changer_12&quot;, &quot;172.19.43.1&quot;, 2, 1
+    SmartTags(&quot;con_state_PLC1&quot;) = 100
+    SmartTags(&quot;connected_to&quot;) = &quot;PLC_2&quot;
+End If
+
+End Sub
+</code></pre>
+<p>connection_lost()</p>
+<pre><code class="vbscript">Sub connection_lost()
+&#39;提示：
+&#39; 1. 使用 &lt;CTRL+SPACE&gt; 或 &lt;CTRL+I&gt; 快捷键打开含所有对象和函数的列表
+&#39; 2. 使用 HMI Runtime 对象写入代码。
+&#39;  示例：HmiRuntime.Screens(&quot;Screen_1&quot;)。
+&#39; 3. 使用 &lt;CTRL+J&gt; 快捷键创建对象引用。
+&#39;从此位置起写入代码：
+
+&#39;***************************
+&#39;****   Deactivation    ****
+&#39;***************************
+&#39;If the connections are not able to reset there status tag back to &quot;1&quot; they will be marked with 100 (disabled).
+
+If SmartTags(&quot;con_state_PLC1&quot;) &gt;= 5 Then
+    SmartTags(&quot;con_state_PLC1&quot;) = 100
+End If
+
+If SmartTags(&quot;con_state_PLC2&quot;) &gt;= 5 Then
+    SmartTags(&quot;con_state_PLC2&quot;) = 100
+End If
+
+&#39;If both connections are marked with &quot;disabled&quot;, the connection memory will be set to &quot;connection_lost&quot; 
+
+If SmartTags(&quot;con_state_PLC1&quot;) = 100 And SmartTags(&quot;con_state_PLC2&quot;) = 100 Then
+    SmartTags(&quot;connected_to&quot;) = &quot;connection lost&quot;
+End If
+
+&#39;********************************
+&#39;****   Setting fault flag   ****
+&#39;********************************
+&#39;In each cycle of 1 minute the status tags of the connections will be set to 5.
+
+If SmartTags(&quot;con_state_PLC1&quot;) &lt; 5 Then
+    SmartTags(&quot;con_state_PLC1&quot;) = 5
+End If
+
+If SmartTags(&quot;con_state_PLC2&quot;) &lt; 5 Then
+    SmartTags(&quot;con_state_PLC2&quot;) = 5
+End If
+
+End Sub
+</code></pre>
+<h4 id="3、建立脚本触发："><a href="#3、建立脚本触发：" class="headerlink" title="3、建立脚本触发："></a>3、建立脚本触发：</h4><p><img src="/2023/05/28/siemens%E8%A7%A6%E6%91%B8%E5%B1%8F%E8%BF%9E%E6%8E%A5%E5%86%97%E4%BD%99CPU/2.png"></p>
+<p><img src="/2023/05/28/siemens%E8%A7%A6%E6%91%B8%E5%B1%8F%E8%BF%9E%E6%8E%A5%E5%86%97%E4%BD%99CPU/3.png"></p>
+
       
        <hr><span style="font-style: italic;color: gray;"> sunrtnj@163.com </span>
     </div>
