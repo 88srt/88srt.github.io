@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>保存EXCEL方法 | 88srt</title>
-  <meta name="keywords" content=" excel ">
-  <meta name="description" content="保存EXCEL方法 | 88srt">
+  <title>TIA V19 | 88srt</title>
+  <meta name="keywords" content=" TIA ">
+  <meta name="description" content="TIA V19 | 88srt">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="赠人玫瑰，手留余香。">
 <meta property="og:type" content="website">
@@ -607,9 +607,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-保存EXCEL方法" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-博图V19" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">保存EXCEL方法</h1>
+        <h1 class="article-title">TIA V19</h1>
     
     <div class="article-meta">
         
@@ -621,7 +621,9 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="文档">文档</a>
+            <a  data-rel="下载">下载</a> > 
+            
+            <a  data-rel="下载&lt;---&gt;TIA">TIA</a>
             
         </span>
         
@@ -629,19 +631,19 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color1">excel</a>
+            <a class="color4">TIA</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-05-18 00:05:40'>2023-05-18 00:01</time>
+            发布时间 : <time class="date" title='最后更新: 2023-12-03 22:52:03'>2023-12-03 22:45</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:628</span>
+        <span>字数:14</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -676,112 +678,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <pre><code class="vbscript">Dim objExcelApp,objExcelbook,objExcelSheet
-Dim fn,count,sheetname,t
-Dim n,y,r
-Dim a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11
-
-If HMIRuntime.Tags(&quot;BC_CZ8_Start&quot;).Read = 1 Then HMIRuntime.Tags(&quot;CZG8.TIMESTART&quot;).Write Now End If
-HMIRuntime.Tags(&quot;CZG8.CZG&quot;).Write &quot;称重罐8&quot;
-HMIRuntime.Tags(&quot;CZG8.PF&quot;).Write HMIRuntime.Tags(&quot;PH_PH_CZ8&quot;).Read
-If HMIRuntime.Tags(&quot;BC_CZ8_Start&quot;).Read = 0 And HMIRuntime.Tags(&quot;BC_CZ8_Aborted&quot;).Read = 0 Then
-HMIRuntime.Tags(&quot;CZG8.TIMESTOP&quot;).Write Now
-HMIRuntime.Tags(&quot;CZG8.ZL&quot;).Write HMIRuntime.Tags(&quot;WT04W201DB_OUT&quot;).Read
-HMIRuntime.Tags(&quot;CZG8.FL&quot;).Write HMIRuntime.Tags(&quot;JY_FULIAO_CZ8_WT_SJ&quot;).Read
-If HMIRuntime.Tags(&quot;JY_GTJ_CZ8_SP_WT&quot;).Read &gt; 0 Then
-HMIRuntime.Tags(&quot;CZG8.GTJ&quot;).Write HMIRuntime.Tags(&quot;JY_GTJ_CZ8_WT_SJ&quot;).Read
-Else
-HMIRuntime.Tags(&quot;CZG8.GTJ&quot;).Write 0
-End If
-If HMIRuntime.Tags(&quot;JY_TS_CZ8_SP_WT&quot;).Read &gt; 0 Then
-HMIRuntime.Tags(&quot;CZG8.TS&quot;).Write HMIRuntime.Tags(&quot;JY_TS_CZ8_WT_SJ&quot;).Read
-Else
-HMIRuntime.Tags(&quot;CZG8.TS&quot;).Write 0
-End If
-If HMIRuntime.Tags(&quot;JY_MYT_CZ8_SP_WT&quot;).Read &gt; 0 Then
-HMIRuntime.Tags(&quot;CZG8.MYT&quot;).Write HMIRuntime.Tags(&quot;JY_MYT_CZ8_WT_SJ&quot;).Read
-Else
-HMIRuntime.Tags(&quot;CZG8.MYT&quot;).Write 0
-End If
-If HMIRuntime.Tags(&quot;JY_RO_CZ8_SP_WT&quot;).Read &gt; 0 Then
-HMIRuntime.Tags(&quot;CZG8.RO&quot;).Write HMIRuntime.Tags(&quot;JY_RO_CZ8_WT_SJ&quot;).Read
-Else
-HMIRuntime.Tags(&quot;CZG8.RO&quot;).Write 0
-End If
-If HMIRuntime.Tags(&quot;JY_GUOLI_CZ8_SP_WT&quot;).Read &gt; 0 Then
-HMIRuntime.Tags(&quot;CZG8.GL&quot;).Write HMIRuntime.Tags(&quot;JY_GUOLI_CZ8_WT_SJ&quot;).Read
-Else
-HMIRuntime.Tags(&quot;CZG8.GL&quot;).Write 0
-End If
-
-End If 
-
-If HMIRuntime.Tags(&quot;BC_CZ8_Start&quot;).Read = 0 And HMIRuntime.Tags(&quot;BC_CZ8_Aborted&quot;).Read = 0 Then
-
-n=CStr(Year(Now))
-If Month(Now)&lt;10 Then
-y=&quot;0&quot;&amp;CStr(Month(Now))
-Else
-y=CStr(Month(Now))
-End If
-If Day(Now)&lt;10 Then
-r=&quot;0&quot;&amp;CStr(Day(Now))
-Else
-r=CStr(Day(Now))
-End If
-fn=n&amp;y&amp;r
-
-Set a1=HMIRuntime.Tags(&quot;CZG8.CZG&quot;)
-Set a2=HMIRuntime.Tags(&quot;CZG8.PF&quot;)
-Set a3=HMIRuntime.Tags(&quot;CZG8.TIMESTART&quot;)
-Set a4=HMIRuntime.Tags(&quot;CZG8.TIMESTOP&quot;)
-Set a5=HMIRuntime.Tags(&quot;CZG8.ZL&quot;)
-Set a6=HMIRuntime.Tags(&quot;CZG8.GL&quot;)
-Set a7=HMIRuntime.Tags(&quot;CZG8.GTJ&quot;)
-Set a8=HMIRuntime.Tags(&quot;CZG8.MYT&quot;)
-Set a9=HMIRuntime.Tags(&quot;CZG8.TS&quot;)
-Set a10=HMIRuntime.Tags(&quot;CZG8.RO&quot;)
-Set a11=HMIRuntime.Tags(&quot;CZG8.FL&quot;)
-
-count=HMIRuntime.Tags(&quot;BBDB_COUNT_CZ&quot;).Read
-t=count+1
-
-sheetname=&quot;Sheet1&quot;
-
-Set objExcelApp=CreateObject(&quot;Excel.Application&quot;)
-    objExcelApp.visible=FalSE
-    objExcelApp.workbooks.open &quot;E:\BB\CZ.xlsx&quot;
-    objExcelApp.worksheets(sheetname).activate
-
-    objExcelApp.worksheets(sheetname).cells(t,1).value=fn
-    a1.Read
-    objExcelApp.worksheets(sheetname).cells(t,2).value=a1.Value
-    a2.Read
-    objExcelApp.worksheets(sheetname).cells(t,3).value=a2.Value
-    a3.Read
-    objExcelApp.worksheets(sheetname).cells(t,4).value=a3.Value
-    a4.Read
-    objExcelApp.worksheets(sheetname).cells(t,5).value=a4.Value
-    a5.Read
-    objExcelApp.worksheets(sheetname).cells(t,6).value=a5.Value
-    a6.Read
-    objExcelApp.worksheets(sheetname).cells(t,7).value=a6.Value
-    a7.Read
-    objExcelApp.worksheets(sheetname).cells(t,8).value=a7.Value
-    a8.Read
-    objExcelApp.worksheets(sheetname).cells(t,9).value=a8.Value
-    a9.Read
-    objExcelApp.worksheets(sheetname).cells(t,10).value=a9.Value
-    a10.Read
-    objExcelApp.worksheets(sheetname).cells(t,11).value=a10.Value
-    a11.Read
-    objExcelApp.worksheets(sheetname).cells(t,12).value=a11.Value
-
-objExcelApp.ActiveWorkbook.Save
-objExcelApp.ActiveWorkbook.close
-objExcelApp.ActiveWorkbook.Quit
-Set objExcelApp=Nothing
-</code></pre>
+        <p>下载链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1jtS8LRvX1ko9egy_4XdkLw">https://pan.baidu.com/s/1jtS8LRvX1ko9egy_4XdkLw</a><br>提取码：8srt </p>
 
       
        <hr><span style="font-style: italic;color: gray;"> sunrtnj@163.com </span>
