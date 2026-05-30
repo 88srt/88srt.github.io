@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>88srt</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="88srt">
+  <title>SQL学习笔记3 | 88srt</title>
+  <meta name="keywords" content=" SQL ">
+  <meta name="description" content="SQL学习笔记3 | 88srt">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="赠人玫瑰，手留余香。">
 <meta property="og:type" content="website">
@@ -56,7 +56,7 @@
 
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/"
    class="avatar_target">
@@ -650,12 +650,60 @@
         </div>
     </div>
 </aside>
-<div id="post" class="index">
+<div id="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-SQL学习笔记3" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#SunRT"><span class="toc-text">SunRT </span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E88srt"><span class="toc-text">关于88srt</span></a></li></ol></li></ol>
+        <h1 class="article-title">SQL学习笔记3</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="SQL">SQL</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color4">SQL</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2026-05-30 10:33:40'>2026-05-30 10:27</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:1.6k</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%E8%BF%87%E6%BB%A4-WHERE"><span class="toc-text">条件过滤 WHERE</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%92%E5%BA%8F%E4%B8%8E%E5%88%86%E9%A1%B5"><span class="toc-text">排序与分页</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CASE-WHEN-%E6%9D%A1%E4%BB%B6%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-text">CASE WHEN 条件表达式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JOIN-%E8%BF%9E%E6%8E%A5%E6%9F%A5%E8%AF%A2"><span class="toc-text">JOIN 连接查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B%E8%A1%A8"><span class="toc-text">示例表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#INNER-JOIN%EF%BC%88%E5%86%85%E8%BF%9E%E6%8E%A5%EF%BC%89"><span class="toc-text">INNER JOIN（内连接）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#LEFT-JOIN%EF%BC%88%E5%B7%A6%E8%BF%9E%E6%8E%A5%EF%BC%89"><span class="toc-text">LEFT JOIN（左连接）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E8%A1%A8%E8%BF%9E%E6%8E%A5"><span class="toc-text">多表连接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%81%9A%E5%90%88%E5%87%BD%E6%95%B0%E4%B8%8E%E5%88%86%E7%BB%84"><span class="toc-text">聚合函数与分组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E8%81%9A%E5%90%88%E5%87%BD%E6%95%B0"><span class="toc-text">常用聚合函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#GROUP-BY-%E5%88%86%E7%BB%84"><span class="toc-text">GROUP BY 分组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HAVING-%E8%BF%87%E6%BB%A4%E5%88%86%E7%BB%84"><span class="toc-text">HAVING 过滤分组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%90%E6%9F%A5%E8%AF%A2"><span class="toc-text">子查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%87%E9%87%8F%E5%AD%90%E6%9F%A5%E8%AF%A2%EF%BC%88%E8%BF%94%E5%9B%9E%E5%8D%95%E4%B8%AA%E5%80%BC%EF%BC%89"><span class="toc-text">标量子查询（返回单个值）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%8C%E5%AD%90%E6%9F%A5%E8%AF%A2-IN"><span class="toc-text">行子查询 + IN</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#EXISTS-%E5%AD%90%E6%9F%A5%E8%AF%A2"><span class="toc-text">EXISTS 子查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#FROM-%E5%AD%90%E5%8F%A5%E4%B8%AD%E7%9A%84%E5%AD%90%E6%9F%A5%E8%AF%A2%EF%BC%88%E6%B4%BE%E7%94%9F%E8%A1%A8%EF%BC%89"><span class="toc-text">FROM 子句中的子查询（派生表）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%AC%E7%94%A8%E8%A1%A8%E8%A1%A8%E8%BE%BE%E5%BC%8F-CTE%EF%BC%88%E6%9B%B4%E6%B8%85%E6%99%B0%E7%9A%84%E5%AD%90%E6%9F%A5%E8%AF%A2%EF%BC%89"><span class="toc-text">公用表表达式 CTE（更清晰的子查询）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%86%E5%9B%BE"><span class="toc-text">视图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B4%A2%E5%BC%95%E4%B8%8E%E6%80%A7%E8%83%BD"><span class="toc-text">索引与性能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E7%B4%A2%E5%BC%95"><span class="toc-text">创建索引</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E5%8A%A0%E7%B4%A2%E5%BC%95%EF%BC%9F"><span class="toc-text">什么时候加索引？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%A8-EXPLAIN-%E5%88%86%E6%9E%90%E6%9F%A5%E8%AF%A2"><span class="toc-text">用 EXPLAIN 分析查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8B%E5%8A%A1"><span class="toc-text">事务</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ACID-%E7%89%B9%E6%80%A7"><span class="toc-text">ACID 特性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95"><span class="toc-text">基本用法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%99%B7%E9%98%B1%E4%B8%8E%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5"><span class="toc-text">常见陷阱与最佳实践</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%99%B7%E9%98%B1-%F0%9F%95%B3%EF%B8%8F"><span class="toc-text">陷阱 🕳️</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5-%E2%9C%85"><span class="toc-text">最佳实践 ✅</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-text">结语</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -668,15 +716,352 @@
     }
 </style>
 </div>
-            <h1 id="SunRT"><a href="#SunRT" class="headerlink" title="SunRT "></a><center>SunRT </center></h1><h2 id="关于88srt"><a href="#关于88srt" class="headerlink" title="关于88srt"></a>关于88srt</h2><p><strong>88srt</strong> 是自动化方向分享站（个人）。</p>
-<p>到目前为止已经写了<code class="article_number"></code>篇文章， 共<code class="site_word_count"></code>字。</p>
-<!--本站访问人数：<code class="site_uv"></code>人次,访问量：<code class="site_pv"></code>次-->
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="条件过滤-WHERE"><a href="#条件过滤-WHERE" class="headerlink" title="条件过滤 WHERE"></a>条件过滤 WHERE</h4><pre><code class="sql">SELECT * FROM users
+WHERE age &gt; 18
+  AND email LIKE &#39;&#39;%@example.com&#39;&#39;
+  AND id IN (1, 2, 3);
+</code></pre>
+<p><strong>常用运算符：</strong></p>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>=</code>, <code>&lt;&gt;</code>, <code>!=</code></td>
+<td>等于、不等于</td>
+<td><code>status &lt;&gt; &#39;&#39;deleted&#39;&#39;</code></td>
+</tr>
+<tr>
+<td><code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code></td>
+<td>比较</td>
+<td><code>age &gt;= 18</code></td>
+</tr>
+<tr>
+<td><code>AND</code>, <code>OR</code>, <code>NOT</code></td>
+<td>逻辑运算</td>
+<td><code>a &gt; 1 AND b &lt; 10</code></td>
+</tr>
+<tr>
+<td><code>BETWEEN x AND y</code></td>
+<td>范围（含边界）</td>
+<td><code>age BETWEEN 18 AND 30</code></td>
+</tr>
+<tr>
+<td><code>IN (...)</code></td>
+<td>在集合中</td>
+<td><code>id IN (1, 3, 5)</code></td>
+</tr>
+<tr>
+<td><code>LIKE</code></td>
+<td>模式匹配</td>
+<td><code>name LIKE &#39;&#39;张%&#39;&#39;</code></td>
+</tr>
+<tr>
+<td><code>IS NULL</code> / <code>IS NOT NULL</code></td>
+<td>空值判断</td>
+<td><code>email IS NOT NULL</code></td>
+</tr>
+</tbody></table>
+<h4 id="排序与分页"><a href="#排序与分页" class="headerlink" title="排序与分页"></a>排序与分页</h4><pre><code class="sql">-- 排序
+SELECT * FROM users ORDER BY age DESC, username ASC;
+
+-- 分页（LIMIT + OFFSET）
+SELECT * FROM users ORDER BY id LIMIT 10 OFFSET 20;
+-- 等价写法（MySQL/PostgreSQL）
+SELECT * FROM users ORDER BY id LIMIT 20, 10;
+</code></pre>
+<h4 id="CASE-WHEN-条件表达式"><a href="#CASE-WHEN-条件表达式" class="headerlink" title="CASE WHEN 条件表达式"></a>CASE WHEN 条件表达式</h4><pre><code class="sql">SELECT
+    username,
+    age,
+    CASE
+        WHEN age &lt; 18 THEN &#39;&#39;未成年&#39;&#39;
+        WHEN age BETWEEN 18 AND 60 THEN &#39;&#39;成年人&#39;&#39;
+        ELSE &#39;&#39;老年人&#39;&#39;
+    END AS age_group
+FROM users;
+</code></pre>
+<hr>
+<h4 id="JOIN-连接查询"><a href="#JOIN-连接查询" class="headerlink" title="JOIN 连接查询"></a>JOIN 连接查询</h4><p>这是我刚学 SQL 时觉得最绕的一部分，画个图就清楚了：</p>
+<pre><code>INNER JOIN:       LEFT JOIN:        RIGHT JOIN:       FULL JOIN:
+┌───┐ ┌───┐      ┌───┐              ┌───┐             ┌───┐ ┌───┐
+│ A∩B │           │ A │              │ B │              │ A∪B │
+└───┘ └───┘      └───┘              └───┘             └───┘ └───┘
+   只返回      A 全保留，B 补充     B 全保留，A 补充    全部保留
+   匹配行      无匹配补 NULL        无匹配补 NULL      无匹配补 NULL
+</code></pre>
+<h4 id="示例表"><a href="#示例表" class="headerlink" title="示例表"></a>示例表</h4><pre><code class="sql">-- 学生表
+CREATE TABLE students (
+    id   INT PRIMARY KEY,
+    name VARCHAR(20)
+);
+INSERT INTO students VALUES (1, &#39;&#39;张三&#39;&#39;), (2, &#39;&#39;李四&#39;&#39;), (3, &#39;&#39;王五&#39;&#39;);
+
+-- 成绩表
+CREATE TABLE scores (
+    student_id INT,
+    subject    VARCHAR(20),
+    score      INT
+);
+INSERT INTO scores VALUES
+    (1, &#39;&#39;语文&#39;&#39;, 85), (1, &#39;&#39;数学&#39;&#39;, 90),
+    (2, &#39;&#39;语文&#39;&#39;, 78), (3, &#39;&#39;英语&#39;&#39;, 88);
+</code></pre>
+<h4 id="INNER-JOIN（内连接）"><a href="#INNER-JOIN（内连接）" class="headerlink" title="INNER JOIN（内连接）"></a>INNER JOIN（内连接）</h4><p>只返回两表都有匹配的行。</p>
+<pre><code class="sql">SELECT s.name, sc.subject, sc.score
+FROM students s
+INNER JOIN scores sc ON s.id = sc.student_id;
+
+-- 结果：
+-- 张三 | 语文 | 85
+-- 张三 | 数学 | 90
+-- 李四 | 语文 | 78
+-- 王五 | 英语 | 88
+</code></pre>
+<h4 id="LEFT-JOIN（左连接）"><a href="#LEFT-JOIN（左连接）" class="headerlink" title="LEFT JOIN（左连接）"></a>LEFT JOIN（左连接）</h4><p>左表全保留，右表无匹配时补 <code>NULL</code>。</p>
+<pre><code class="sql">SELECT s.name, sc.subject, sc.score
+FROM students s
+LEFT JOIN scores sc ON s.id = sc.student_id;
+
+-- 结果：张三、李四、王五 都在
+-- 注意：李四只有一条成绩，王五只有一条
+</code></pre>
+<h4 id="多表连接"><a href="#多表连接" class="headerlink" title="多表连接"></a>多表连接</h4><pre><code class="sql">SELECT
+    s.name,
+    sc.subject,
+    sc.score,
+    g.grade_level
+FROM students s
+INNER JOIN scores sc ON s.id = sc.student_id
+LEFT JOIN grade_standard g ON sc.score BETWEEN g.min_score AND g.max_score;
+</code></pre>
+<hr>
+<h4 id="聚合函数与分组"><a href="#聚合函数与分组" class="headerlink" title="聚合函数与分组"></a>聚合函数与分组</h4><h4 id="常用聚合函数"><a href="#常用聚合函数" class="headerlink" title="常用聚合函数"></a>常用聚合函数</h4><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>COUNT()</code></td>
+<td>计数</td>
+<td><code>COUNT(*)</code>, <code>COUNT(DISTINCT col)</code></td>
+</tr>
+<tr>
+<td><code>SUM()</code></td>
+<td>求和</td>
+<td><code>SUM(score)</code></td>
+</tr>
+<tr>
+<td><code>AVG()</code></td>
+<td>平均值</td>
+<td><code>AVG(score)</code></td>
+</tr>
+<tr>
+<td><code>MAX()</code> / <code>MIN()</code></td>
+<td>最大/最小</td>
+<td><code>MAX(score)</code></td>
+</tr>
+</tbody></table>
+<h4 id="GROUP-BY-分组"><a href="#GROUP-BY-分组" class="headerlink" title="GROUP BY 分组"></a>GROUP BY 分组</h4><pre><code class="sql">-- 每个学生的平均分
+SELECT
+    student_id,
+    AVG(score) AS avg_score,
+    COUNT(*)   AS subject_count
+FROM scores
+GROUP BY student_id;
+</code></pre>
+<h4 id="HAVING-过滤分组"><a href="#HAVING-过滤分组" class="headerlink" title="HAVING 过滤分组"></a>HAVING 过滤分组</h4><p><code>WHERE</code> 过滤行，<code>HAVING</code> 过滤分组结果。</p>
+<pre><code class="sql">-- 找出平均分 &gt;= 80 的学生
+SELECT
+    student_id,
+    AVG(score) AS avg_score
+FROM scores
+GROUP BY student_id
+HAVING AVG(score) &gt;= 80;
+</code></pre>
+<blockquote>
+<p>💡 <strong>执行顺序口诀</strong>：<code>FROM → WHERE → GROUP BY → HAVING → SELECT → ORDER BY → LIMIT</code></p>
+</blockquote>
+<hr>
+<h4 id="子查询"><a href="#子查询" class="headerlink" title="子查询"></a>子查询</h4><h4 id="标量子查询（返回单个值）"><a href="#标量子查询（返回单个值）" class="headerlink" title="标量子查询（返回单个值）"></a>标量子查询（返回单个值）</h4><pre><code class="sql">-- 查询分数高于平均分的学生成绩
+SELECT * FROM scores
+WHERE score &gt; (SELECT AVG(score) FROM scores);
+</code></pre>
+<h4 id="行子查询-IN"><a href="#行子查询-IN" class="headerlink" title="行子查询 + IN"></a>行子查询 + IN</h4><pre><code class="sql">-- 查询有成绩记录的学生
+SELECT * FROM students
+WHERE id IN (SELECT DISTINCT student_id FROM scores);
+</code></pre>
+<h4 id="EXISTS-子查询"><a href="#EXISTS-子查询" class="headerlink" title="EXISTS 子查询"></a>EXISTS 子查询</h4><pre><code class="sql">-- 查询至少有一门成绩的学生（比 IN 效率更高）
+SELECT * FROM students s
+WHERE EXISTS (
+    SELECT 1 FROM scores sc WHERE sc.student_id = s.id
+);
+</code></pre>
+<h4 id="FROM-子句中的子查询（派生表）"><a href="#FROM-子句中的子查询（派生表）" class="headerlink" title="FROM 子句中的子查询（派生表）"></a>FROM 子句中的子查询（派生表）</h4><pre><code class="sql">SELECT avg_score_table.student_id, avg_score_table.avg_s
+FROM (
+    SELECT student_id, AVG(score) AS avg_s
+    FROM scores
+    GROUP BY student_id
+) AS avg_score_table
+WHERE avg_score_table.avg_s &gt; 80;
+</code></pre>
+<h4 id="公用表表达式-CTE（更清晰的子查询）"><a href="#公用表表达式-CTE（更清晰的子查询）" class="headerlink" title="公用表表达式 CTE（更清晰的子查询）"></a>公用表表达式 CTE（更清晰的子查询）</h4><pre><code class="sql">WITH avg_scores AS (
+    SELECT student_id, AVG(score) AS avg_s
+    FROM scores
+    GROUP BY student_id
+)
+SELECT s.name, a.avg_s
+FROM students s
+JOIN avg_scores a ON s.id = a.student_id
+WHERE a.avg_s &gt; 80;
+</code></pre>
+<hr>
+<h4 id="视图"><a href="#视图" class="headerlink" title="视图"></a>视图</h4><p>视图是对查询的封装，像一个”虚拟表”。简化复杂查询，不存储数据。</p>
+<pre><code class="sql">-- 创建视图
+CREATE VIEW student_summary AS
+SELECT
+    s.id,
+    s.name,
+    COUNT(sc.subject) AS subject_count,
+    AVG(sc.score)     AS avg_score
+FROM students s
+LEFT JOIN scores sc ON s.id = sc.student_id
+GROUP BY s.id, s.name;
+
+-- 像查表一样查视图
+SELECT * FROM student_summary WHERE avg_score &gt; 80;
+
+-- 删除视图
+DROP VIEW IF EXISTS student_summary;
+</code></pre>
+<hr>
+<h4 id="索引与性能"><a href="#索引与性能" class="headerlink" title="索引与性能"></a>索引与性能</h4><p>索引是 SQL 性能调优最重要的手段，相当于书的目录。</p>
+<h4 id="创建索引"><a href="#创建索引" class="headerlink" title="创建索引"></a>创建索引</h4><pre><code class="sql">-- 单列索引
+CREATE INDEX idx_users_email ON users(email);
+
+-- 唯一索引（同时保证唯一性）
+CREATE UNIQUE INDEX idx_users_username ON users(username);
+
+-- 复合索引（多列联合，注意&quot;最左前缀&quot;原则）
+CREATE INDEX idx_scores_student_subject ON scores(student_id, subject);
+</code></pre>
+<h4 id="什么时候加索引？"><a href="#什么时候加索引？" class="headerlink" title="什么时候加索引？"></a>什么时候加索引？</h4><ul>
+<li>✅ <code>WHERE</code> 条件中频繁过滤的列</li>
+<li>✅ <code>JOIN</code> 的关联列</li>
+<li>✅ <code>ORDER BY</code> / <code>GROUP BY</code> 的列</li>
+<li>❌ 数据量很小的表（几百行）</li>
+<li>❌ 频繁更新的列（维护成本高）</li>
+<li>❌ 区分度很低的列（如性别，只有男/女两种值）</li>
+</ul>
+<h4 id="用-EXPLAIN-分析查询"><a href="#用-EXPLAIN-分析查询" class="headerlink" title="用 EXPLAIN 分析查询"></a>用 EXPLAIN 分析查询</h4><pre><code class="sql">EXPLAIN SELECT * FROM users WHERE email = &#39;&#39;test@example.com&#39;&#39;;
+-- 看 type 列：ALL（全表扫描）→ index → range → ref → const（最优）
+</code></pre>
+<hr>
+<h4 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h4><p>事务保证一组操作要么全部成功，要么全部回滚。</p>
+<h4 id="ACID-特性"><a href="#ACID-特性" class="headerlink" title="ACID 特性"></a>ACID 特性</h4><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>A</strong>tomicity 原子性</td>
+<td>操作不可分割</td>
+</tr>
+<tr>
+<td><strong>C</strong>onsistency 一致性</td>
+<td>数据状态前后一致</td>
+</tr>
+<tr>
+<td><strong>I</strong>solation 隔离性</td>
+<td>并发事务互不干扰</td>
+</tr>
+<tr>
+<td><strong>D</strong>urability 持久性</td>
+<td>提交后数据永久保存</td>
+</tr>
+</tbody></table>
+<h4 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h4><pre><code class="sql">-- 开启事务
+BEGIN;
+
+UPDATE accounts SET balance = balance - 100 WHERE id = 1;
+UPDATE accounts SET balance = balance + 100 WHERE id = 2;
+
+-- 如果没问题就提交
+COMMIT;
+
+-- 如果有问题就回滚
+ROLLBACK;
+</code></pre>
+<hr>
+<h4 id="常见陷阱与最佳实践"><a href="#常见陷阱与最佳实践" class="headerlink" title="常见陷阱与最佳实践"></a>常见陷阱与最佳实践</h4><h4 id="陷阱-🕳️"><a href="#陷阱-🕳️" class="headerlink" title="陷阱 🕳️"></a>陷阱 🕳️</h4><ol>
+<li><p><strong><code>NULL</code> 的三值逻辑</strong></p>
+<pre><code class="sql">-- 错误！NULL 不能用 = 比较
+SELECT * FROM users WHERE email = NULL;           -- ❌ 永远为空
+
+-- 正确
+SELECT * FROM users WHERE email IS NULL;           -- ✅
+</code></pre>
+</li>
+<li><p><strong><code>WHERE</code> vs <code>HAVING</code> 混淆</strong></p>
+<pre><code class="sql">-- 错误！WHERE 中不能用聚合函数
+SELECT student_id, AVG(score) FROM scores WHERE AVG(score) &gt; 80 GROUP BY student_id;  -- ❌
+
+-- 正确
+SELECT student_id, AVG(score) FROM scores GROUP BY student_id HAVING AVG(score) &gt; 80; -- ✅
+</code></pre>
+</li>
+<li><p><strong><code>DELETE</code> / <code>UPDATE</code> 忘加 <code>WHERE</code></strong></p>
+<pre><code class="sql">-- 养成先 SELECT 确认的习惯
+SELECT * FROM users WHERE id = 1;     -- 先看要删哪些
+DELETE FROM users WHERE id = 1;       -- 确认无误再执行
+</code></pre>
+</li>
+<li><p><strong><code>COUNT(*)</code> vs <code>COUNT(col)</code></strong></p>
+<pre><code class="sql">COUNT(*)     -- 统计所有行（含 NULL）
+COUNT(col)   -- 统计 col 非 NULL 的行数
+</code></pre>
+</li>
+</ol>
+<h4 id="最佳实践-✅"><a href="#最佳实践-✅" class="headerlink" title="最佳实践 ✅"></a>最佳实践 ✅</h4><ol>
+<li><strong>永远显式写出列名</strong>，别用 <code>SELECT *</code></li>
+<li><strong>别名要语义化</strong>：<code>AS avg_score</code> 而不 <code>AS a</code></li>
+<li><strong>SQL 关键字大写</strong>，表名列名小写，方便阅读</li>
+<li><strong>复杂查询拆成 CTE</strong>，逐步调试</li>
+<li><strong>生产环境先用 <code>EXPLAIN</code> 分析</strong>，避免慢查询拖垮数据库</li>
+<li><strong>敏感操作先开事务</strong>，确认无误再 <code>COMMIT</code></li>
+</ol>
+<hr>
+<h4 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h4><p>SQL 是一门”上手容易、精通难”的语言。基础 CRUD 一天就能学会，但要写出高性能、可维护的查询，需要持续练习和对数据库原理的理解。</p>
+<p>这份笔记我会持续更新，当作自己的速查手册。</p>
+<hr>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> sunrtnj@163.com </span>
+    </div>
+</article>
 
 
 
-        </article>
-        
-        
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">
@@ -685,11 +1070,11 @@
 <p class="footer-entry">SunRT个人主页</p>
 
     </div>
-</div>
-<div class="full-toc">
-    <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
+    </div>
 </div>
 
 </body>
