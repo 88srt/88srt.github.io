@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>TIA 18 | 88srt</title>
-  <meta name="keywords" content=" TIA ">
-  <meta name="description" content="TIA 18 | 88srt">
+  <title>SQL学习笔记五 | 88srt</title>
+  <meta name="keywords" content=" SQL , 触发器 , 函数 ">
+  <meta name="description" content="SQL学习笔记五 | 88srt">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="赠人玫瑰，手留余香。">
 <meta property="og:type" content="website">
@@ -678,23 +678,19 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-TIA-18" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-SQL学习笔记五" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">TIA 18</h1>
+        <h1 class="article-title">SQL学习笔记五</h1>
     
     <div class="article-meta">
         
-        
-        <span class="author"><a>srt</a></span>
         
         
         <span class="book">
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="下载">下载</a> > 
-            
-            <a  data-rel="下载&lt;---&gt;TIA">TIA</a>
+            <a  data-rel="SQL">SQL</a>
             
         </span>
         
@@ -702,19 +698,23 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color4">TIA</a>
+            <a class="color4">SQL</a>
+            
+            <a class="color4">触发器</a>
+            
+            <a class="color3">函数</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-01-13 09:17:56'>2023-01-13 09:14</time>
+            发布时间 : <time class="date" title='最后更新: 2026-07-04 22:02:30'>2026-07-04 14:30</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:14</span>
+        <span>字数:2.4k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -733,7 +733,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5%EF%BC%9Ahttps-pan-baidu-com-s-15LeRw9e2S4mPvZ8h8LVvdw"><span class="toc-text">下载链接：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;15LeRw9e2S4mPvZ8h8LVvdw</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%8F%90%E5%8F%96%E7%A0%81%EF%BC%9A8srt"><span class="toc-text">提取码：8srt</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%BA%94%EF%BC%9A%E8%A7%A6%E5%8F%91%E5%99%A8%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0"><span class="toc-text">SQL学习笔记五：触发器与自定义函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-%E8%A7%A6%E5%8F%91%E5%99%A8%EF%BC%88Trigger%EF%BC%89"><span class="toc-text">11. 触发器（Trigger）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#11-1-%E8%A7%A6%E5%8F%91%E5%99%A8%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-text">11.1 触发器的分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-2-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-text">11.2 基本语法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#MySQL"><span class="toc-text">MySQL</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#PostgreSQL"><span class="toc-text">PostgreSQL</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-3-NEW-%E5%92%8C-OLD-%E4%BC%AA%E8%AE%B0%E5%BD%95"><span class="toc-text">11.3 NEW 和 OLD 伪记录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-4-%E5%AE%9E%E6%88%98%E7%A4%BA%E4%BE%8B"><span class="toc-text">11.4 实战示例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B%E4%B8%80%EF%BC%9A%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0%E2%80%9D%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4%E2%80%9D%E5%AD%97%E6%AE%B5"><span class="toc-text">示例一：自动更新”修改时间”字段</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B%E4%BA%8C%EF%BC%9A%E5%AE%A1%E8%AE%A1%E6%97%A5%E5%BF%97%EF%BC%88%E8%AE%B0%E5%BD%95%E8%B0%81%E5%9C%A8%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E5%88%A0%E4%BA%86%E4%BB%80%E4%B9%88%EF%BC%89"><span class="toc-text">示例二：审计日志（记录谁在什么时候删了什么）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B%E4%B8%89%EF%BC%9A%E9%98%B2%E6%AD%A2%E8%AF%AF%E5%88%A0%EF%BC%88%E9%98%BB%E6%AD%A2%E5%88%A0%E9%99%A4%E5%85%B3%E9%94%AE%E6%95%B0%E6%8D%AE%EF%BC%89"><span class="toc-text">示例三：防止误删（阻止删除关键数据）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B%E5%9B%9B%EF%BC%9A%E7%BA%A7%E8%81%94%E8%87%AA%E5%8A%A8%E6%8F%92%E5%85%A5%EF%BC%88%E4%B8%80%E5%AF%B9%E5%A4%9A%E5%85%B3%E7%B3%BB%E8%81%94%E5%8A%A8%EF%BC%89"><span class="toc-text">示例四：级联自动插入（一对多关系联动）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-5-%E8%A7%A6%E5%8F%91%E5%99%A8%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">11.5 触发器的注意事项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-6-%E6%9F%A5%E7%9C%8B%E4%B8%8E%E7%AE%A1%E7%90%86%E8%A7%A6%E5%8F%91%E5%99%A8"><span class="toc-text">11.6 查看与管理触发器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0%EF%BC%88User-Defined-Function%EF%BC%89"><span class="toc-text">12. 自定义函数（User-Defined Function）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#12-1-%E5%87%BD%E6%95%B0-vs-%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B"><span class="toc-text">12.1 函数 vs. 存储过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-2-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-text">12.2 基本语法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#MySQL-1"><span class="toc-text">MySQL</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#PostgreSQL-1"><span class="toc-text">PostgreSQL</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-3-%E5%AE%9E%E6%88%98%E7%A4%BA%E4%BE%8B"><span class="toc-text">12.3 实战示例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B%E4%B8%80%EF%BC%9A%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%97%A5%E6%9C%9F"><span class="toc-text">示例一：格式化日期</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B%E4%BA%8C%EF%BC%9A%E6%8F%90%E5%8F%96%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E6%95%B0%E5%AD%97"><span class="toc-text">示例二：提取字符串中的数字</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B%E4%B8%89%EF%BC%9A%E8%AE%A1%E7%AE%97%E4%B8%A4%E4%B8%AA%E6%97%A5%E6%9C%9F%E4%B9%8B%E9%97%B4%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%97%A5%E6%95%B0"><span class="toc-text">示例三：计算两个日期之间的工作日数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B%E5%9B%9B%EF%BC%9A%E8%BF%94%E5%9B%9E%E8%A1%A8%E7%B1%BB%E5%9E%8B%EF%BC%88PostgreSQL%EF%BC%89"><span class="toc-text">示例四：返回表类型（PostgreSQL）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-4-%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">12.4 注意事项</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E4%BB%B6%E5%A5%97%E5%AF%B9%E6%AF%94%EF%BC%9A%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B-vs-%E5%87%BD%E6%95%B0-vs-%E8%A7%A6%E5%8F%91%E5%99%A8-vs-%E8%A7%86%E5%9B%BE"><span class="toc-text">四件套对比：存储过程 vs. 函数 vs. 触发器 vs. 视图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-text">结语</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -749,7 +749,546 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="下载链接：https-pan-baidu-com-s-15LeRw9e2S4mPvZ8h8LVvdw"><a href="#下载链接：https-pan-baidu-com-s-15LeRw9e2S4mPvZ8h8LVvdw" class="headerlink" title="下载链接：https://pan.baidu.com/s/15LeRw9e2S4mPvZ8h8LVvdw"></a>下载链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/15LeRw9e2S4mPvZ8h8LVvdw">https://pan.baidu.com/s/15LeRw9e2S4mPvZ8h8LVvdw</a></h5><h5 id="提取码：8srt"><a href="#提取码：8srt" class="headerlink" title="提取码：8srt"></a>提取码：8srt</h5>
+        <h2 id="SQL学习笔记五：触发器与自定义函数"><a href="#SQL学习笔记五：触发器与自定义函数" class="headerlink" title="SQL学习笔记五：触发器与自定义函数"></a>SQL学习笔记五：触发器与自定义函数</h2><p>上篇讲了存储过程，结尾留了个对比表——存储过程、函数、触发器三者各司其职。这篇就把触发器和函数补上。</p>
+<hr>
+<h2 id="11-触发器（Trigger）"><a href="#11-触发器（Trigger）" class="headerlink" title="11. 触发器（Trigger）"></a>11. 触发器（Trigger）</h2><p>触发器是一种特殊的存储过程，<strong>不需要手动调用</strong>，当表上发生 INSERT、UPDATE、DELETE 时自动触发。最常见的用途：审计日志、数据校验、级联更新。</p>
+<h3 id="11-1-触发器的分类"><a href="#11-1-触发器的分类" class="headerlink" title="11.1 触发器的分类"></a>11.1 触发器的分类</h3><table>
+<thead>
+<tr>
+<th>分类维度</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>触发时机</td>
+<td><code>BEFORE</code> / <code>AFTER</code></td>
+<td>操作前触发 / 操作后触发</td>
+</tr>
+<tr>
+<td>触发事件</td>
+<td><code>INSERT</code> / <code>UPDATE</code> / <code>DELETE</code></td>
+<td>对哪种操作响应</td>
+</tr>
+<tr>
+<td>作用范围</td>
+<td><code>FOR EACH ROW</code>（行级） / <code>FOR EACH STATEMENT</code>（语句级）</td>
+<td>每行触发一次 / 每条语句触发一次</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>💡 MySQL 只支持行级触发器（<code>FOR EACH ROW</code>），PostgreSQL 两者都支持。</p>
+</blockquote>
+<h3 id="11-2-基本语法"><a href="#11-2-基本语法" class="headerlink" title="11.2 基本语法"></a>11.2 基本语法</h3><h4 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h4><pre><code class="sql">DELIMITER $$
+
+CREATE TRIGGER trigger_name
+    &#123;BEFORE | AFTER&#125; &#123;INSERT | UPDATE | DELETE&#125;
+    ON table_name
+    FOR EACH ROW
+BEGIN
+    -- 触发器逻辑
+END$$
+
+DELIMITER ;
+</code></pre>
+<h4 id="PostgreSQL"><a href="#PostgreSQL" class="headerlink" title="PostgreSQL"></a>PostgreSQL</h4><pre><code class="sql">CREATE OR REPLACE FUNCTION trigger_function()
+RETURNS TRIGGER AS $$
+BEGIN
+    -- 触发器逻辑
+    RETURN NEW;  -- 或 RETURN OLD（DELETE 时）
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER trigger_name
+    &#123;BEFORE | AFTER&#125; &#123;INSERT | UPDATE | DELETE&#125;
+    ON table_name
+    FOR EACH ROW
+    EXECUTE FUNCTION trigger_function();
+</code></pre>
+<blockquote>
+<p>💡 PostgreSQL 把触发器逻辑写在函数里，再用 <code>CREATE TRIGGER</code> 绑定。好处是函数可以复用给多个触发器。</p>
+</blockquote>
+<h3 id="11-3-NEW-和-OLD-伪记录"><a href="#11-3-NEW-和-OLD-伪记录" class="headerlink" title="11.3 NEW 和 OLD 伪记录"></a>11.3 NEW 和 OLD 伪记录</h3><p>在行级触发器中，可以通过 <code>NEW</code> 和 <code>OLD</code> 访问数据：</p>
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th><code>OLD</code></th>
+<th><code>NEW</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>INSERT</code></td>
+<td>无（全是 NULL）</td>
+<td>新插入的行</td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td>被删除的行</td>
+<td>无（全是 NULL）</td>
+</tr>
+<tr>
+<td><code>UPDATE</code></td>
+<td>修改前的行</td>
+<td>修改后的行</td>
+</tr>
+</tbody></table>
+<pre><code class="sql">-- 示例：自动记录修改前后的值
+IF NEW.price &lt;&gt; OLD.price THEN
+    INSERT INTO price_log(product_id, old_price, new_price, changed_at)
+    VALUES (NEW.id, OLD.price, NEW.price, NOW());
+END IF;
+</code></pre>
+<h3 id="11-4-实战示例"><a href="#11-4-实战示例" class="headerlink" title="11.4 实战示例"></a>11.4 实战示例</h3><h4 id="示例一：自动更新”修改时间”字段"><a href="#示例一：自动更新”修改时间”字段" class="headerlink" title="示例一：自动更新”修改时间”字段"></a>示例一：自动更新”修改时间”字段</h4><pre><code class="sql">DELIMITER $$
+
+CREATE TRIGGER trg_users_before_update
+    BEFORE UPDATE ON users
+    FOR EACH ROW
+BEGIN
+    SET NEW.updated_at = NOW();
+END$$
+
+DELIMITER ;
+</code></pre>
+<p>每次 UPDATE <code>users</code> 表时，<code>updated_at</code> 自动刷新，不用在应用代码里手动设置。</p>
+<h4 id="示例二：审计日志（记录谁在什么时候删了什么）"><a href="#示例二：审计日志（记录谁在什么时候删了什么）" class="headerlink" title="示例二：审计日志（记录谁在什么时候删了什么）"></a>示例二：审计日志（记录谁在什么时候删了什么）</h4><p>先建一张日志表：</p>
+<pre><code class="sql">CREATE TABLE audit_log (
+    id          INT AUTO_INCREMENT PRIMARY KEY,
+    table_name  VARCHAR(50),
+    operation   VARCHAR(10),
+    record_id   INT,
+    old_data    JSON,
+    new_data    JSON,
+    changed_at  DATETIME DEFAULT NOW(),
+    changed_by  VARCHAR(50)
+);
+</code></pre>
+<p>再创建触发器：</p>
+<pre><code class="sql">DELIMITER $$
+
+CREATE TRIGGER trg_products_after_delete
+    AFTER DELETE ON products
+    FOR EACH ROW
+BEGIN
+    INSERT INTO audit_log (table_name, operation, record_id, old_data, changed_at)
+    VALUES (
+        &#39;&#39;products&#39;&#39;,
+        &#39;&#39;DELETE&#39;&#39;,
+        OLD.id,
+        JSON_OBJECT(&#39;&#39;name&#39;&#39;, OLD.name, &#39;&#39;price&#39;&#39;, OLD.price, &#39;&#39;stock&#39;&#39;, OLD.stock),
+        NOW()
+    );
+END$$
+
+DELIMITER ;
+</code></pre>
+<h4 id="示例三：防止误删（阻止删除关键数据）"><a href="#示例三：防止误删（阻止删除关键数据）" class="headerlink" title="示例三：防止误删（阻止删除关键数据）"></a>示例三：防止误删（阻止删除关键数据）</h4><pre><code class="sql">DELIMITER $$
+
+CREATE TRIGGER trg_orders_before_delete
+    BEFORE DELETE ON orders
+    FOR EACH ROW
+BEGIN
+    IF OLD.status = &#39;&#39;已发货&#39;&#39; THEN
+        SIGNAL SQLSTATE &#39;&#39;45000&#39;&#39;
+        SET MESSAGE_TEXT = &#39;&#39;不允许删除已发货的订单&#39;&#39;;
+    END IF;
+END$$
+
+DELIMITER ;
+</code></pre>
+<h4 id="示例四：级联自动插入（一对多关系联动）"><a href="#示例四：级联自动插入（一对多关系联动）" class="headerlink" title="示例四：级联自动插入（一对多关系联动）"></a>示例四：级联自动插入（一对多关系联动）</h4><pre><code class="sql">-- 新增用户时，自动创建一个默认钱包
+DELIMITER $$
+
+CREATE TRIGGER trg_users_after_insert
+    AFTER INSERT ON users
+    FOR EACH ROW
+BEGIN
+    INSERT INTO wallets (user_id, balance)
+    VALUES (NEW.id, 0.00);
+END$$
+
+DELIMITER ;
+</code></pre>
+<h3 id="11-5-触发器的注意事项"><a href="#11-5-触发器的注意事项" class="headerlink" title="11.5 触发器的注意事项"></a>11.5 触发器的注意事项</h3><p><strong>陷阱 🕳️</strong></p>
+<ol>
+<li><p><strong>触发器链（级联触发）</strong></p>
+<p>触发器里修改了表 B，表 B 又有触发器修改表 C……形成链条。一旦出问题很难排查。</p>
+<pre><code class="sql">-- 预防：检查嵌套深度
+SELECT @@max_sp_recursion_depth;  -- MySQL，默认 0（不允许递归）
+</code></pre>
+</li>
+<li><p><strong>性能问题</strong></p>
+<p>每行触发一次，批量操作时开销巨大：</p>
+<pre><code class="sql">-- 10000 行 → 触发器执行 10000 次！
+UPDATE products SET price = price * 1.1;
+</code></pre>
+<p>批量操作时考虑临时禁用触发器：</p>
+<pre><code class="sql">DISABLE TRIGGER trg_products_before_update ON products;  -- PostgreSQL
+-- 执行批量操作
+ENABLE TRIGGER trg_products_before_update ON products;
+</code></pre>
+</li>
+<li><p><strong>调试困难</strong></p>
+<p>触发器在后台默默执行，出了问题没有显式的报错栈。建议在触发器中加日志记录。</p>
+</li>
+<li><p><strong>BEFORE 触发器中修改 NEW 仅对行级有效</strong></p>
+<p>语句级触发器不能修改数据行。</p>
+</li>
+</ol>
+<p><strong>最佳实践 ✅</strong></p>
+<table>
+<thead>
+<tr>
+<th>建议</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>一个触发器只做一件事</td>
+<td>别把校验、日志、级联全写一起</td>
+</tr>
+<tr>
+<td>触发器命名要规范</td>
+<td><code>trg_&#123;表名&#125;_&#123;before/after&#125;_&#123;insert/update/delete&#125;</code></td>
+</tr>
+<tr>
+<td>避免在触发器中调用外部服务</td>
+<td>如发 HTTP 请求、发邮件——会拖慢整个事务</td>
+</tr>
+<tr>
+<td>多行操作时评估性能</td>
+<td>考虑用语句级触发器代替行级</td>
+</tr>
+<tr>
+<td>保持逻辑简单</td>
+<td>复杂业务放存储过程，触发器只做轻量校验</td>
+</tr>
+</tbody></table>
+<h3 id="11-6-查看与管理触发器"><a href="#11-6-查看与管理触发器" class="headerlink" title="11.6 查看与管理触发器"></a>11.6 查看与管理触发器</h3><pre><code class="sql">-- MySQL 查看所有触发器
+SHOW TRIGGERS;
+SHOW TRIGGERS LIKE &#39;&#39;users%&#39;&#39;;
+
+-- 查看触发器定义
+SHOW CREATE TRIGGER trg_users_before_update;
+
+-- 删除触发器
+DROP TRIGGER IF EXISTS trg_users_before_update;
+
+-- PostgreSQL 查看触发器
+SELECT trigger_name, event_manipulation, event_object_table
+FROM information_schema.triggers;
+</code></pre>
+<hr>
+<h2 id="12-自定义函数（User-Defined-Function）"><a href="#12-自定义函数（User-Defined-Function）" class="headerlink" title="12. 自定义函数（User-Defined Function）"></a>12. 自定义函数（User-Defined Function）</h2><p>函数和存储过程很像，但有一个本质区别：<strong>函数必须有返回值，且可以在 SELECT 中直接调用</strong>。</p>
+<h3 id="12-1-函数-vs-存储过程"><a href="#12-1-函数-vs-存储过程" class="headerlink" title="12.1 函数 vs. 存储过程"></a>12.1 函数 vs. 存储过程</h3><table>
+<thead>
+<tr>
+<th>比较维度</th>
+<th>函数</th>
+<th>存储过程</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>返回值</td>
+<td>必须返回一个值（标量或表）</td>
+<td>可选，通过 OUT 参数</td>
+</tr>
+<tr>
+<td>在 SELECT 中使用</td>
+<td>✅ <code>SELECT func()</code></td>
+<td>❌</td>
+</tr>
+<tr>
+<td>事务控制</td>
+<td>❌ 不能 COMMIT/ROLLBACK</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>调用方式</td>
+<td><code>SELECT func(args)</code></td>
+<td><code>CALL proc(args)</code></td>
+</tr>
+<tr>
+<td>修改数据</td>
+<td>有限制（视数据库而定）</td>
+<td>无限制</td>
+</tr>
+<tr>
+<td>典型场景</td>
+<td>计算、格式化、转换</td>
+<td>批量处理、复杂业务</td>
+</tr>
+</tbody></table>
+<h3 id="12-2-基本语法"><a href="#12-2-基本语法" class="headerlink" title="12.2 基本语法"></a>12.2 基本语法</h3><h4 id="MySQL-1"><a href="#MySQL-1" class="headerlink" title="MySQL"></a>MySQL</h4><pre><code class="sql">DELIMITER $$
+
+CREATE FUNCTION func_name(param1 INT, param2 VARCHAR(50))
+RETURNS INT                                    -- 返回值类型
+DETERMINISTIC                                  -- 确定性：相同输入必有相同输出
+READS SQL DATA                                 -- 只读数据
+BEGIN
+    DECLARE result INT;
+
+    -- 函数逻辑
+    SELECT COUNT(*) INTO result FROM table_name WHERE col = param1;
+
+    RETURN result;
+END$$
+
+DELIMITER ;
+</code></pre>
+<p><strong>MySQL 函数属性说明：</strong></p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>DETERMINISTIC</code></td>
+<td>确定性函数，相同输入一定返回相同结果（用于优化和主从复制）</td>
+</tr>
+<tr>
+<td><code>NOT DETERMINISTIC</code></td>
+<td>非确定性（如 <code>NOW()</code>）</td>
+</tr>
+<tr>
+<td><code>READS SQL DATA</code></td>
+<td>只读数据，不修改</td>
+</tr>
+<tr>
+<td><code>MODIFIES SQL DATA</code></td>
+<td>会修改数据</td>
+</tr>
+<tr>
+<td><code>NO SQL</code></td>
+<td>不含 SQL 语句，纯计算</td>
+</tr>
+</tbody></table>
+<h4 id="PostgreSQL-1"><a href="#PostgreSQL-1" class="headerlink" title="PostgreSQL"></a>PostgreSQL</h4><pre><code class="sql">CREATE OR REPLACE FUNCTION calc_discount(price NUMERIC, level VARCHAR)
+RETURNS NUMERIC AS $$
+DECLARE
+    rate NUMERIC;
+BEGIN
+    CASE level
+        WHEN &#39;&#39;VIP&#39;&#39;    THEN rate := 0.8;
+        WHEN &#39;&#39;GOLD&#39;&#39;   THEN rate := 0.85;
+        WHEN &#39;&#39;SILVER&#39;&#39; THEN rate := 0.9;
+        ELSE rate := 0.95;
+    END CASE;
+
+    RETURN price * rate;
+END;
+$$ LANGUAGE plpgsql IMMUTABLE;
+</code></pre>
+<p>PostgreSQL 函数易变性标记：</p>
+<table>
+<thead>
+<tr>
+<th>标记</th>
+<th>含义</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>IMMUTABLE</code></td>
+<td>相同参数永远返回相同结果</td>
+<td>数学计算</td>
+</tr>
+<tr>
+<td><code>STABLE</code></td>
+<td>同一事务内相同参数返回相同结果</td>
+<td>查表取值</td>
+</tr>
+<tr>
+<td><code>VOLATILE</code></td>
+<td>每次调用结果都可能不同（默认）</td>
+<td><code>random()</code></td>
+</tr>
+</tbody></table>
+<h3 id="12-3-实战示例"><a href="#12-3-实战示例" class="headerlink" title="12.3 实战示例"></a>12.3 实战示例</h3><h4 id="示例一：格式化日期"><a href="#示例一：格式化日期" class="headerlink" title="示例一：格式化日期"></a>示例一：格式化日期</h4><pre><code class="sql">DELIMITER $$
+
+CREATE FUNCTION format_date_cn(d DATE)
+RETURNS VARCHAR(20)
+DETERMINISTIC
+NO SQL
+BEGIN
+    RETURN DATE_FORMAT(d, &#39;&#39;%Y年%m月%d日&#39;&#39;);
+END$$
+
+DELIMITER ;
+
+-- 使用
+SELECT format_date_cn(&#39;&#39;2026-07-04&#39;&#39;);  -- 2026年07月04日
+SELECT name, format_date_cn(created_at) AS 创建日期 FROM users;
+</code></pre>
+<h4 id="示例二：提取字符串中的数字"><a href="#示例二：提取字符串中的数字" class="headerlink" title="示例二：提取字符串中的数字"></a>示例二：提取字符串中的数字</h4><pre><code class="sql">DELIMITER $$
+
+CREATE FUNCTION extract_number(str VARCHAR(255))
+RETURNS INT
+DETERMINISTIC
+NO SQL
+BEGIN
+    DECLARE result VARCHAR(255) DEFAULT &#39;&#39;&#39;&#39;;
+    DECLARE i INT DEFAULT 1;
+    DECLARE ch CHAR(1);
+
+    WHILE i &lt;= CHAR_LENGTH(str) DO
+        SET ch = SUBSTRING(str, i, 1);
+        IF ch BETWEEN &#39;&#39;0&#39;&#39; AND &#39;&#39;9&#39;&#39; THEN
+            SET result = CONCAT(result, ch);
+        END IF;
+        SET i = i + 1;
+    END WHILE;
+
+    RETURN IF(result = &#39;&#39;&#39;&#39;, NULL, CAST(result AS INT));
+END$$
+
+DELIMITER ;
+
+-- 使用
+SELECT extract_number(&#39;&#39;订单号: AB20260704001&#39;&#39;);  -- 20260704001
+</code></pre>
+<h4 id="示例三：计算两个日期之间的工作日数"><a href="#示例三：计算两个日期之间的工作日数" class="headerlink" title="示例三：计算两个日期之间的工作日数"></a>示例三：计算两个日期之间的工作日数</h4><pre><code class="sql">DELIMITER $$
+
+CREATE FUNCTION workdays_between(start_date DATE, end_date DATE)
+RETURNS INT
+DETERMINISTIC
+NO SQL
+BEGIN
+    DECLARE days INT DEFAULT 0;
+    DECLARE cur DATE;
+
+    SET cur = start_date;
+
+    WHILE cur &lt;= end_date DO
+        IF DAYOFWEEK(cur) NOT IN (1, 7) THEN  -- 排除周日(1)和周六(7)
+            SET days = days + 1;
+        END IF;
+        SET cur = DATE_ADD(cur, INTERVAL 1 DAY);
+    END WHILE;
+
+    RETURN days;
+END$$
+
+DELIMITER ;
+
+-- 使用
+SELECT workdays_between(&#39;&#39;2026-07-01&#39;&#39;, &#39;&#39;2026-07-04&#39;&#39;);  -- 3（7月1-4日，排除周六）
+</code></pre>
+<h4 id="示例四：返回表类型（PostgreSQL）"><a href="#示例四：返回表类型（PostgreSQL）" class="headerlink" title="示例四：返回表类型（PostgreSQL）"></a>示例四：返回表类型（PostgreSQL）</h4><p>PostgreSQL 函数可以返回整个表作为结果集：</p>
+<pre><code class="sql">CREATE OR REPLACE FUNCTION get_top_students(n INT)
+RETURNS TABLE(name VARCHAR, avg_score NUMERIC) AS $$
+BEGIN
+    RETURN QUERY
+    SELECT s.name, AVG(sc.score)::NUMERIC(5,2)
+    FROM students s
+    JOIN scores sc ON s.id = sc.student_id
+    GROUP BY s.id, s.name
+    ORDER BY AVG(sc.score) DESC
+    LIMIT n;
+END;
+$$ LANGUAGE plpgsql STABLE;
+
+-- 像查表一样调用
+SELECT * FROM get_top_students(5);
+</code></pre>
+<h3 id="12-4-注意事项"><a href="#12-4-注意事项" class="headerlink" title="12.4 注意事项"></a>12.4 注意事项</h3><p><strong>陷阱 🕳️</strong></p>
+<ol>
+<li><p><strong>MySQL 函数中不能执行动态 SQL</strong></p>
+<pre><code class="sql">-- ❌ MySQL 函数中不允许 PREPARE/EXECUTE
+-- 需要用存储过程代替
+</code></pre>
+</li>
+<li><p><strong>函数中修改数据有风险</strong></p>
+<pre><code class="sql">-- ❌ 在 SELECT 中调用会修改数据的函数，结果不可预测
+SELECT id, update_counter(id) FROM users;  -- 副作用不确定
+</code></pre>
+</li>
+<li><p><strong>性能陷阱：函数在 SELECT 中对每行执行一次</strong></p>
+<pre><code class="sql">-- ❌ 大表慢！对 users 每一行都调用一次函数
+SELECT id, complex_calc(id) FROM users WHERE 1=1;  -- 100 万行 = 100 万次函数调用
+
+-- ✅ 尽量把逻辑写到 WHERE/JOIN 里，减少函数调用
+</code></pre>
+</li>
+<li><p><strong>函数与 GROUP BY 混用要注意确定性</strong></p>
+<pre><code class="sql">-- 确保函数在聚合层面计算，而非行级
+SELECT department, SUM(salary) FROM employees GROUP BY department;
+-- 而不是
+SELECT department, calc_bonus(salary) FROM employees GROUP BY department;  -- ❌ 不可预测
+</code></pre>
+</li>
+</ol>
+<hr>
+<h2 id="四件套对比：存储过程-vs-函数-vs-触发器-vs-视图"><a href="#四件套对比：存储过程-vs-函数-vs-触发器-vs-视图" class="headerlink" title="四件套对比：存储过程 vs. 函数 vs. 触发器 vs. 视图"></a>四件套对比：存储过程 vs. 函数 vs. 触发器 vs. 视图</h2><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>存储过程</th>
+<th>函数</th>
+<th>触发器</th>
+<th>视图</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>调用方式</td>
+<td><code>CALL</code></td>
+<td><code>SELECT</code></td>
+<td>事件触发</td>
+<td><code>SELECT</code></td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>OUT 参数</td>
+<td>必须返回</td>
+<td>无</td>
+<td>虚拟表</td>
+</tr>
+<tr>
+<td>修改数据</td>
+<td>✅</td>
+<td>⚠️ 有限制</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>事务控制</td>
+<td>✅</td>
+<td>❌</td>
+<td>跟随触发语句</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>参数</td>
+<td>IN/OUT/INOUT</td>
+<td>IN</td>
+<td>NEW/OLD</td>
+<td>无</td>
+</tr>
+<tr>
+<td>存储数据</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌（只是查询封装）</td>
+</tr>
+<tr>
+<td>典型场景</td>
+<td>复杂业务流程</td>
+<td>计算/格式化</td>
+<td>审计/校验</td>
+<td>简化复杂查询</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>💡 选择原则：<strong>能查询解决的用视图，要计算的用函数，要自动化响应用触发器，复杂多步操作用存储过程。</strong></p>
+</blockquote>
+<hr>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>触发器和函数是 SQL 进阶的两块重要拼图。触发器让数据库能”主动响应”数据变化，函数让复杂计算可以在 SQL 层面复用。到现在为止，存储过程、函数、触发器、视图这四件套已经齐全，配合之前的 JOIN、子查询、索引等基础，日常开发中的绝大多数 SQL 场景都能应对了。</p>
+<p>下一篇计划讲<strong>窗口函数</strong>——这是做数据分析、排名、累计计算的利器，也是面试高频考点。</p>
+<hr>
+
       
        <hr><span style="font-style: italic;color: gray;"> sunrtnj@163.com </span>
     </div>
