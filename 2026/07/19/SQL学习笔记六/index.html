@@ -1,0 +1,2187 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>SQL学习笔记六 | 88srt</title>
+  <meta name="keywords" content=" SQL , 窗口函数 ">
+  <meta name="description" content="SQL学习笔记六 | 88srt">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="赠人玫瑰，手留余香。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="我的主页">
+<meta property="og:url" content="http://88srt.github.io/about/index.html">
+<meta property="og:site_name" content="88srt">
+<meta property="og:description" content="赠人玫瑰，手留余香。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-10-25T06:00:31.000Z">
+<meta property="article:modified_time" content="2023-05-12T12:38:52.000Z">
+<meta property="article:author" content="SunRT">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/SRTLOGO.png">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+<script src="/js/custom-iconfont.js?v=1.1.0" ></script>
+<meta name="generator" content="Hexo 5.4.2"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/srt.jpg"/>
+</a>
+<div class="author">
+    <span>SunRT</span>
+</div>
+
+<style>
+    /* body {
+       text-align:center;
+    } */
+    .weixin {
+    position: relative;
+    }
+    .weixin img.qrcode {
+    position: absolute;
+    z-index: 99;
+    width: 7.5rem;
+    max-width: none;
+    height: 7.5rem;
+    transform: scale(0);
+    transform-origin: bottom center;
+    opacity: 0;
+    border: .3125rem solid hsl(169, 94%, 48%);
+    border-radius: .25rem;
+    -webkit-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    margin-top: -130px;
+    margin-left: 0px;
+    }
+    .weixin:hover img.qrcode {
+    transform: scale(1);
+    opacity: 1;
+    }
+    </style>
+<div class="social weixin" href="javascript:">
+    <img class="qrcode" src="img/wxqrcode.jpg" alt="联系方式"> 
+    <div class="icon" >
+        
+        
+            
+                
+                 <a title="weixin"
+                    target="_blank"> 
+                    
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-weixin"></use>
+                    </svg>
+                
+                 </a>
+        
+    
+    </div>
+</div>   
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(28)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                <li>
+                    <div data-rel="下载">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        下载
+                        <small>(12)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="下载<--->EKB">
+                                        
+                                        EKB
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="下载<--->pcs7">
+                                        
+                                        pcs7
+                                        
+                                            <small>(4
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="下载<--->sis">
+                                        
+                                        sis
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="下载<--->TIA">
+                                        
+                                        TIA
+                                        
+                                            <small>(4
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="下载<--->wincc">
+                                        
+                                        wincc
+                                        
+                                            <small>(2
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="SQL">
+                        
+                        SQL
+                        <small>(6)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="文档">
+                        
+                        文档
+                        <small>(8)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="TIA">
+                        
+                        TIA
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="wincc">
+                        
+                        wincc
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">关于</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="28">
+<input type="hidden" id="yelog_site_word_count" value="22.4k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="https://blog.csdn.net/u013353858?spm=1010.2135.3001.5343">CSDN</a></li>
+            
+            <li><a target="_blank" href="https://www.88srt.top">备用地址</a></li>
+            
+            <li><a target="_blank" href="https://www.88srt.tech">chatGPT（测试）</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>触发器</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>窗口函数</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>函数</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>控件</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>属性</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>EKB</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>excel</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>git</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>HMI</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>intouch</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>pcs7</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>sis</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>SQL</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>TIA</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>wincc</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a id="top" class="全部文章 下载 pcs7 "
+           href="/2026/07/19/pcs7v9.1/"
+           data-tag="pcs7"
+           data-author="srt" >
+            <span class="post-title" title="pcs7 v9.1 sp1">pcs7 v9.1 sp1</span>
+            <span class="post-date" title="2026-07-19 20:49:26">2026/07/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 下载 TIA "
+           href="/2026/07/19/TIA/"
+           data-tag="TIA"
+           data-author="srt" >
+            <span class="post-title" title="TIA V17">TIA V17</span>
+            <span class="post-date" title="2026-07-19 20:49:27">2026/07/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 下载 pcs7 "
+           href="/2026/07/19/pcs7v9.0/"
+           data-tag="pcs7"
+           data-author="srt" >
+            <span class="post-title" title="pcs7 v9.0 sp3">pcs7 v9.0 sp3</span>
+            <span class="post-date" title="2026-07-19 20:49:26">2026/07/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 文档 "
+           href="/2026/07/19/index/"
+           data-tag="控件"
+           data-author="srt" >
+            <span class="post-title" title="Formula One 常用函数及属性">Formula One 常用函数及属性</span>
+            <span class="post-date" title="2026-07-19 20:49:26">2026/07/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 下载 EKB "
+           href="/2026/07/19/EKB/"
+           data-tag="EKB"
+           data-author="srt" >
+            <span class="post-title" title="EKB 最新">EKB 最新</span>
+            <span class="post-date" title="2026-07-19 20:49:26">2026/07/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 SQL "
+           href="/2026/07/19/SQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%85%AD/"
+           data-tag="SQL,窗口函数"
+           data-author="" >
+            <span class="post-title" title="SQL学习笔记六">SQL学习笔记六</span>
+            <span class="post-date" title="2026-07-19 10:00:00">2026/07/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 SQL "
+           href="/2026/07/04/SQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05/"
+           data-tag="SQL,触发器,函数"
+           data-author="" >
+            <span class="post-title" title="SQL学习笔记5">SQL学习笔记5</span>
+            <span class="post-date" title="2026-07-04 14:30:00">2026/07/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 SQL "
+           href="/2026/05/30/SQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04/"
+           data-tag="SQL"
+           data-author="" >
+            <span class="post-title" title="SQL学习笔记4">SQL学习笔记4</span>
+            <span class="post-date" title="2026-05-30 20:28:54">2026/05/30</span>
+        </a>
+        
+        
+        <a  class="全部文章 SQL "
+           href="/2026/05/30/SQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03/"
+           data-tag="SQL"
+           data-author="" >
+            <span class="post-title" title="SQL学习笔记3">SQL学习笔记3</span>
+            <span class="post-date" title="2026-05-30 10:27:19">2026/05/30</span>
+        </a>
+        
+        
+        <a  class="全部文章 下载 pcs7 "
+           href="/2025/12/18/V10/"
+           data-tag="pcs7"
+           data-author="" >
+            <span class="post-title" title="PCS7 V10">PCS7 V10</span>
+            <span class="post-date" title="2025-12-18 14:46:40">2025/12/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 下载 TIA "
+           href="/2025/04/04/%E5%8D%9A%E5%9B%BE-V20/"
+           data-tag="TIA"
+           data-author="" >
+            <span class="post-title" title="TIA V20">TIA V20</span>
+            <span class="post-date" title="2025-04-04 21:49:49">2025/04/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 文档 "
+           href="/2024/04/08/vbs%E8%84%9A%E6%9C%AC2/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="vbs脚本2延时">vbs脚本2延时</span>
+            <span class="post-date" title="2024-04-08 17:34:32">2024/04/08</span>
+        </a>
+        
+        
+        <a  class="全部文章 文档 "
+           href="/2024/04/08/%E2%80%9Cvbs%E8%84%9A%E6%9C%AC%E2%80%9D/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="vbs脚本1排队">vbs脚本1排队</span>
+            <span class="post-date" title="2024-04-08 17:00:26">2024/04/08</span>
+        </a>
+        
+        
+        <a  class="全部文章 下载 TIA "
+           href="/2023/12/03/%E5%8D%9A%E5%9B%BEV19/"
+           data-tag="TIA"
+           data-author="srt" >
+            <span class="post-title" title="TIA V19">TIA V19</span>
+            <span class="post-date" title="2023-12-03 22:45:39">2023/12/03</span>
+        </a>
+        
+        
+        <a  class="全部文章 TIA "
+           href="/2023/06/05/TIA-wincc-PJ/"
+           data-tag="TIA"
+           data-author="srt" >
+            <span class="post-title" title="TIA wincc PJ">TIA wincc PJ</span>
+            <span class="post-date" title="2023-06-05 21:34:54">2023/06/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 文档 "
+           href="/2023/05/28/siemens%E8%A7%A6%E6%91%B8%E5%B1%8F%E8%BF%9E%E6%8E%A5%E5%86%97%E4%BD%99CPU/"
+           data-tag="HMI"
+           data-author="srt" >
+            <span class="post-title" title="siemens触摸屏连接冗余CPU">siemens触摸屏连接冗余CPU</span>
+            <span class="post-date" title="2023-05-28 20:16:06">2023/05/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 文档 "
+           href="/2023/05/25/intouch%E6%8E%88%E6%9D%83/"
+           data-tag="intouch"
+           data-author="" >
+            <span class="post-title" title="intouch授权">intouch授权</span>
+            <span class="post-date" title="2023-05-25 23:59:55">2023/05/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 文档 "
+           href="/2023/05/19/git/"
+           data-tag="git"
+           data-author="srt" >
+            <span class="post-title" title="git">git</span>
+            <span class="post-date" title="2023-05-19 13:08:50">2023/05/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 文档 "
+           href="/2023/05/18/%E4%BF%9D%E5%AD%98EXCEL%E6%96%B9%E6%B3%95/"
+           data-tag="excel"
+           data-author="srt" >
+            <span class="post-title" title="保存EXCEL方法">保存EXCEL方法</span>
+            <span class="post-date" title="2023-05-18 00:01:50">2023/05/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 下载 pcs7 "
+           href="/2023/05/13/PCS7-V9-1-SP2/"
+           data-tag="pcs7"
+           data-author="" >
+            <span class="post-title" title="PCS7 V9.1 SP2">PCS7 V9.1 SP2</span>
+            <span class="post-date" title="2023-05-13 15:03:03">2023/05/13</span>
+        </a>
+        
+        
+        <a  class="全部文章 下载 sis "
+           href="/2023/05/11/F-system/"
+           data-tag="sis"
+           data-author="srt" >
+            <span class="post-title" title="F-system">F-system</span>
+            <span class="post-date" title="2023-05-11 11:34:17">2023/05/11</span>
+        </a>
+        
+        
+        <a  class="全部文章 下载 wincc "
+           href="/2023/04/08/wincc-8-0/"
+           data-tag="wincc"
+           data-author="srt" >
+            <span class="post-title" title="wincc 8.0">wincc 8.0</span>
+            <span class="post-date" title="2023-04-08 19:27:46">2023/04/08</span>
+        </a>
+        
+        
+        <a  class="全部文章 下载 wincc "
+           href="/2023/04/08/wincc/"
+           data-tag="wincc"
+           data-author="srt" >
+            <span class="post-title" title="WINCC V7.5 SP2">WINCC V7.5 SP2</span>
+            <span class="post-date" title="2023-04-08 19:27:46">2023/04/08</span>
+        </a>
+        
+        
+        <a  class="全部文章 文档 "
+           href="/2023/02/13/sheet/"
+           data-tag="属性"
+           data-author="" >
+            <span class="post-title" title="spreadsheet 属性方法事件">spreadsheet 属性方法事件</span>
+            <span class="post-date" title="2023-02-13 11:48:31">2023/02/13</span>
+        </a>
+        
+        
+        <a  class="全部文章 下载 TIA "
+           href="/2023/01/13/TIA-18/"
+           data-tag="TIA"
+           data-author="srt" >
+            <span class="post-title" title="TIA 18">TIA 18</span>
+            <span class="post-date" title="2023-01-13 09:14:10">2023/01/13</span>
+        </a>
+        
+        
+        <a  class="全部文章 SQL "
+           href="/2022/11/22/SQL-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02/"
+           data-tag="SQL"
+           data-author="" >
+            <span class="post-title" title="SQL学习笔记2">SQL学习笔记2</span>
+            <span class="post-date" title="2022-11-22 13:46:47">2022/11/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 SQL "
+           href="/2022/11/11/SQL%E5%91%BD%E4%BB%A4%E5%AD%A6%E4%B9%A01/"
+           data-tag="SQL"
+           data-author="" >
+            <span class="post-title" title="SQL学习笔记1">SQL学习笔记1</span>
+            <span class="post-date" title="2022-11-11 10:08:48">2022/11/11</span>
+        </a>
+        
+        
+        <a  class="全部文章 wincc "
+           href="/2022/11/02/winccsql/"
+           data-tag="wincc"
+           data-author="srt" >
+            <span class="post-title" title="wincc归档数据查询">wincc归档数据查询</span>
+            <span class="post-date" title="2022-11-02 17:15:53">2022/11/02</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-SQL学习笔记六" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">SQL学习笔记六</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="SQL">SQL</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color4">SQL</a>
+            
+            <a class="color5">窗口函数</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2026-07-19 10:39:36'>2026-07-19 10:00</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:4.3k</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%9A%E7%AA%97%E5%8F%A3%E5%87%BD%E6%95%B0"><span class="toc-text">SQL学习笔记六：窗口函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-%E7%AA%97%E5%8F%A3%E5%87%BD%E6%95%B0%E5%9F%BA%E7%A1%80"><span class="toc-text">13. 窗口函数基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#13-1-%E4%BB%80%E4%B9%88%E6%98%AF%E7%AA%97%E5%8F%A3%E5%87%BD%E6%95%B0"><span class="toc-text">13.1 什么是窗口函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-2-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-text">13.2 基本语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-3-%E7%AA%97%E5%8F%A3%E5%87%BD%E6%95%B0%E5%88%86%E7%B1%BB"><span class="toc-text">13.3 窗口函数分类</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-%E6%8E%92%E5%90%8D%E5%87%BD%E6%95%B0"><span class="toc-text">14. 排名函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#14-1-ROW-NUMBER-RANK-DENSE-RANK-%E5%AF%B9%E6%AF%94"><span class="toc-text">14.1 ROW_NUMBER &#x2F; RANK &#x2F; DENSE_RANK 对比</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-2-%E5%88%86%E7%BB%84%E5%86%85%E6%8E%92%E5%90%8D"><span class="toc-text">14.2 分组内排名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-3-NTILE%EF%BC%9A%E5%88%86%E6%A1%B6"><span class="toc-text">14.3 NTILE：分桶</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-%E8%81%9A%E5%90%88%E7%AA%97%E5%8F%A3%E5%87%BD%E6%95%B0"><span class="toc-text">15. 聚合窗口函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#15-1-%E7%B4%AF%E8%AE%A1%E6%B1%82%E5%92%8C%EF%BC%88Running-Total%EF%BC%89"><span class="toc-text">15.1 累计求和（Running Total）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15-2-%E7%A7%BB%E5%8A%A8%E5%B9%B3%E5%9D%87"><span class="toc-text">15.2 移动平均</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15-3-%E5%90%84%E9%83%A8%E9%97%A8%E5%8D%A0%E6%AF%94"><span class="toc-text">15.3 各部门占比</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15-4-%E7%AA%97%E5%8F%A3%E5%B8%A7%E5%AD%90%E5%8F%A5%E8%AF%A6%E8%A7%A3"><span class="toc-text">15.4 窗口帧子句详解</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-%E5%81%8F%E7%A7%BB%E5%87%BD%E6%95%B0"><span class="toc-text">16. 偏移函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#16-1-LAG%EF%BC%9A%E5%90%91%E5%89%8D%E7%9C%8B"><span class="toc-text">16.1 LAG：向前看</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16-2-LEAD%EF%BC%9A%E5%90%91%E5%90%8E%E7%9C%8B"><span class="toc-text">16.2 LEAD：向后看</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16-3-FIRST-VALUE-LAST-VALUE"><span class="toc-text">16.3 FIRST_VALUE &#x2F; LAST_VALUE</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-%E5%AE%9E%E6%88%98%E5%9C%BA%E6%99%AF"><span class="toc-text">17. 实战场景</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#17-1-%E8%BF%9E%E7%BB%AD%E7%99%BB%E5%BD%95%E5%A4%A9%E6%95%B0"><span class="toc-text">17.1 连续登录天数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#17-2-%E7%95%99%E5%AD%98%E7%8E%87%E8%AE%A1%E7%AE%97"><span class="toc-text">17.2 留存率计算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#17-3-%E5%90%8C%E6%97%B6%E5%9C%A8%E7%BA%BF%E5%B3%B0%E5%80%BC"><span class="toc-text">17.3 同时在线峰值</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18-%E5%B8%B8%E8%A7%81%E9%99%B7%E9%98%B1%E4%B8%8E%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5"><span class="toc-text">18. 常见陷阱与最佳实践</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%99%B7%E9%98%B1-%F0%9F%95%B3%EF%B8%8F"><span class="toc-text">陷阱 🕳️</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5-%E2%9C%85"><span class="toc-text">最佳实践 ✅</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SQL-%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F%EF%BC%88%E5%AE%8C%E6%95%B4%E7%89%88%EF%BC%89"><span class="toc-text">SQL 执行顺序（完整版）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-text">结语</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%9A%E7%AA%97%E5%8F%A3%E5%87%BD%E6%95%B0-1"><span class="toc-text">SQL学习笔记六：窗口函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-%E7%AA%97%E5%8F%A3%E5%87%BD%E6%95%B0%E5%9F%BA%E7%A1%80-1"><span class="toc-text">13. 窗口函数基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#13-1-%E4%BB%80%E4%B9%88%E6%98%AF%E7%AA%97%E5%8F%A3%E5%87%BD%E6%95%B0-1"><span class="toc-text">13.1 什么是窗口函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-2-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95-1"><span class="toc-text">13.2 基本语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-3-%E7%AA%97%E5%8F%A3%E5%87%BD%E6%95%B0%E5%88%86%E7%B1%BB-1"><span class="toc-text">13.3 窗口函数分类</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-%E6%8E%92%E5%90%8D%E5%87%BD%E6%95%B0-1"><span class="toc-text">14. 排名函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#14-1-ROW-NUMBER-RANK-DENSE-RANK-%E5%AF%B9%E6%AF%94-1"><span class="toc-text">14.1 ROW_NUMBER &#x2F; RANK &#x2F; DENSE_RANK 对比</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-2-%E5%88%86%E7%BB%84%E5%86%85%E6%8E%92%E5%90%8D-1"><span class="toc-text">14.2 分组内排名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-3-NTILE%EF%BC%9A%E5%88%86%E6%A1%B6-1"><span class="toc-text">14.3 NTILE：分桶</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-%E8%81%9A%E5%90%88%E7%AA%97%E5%8F%A3%E5%87%BD%E6%95%B0-1"><span class="toc-text">15. 聚合窗口函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#15-1-%E7%B4%AF%E8%AE%A1%E6%B1%82%E5%92%8C%EF%BC%88Running-Total%EF%BC%89-1"><span class="toc-text">15.1 累计求和（Running Total）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15-2-%E7%A7%BB%E5%8A%A8%E5%B9%B3%E5%9D%87-1"><span class="toc-text">15.2 移动平均</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15-3-%E5%90%84%E9%83%A8%E9%97%A8%E5%8D%A0%E6%AF%94-1"><span class="toc-text">15.3 各部门占比</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15-4-%E7%AA%97%E5%8F%A3%E5%B8%A7%E5%AD%90%E5%8F%A5%E8%AF%A6%E8%A7%A3-1"><span class="toc-text">15.4 窗口帧子句详解</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-%E5%81%8F%E7%A7%BB%E5%87%BD%E6%95%B0-1"><span class="toc-text">16. 偏移函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#16-1-LAG%EF%BC%9A%E5%90%91%E5%89%8D%E7%9C%8B-1"><span class="toc-text">16.1 LAG：向前看</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16-2-LEAD%EF%BC%9A%E5%90%91%E5%90%8E%E7%9C%8B-1"><span class="toc-text">16.2 LEAD：向后看</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16-3-FIRST-VALUE-LAST-VALUE-1"><span class="toc-text">16.3 FIRST_VALUE &#x2F; LAST_VALUE</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-%E5%AE%9E%E6%88%98%E5%9C%BA%E6%99%AF-1"><span class="toc-text">17. 实战场景</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#17-1-%E8%BF%9E%E7%BB%AD%E7%99%BB%E5%BD%95%E5%A4%A9%E6%95%B0-1"><span class="toc-text">17.1 连续登录天数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#17-2-%E7%95%99%E5%AD%98%E7%8E%87%E8%AE%A1%E7%AE%97-1"><span class="toc-text">17.2 留存率计算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#17-3-%E5%90%8C%E6%97%B6%E5%9C%A8%E7%BA%BF%E5%B3%B0%E5%80%BC-1"><span class="toc-text">17.3 同时在线峰值</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18-%E5%B8%B8%E8%A7%81%E9%99%B7%E9%98%B1%E4%B8%8E%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5-1"><span class="toc-text">18. 常见陷阱与最佳实践</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%99%B7%E9%98%B1-%F0%9F%95%B3%EF%B8%8F-1"><span class="toc-text">陷阱 🕳️</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5-%E2%9C%85-1"><span class="toc-text">最佳实践 ✅</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SQL-%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F%EF%BC%88%E5%AE%8C%E6%95%B4%E7%89%88%EF%BC%89-1"><span class="toc-text">SQL 执行顺序（完整版）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD-1"><span class="toc-text">结语</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="SQL学习笔记六：窗口函数"><a href="#SQL学习笔记六：窗口函数" class="headerlink" title="SQL学习笔记六：窗口函数"></a>SQL学习笔记六：窗口函数</h2><p>窗口函数是 SQL 进阶的分水岭——面试必考、数据分析必备。它和普通聚合函数最大的区别是：<strong>聚合函数把多行压成一行，窗口函数保留每一行，同时还能做跨行计算。</strong></p>
+<hr>
+<h2 id="13-窗口函数基础"><a href="#13-窗口函数基础" class="headerlink" title="13. 窗口函数基础"></a>13. 窗口函数基础</h2><h3 id="13-1-什么是窗口函数"><a href="#13-1-什么是窗口函数" class="headerlink" title="13.1 什么是窗口函数"></a>13.1 什么是窗口函数</h3><pre><code class="sql">-- 普通聚合：每个部门只返回一行
+SELECT dept, AVG(salary)
+FROM employees
+GROUP BY dept;
+
+-- 窗口函数：每个员工都还在，但旁边多了部门平均工资
+SELECT
+    name,
+    dept,
+    salary,
+    AVG(salary) OVER (PARTITION BY dept) AS dept_avg
+FROM employees;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>dept</th>
+<th>salary</th>
+<th>dept_avg</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>张三</td>
+<td>技术</td>
+<td>15000</td>
+<td>14000</td>
+</tr>
+<tr>
+<td>李四</td>
+<td>技术</td>
+<td>13000</td>
+<td>14000</td>
+</tr>
+<tr>
+<td>王五</td>
+<td>销售</td>
+<td>12000</td>
+<td>11000</td>
+</tr>
+<tr>
+<td>赵六</td>
+<td>销售</td>
+<td>10000</td>
+<td>11000</td>
+</tr>
+</tbody></table>
+<p>每个人都在，多了一列”部门平均薪资”——这就是窗口函数的核心价值。</p>
+<h3 id="13-2-基本语法"><a href="#13-2-基本语法" class="headerlink" title="13.2 基本语法"></a>13.2 基本语法</h3><pre><code class="sql">函数名() OVER (
+    PARTITION BY 列名      -- 分区：按什么分组计算
+    ORDER BY 列名          -- 排序：分区内按什么排序
+    窗口帧子句             -- 范围：取分区内的哪几行
+)
+</code></pre>
+<p><code>PARTITION BY</code> 可以理解为 <code>GROUP BY</code> 的窗口版，但它不合并行，只是划定计算范围。</p>
+<h3 id="13-3-窗口函数分类"><a href="#13-3-窗口函数分类" class="headerlink" title="13.3 窗口函数分类"></a>13.3 窗口函数分类</h3><table>
+<thead>
+<tr>
+<th>类别</th>
+<th>函数</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>排名</td>
+<td><code>ROW_NUMBER</code>, <code>RANK</code>, <code>DENSE_RANK</code>, <code>NTILE</code></td>
+<td>排序、分组编号</td>
+</tr>
+<tr>
+<td>聚合</td>
+<td><code>SUM</code>, <code>AVG</code>, <code>COUNT</code>, <code>MAX</code>, <code>MIN</code></td>
+<td>移动求和、累计值</td>
+</tr>
+<tr>
+<td>偏移</td>
+<td><code>LAG</code>, <code>LEAD</code>, <code>FIRST_VALUE</code>, <code>LAST_VALUE</code></td>
+<td>前后行对比</td>
+</tr>
+<tr>
+<td>分析</td>
+<td><code>CUME_DIST</code>, <code>PERCENT_RANK</code></td>
+<td>百分比排名</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="14-排名函数"><a href="#14-排名函数" class="headerlink" title="14. 排名函数"></a>14. 排名函数</h2><h3 id="14-1-ROW-NUMBER-RANK-DENSE-RANK-对比"><a href="#14-1-ROW-NUMBER-RANK-DENSE-RANK-对比" class="headerlink" title="14.1 ROW_NUMBER / RANK / DENSE_RANK 对比"></a>14.1 ROW_NUMBER / RANK / DENSE_RANK 对比</h3><pre><code class="sql">SELECT
+    name,
+    score,
+    ROW_NUMBER() OVER (ORDER BY score DESC) AS row_num,
+    RANK()       OVER (ORDER BY score DESC) AS rank_num,
+    DENSE_RANK() OVER (ORDER BY score DESC) AS dense_num
+FROM students;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>score</th>
+<th>row_num</th>
+<th>rank_num</th>
+<th>dense_num</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>张三</td>
+<td>95</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>李四</td>
+<td>95</td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>王五</td>
+<td>88</td>
+<td>3</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr>
+<td>赵六</td>
+<td>88</td>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr>
+<td>孙七</td>
+<td>72</td>
+<td>5</td>
+<td>5</td>
+<td>3</td>
+</tr>
+</tbody></table>
+<p>三者的区别一目了然：</p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>同分处理</th>
+<th>编号连续性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>ROW_NUMBER</code></td>
+<td>随机排先后</td>
+<td>连续（1, 2, 3, 4）</td>
+</tr>
+<tr>
+<td><code>RANK</code></td>
+<td>相同排名</td>
+<td>跳号（1, 1, 3, 3, 5）</td>
+</tr>
+<tr>
+<td><code>DENSE_RANK</code></td>
+<td>相同排名</td>
+<td>不跳号（1, 1, 2, 2, 3）</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>💡 面试常见题：”查每个部门工资最高的员工”——用 <code>ROW_NUMBER</code> + <code>PARTITION BY dept ORDER BY salary DESC</code>，然后取 <code>row_num = 1</code>。</p>
+</blockquote>
+<h3 id="14-2-分组内排名"><a href="#14-2-分组内排名" class="headerlink" title="14.2 分组内排名"></a>14.2 分组内排名</h3><pre><code class="sql">-- 每个部门内按工资排名
+SELECT
+    name,
+    dept,
+    salary,
+    ROW_NUMBER() OVER (PARTITION BY dept ORDER BY salary DESC) AS dept_rank
+FROM employees;
+</code></pre>
+<h3 id="14-3-NTILE：分桶"><a href="#14-3-NTILE：分桶" class="headerlink" title="14.3 NTILE：分桶"></a>14.3 NTILE：分桶</h3><pre><code class="sql">-- 把学生按成绩分成 4 组（四分位）
+SELECT
+    name,
+    score,
+    NTILE(4) OVER (ORDER BY score DESC) AS quartile
+FROM students;
+</code></pre>
+<p>常用场景：按消费金额把用户分成高/中/低价值群体。</p>
+<hr>
+<h2 id="15-聚合窗口函数"><a href="#15-聚合窗口函数" class="headerlink" title="15. 聚合窗口函数"></a>15. 聚合窗口函数</h2><h3 id="15-1-累计求和（Running-Total）"><a href="#15-1-累计求和（Running-Total）" class="headerlink" title="15.1 累计求和（Running Total）"></a>15.1 累计求和（Running Total）</h3><pre><code class="sql">SELECT
+    date,
+    amount,
+    SUM(amount) OVER (ORDER BY date) AS running_total
+FROM sales
+ORDER BY date;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>date</th>
+<th>amount</th>
+<th>running_total</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>01-01</td>
+<td>100</td>
+<td>100</td>
+</tr>
+<tr>
+<td>01-02</td>
+<td>200</td>
+<td>300</td>
+</tr>
+<tr>
+<td>01-03</td>
+<td>150</td>
+<td>450</td>
+</tr>
+<tr>
+<td>01-04</td>
+<td>300</td>
+<td>750</td>
+</tr>
+</tbody></table>
+<p>每一行的 <code>running_total</code> 都是从开头到当前行的总和。</p>
+<h3 id="15-2-移动平均"><a href="#15-2-移动平均" class="headerlink" title="15.2 移动平均"></a>15.2 移动平均</h3><pre><code class="sql">-- 近 3 天的移动平均
+SELECT
+    date,
+    amount,
+    AVG(amount) OVER (ORDER BY date ROWS BETWEEN 2 PRECEDING AND CURRENT ROW) AS ma_3
+FROM sales;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>date</th>
+<th>amount</th>
+<th>ma_3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>01-01</td>
+<td>100</td>
+<td>100</td>
+</tr>
+<tr>
+<td>01-02</td>
+<td>200</td>
+<td>150</td>
+</tr>
+<tr>
+<td>01-03</td>
+<td>150</td>
+<td>150</td>
+</tr>
+<tr>
+<td>01-04</td>
+<td>300</td>
+<td>216.7</td>
+</tr>
+</tbody></table>
+<p>移动平均用于平滑波动，是销售预测、异常检测的基础。</p>
+<h3 id="15-3-各部门占比"><a href="#15-3-各部门占比" class="headerlink" title="15.3 各部门占比"></a>15.3 各部门占比</h3><pre><code class="sql">SELECT
+    name,
+    dept,
+    salary,
+    salary * 100.0 / SUM(salary) OVER (PARTITION BY dept) AS dept_pct
+FROM employees;
+</code></pre>
+<h3 id="15-4-窗口帧子句详解"><a href="#15-4-窗口帧子句详解" class="headerlink" title="15.4 窗口帧子句详解"></a>15.4 窗口帧子句详解</h3><pre><code class="sql">ROWS BETWEEN &#123;起点&#125; AND &#123;终点&#125;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>写法</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>UNBOUNDED PRECEDING</code></td>
+<td>分区第一行</td>
+</tr>
+<tr>
+<td><code>n PRECEDING</code></td>
+<td>当前行前 n 行</td>
+</tr>
+<tr>
+<td><code>CURRENT ROW</code></td>
+<td>当前行</td>
+</tr>
+<tr>
+<td><code>n FOLLOWING</code></td>
+<td>当前行后 n 行</td>
+</tr>
+<tr>
+<td><code>UNBOUNDED FOLLOWING</code></td>
+<td>分区最后一行</td>
+</tr>
+</tbody></table>
+<p><strong>常用组合：</strong></p>
+<pre><code class="sql">-- 累计：从开头到当前
+ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+
+-- 滑动窗口：前 2 行 + 当前 + 后 2 行
+ROWS BETWEEN 2 PRECEDING AND 2 FOLLOWING
+
+-- 累计到分区末尾（少见）
+ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING
+</code></pre>
+<blockquote>
+<p>💡 聚合窗口函数如果不写 <code>ORDER BY</code>，默认是整个分区；如果写了 <code>ORDER BY</code> 但不写窗口帧子句，默认从分区开头到当前行。</p>
+</blockquote>
+<hr>
+<h2 id="16-偏移函数"><a href="#16-偏移函数" class="headerlink" title="16. 偏移函数"></a>16. 偏移函数</h2><h3 id="16-1-LAG：向前看"><a href="#16-1-LAG：向前看" class="headerlink" title="16.1 LAG：向前看"></a>16.1 LAG：向前看</h3><p>取当前行前面第 n 行的值。最经典的场景是<strong>环比计算</strong>。</p>
+<pre><code class="sql">SELECT
+    month,
+    revenue,
+    LAG(revenue, 1) OVER (ORDER BY month) AS prev_month_revenue,
+    revenue - LAG(revenue, 1) OVER (ORDER BY month) AS growth
+FROM monthly_sales;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>month</th>
+<th>revenue</th>
+<th>prev_month_revenue</th>
+<th>growth</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1月</td>
+<td>100</td>
+<td>NULL</td>
+<td>NULL</td>
+</tr>
+<tr>
+<td>2月</td>
+<td>150</td>
+<td>100</td>
+<td>+50</td>
+</tr>
+<tr>
+<td>3月</td>
+<td>130</td>
+<td>150</td>
+<td>-20</td>
+</tr>
+<tr>
+<td>4月</td>
+<td>180</td>
+<td>130</td>
+<td>+50</td>
+</tr>
+</tbody></table>
+<pre><code class="sql">LAG(列名, 偏移量, 默认值) OVER (ORDER BY ...)
+-- 默认值用于第一行（前面没有行时填充）
+</code></pre>
+<h3 id="16-2-LEAD：向后看"><a href="#16-2-LEAD：向后看" class="headerlink" title="16.2 LEAD：向后看"></a>16.2 LEAD：向后看</h3><p>取当前行后面第 n 行的值。</p>
+<pre><code class="sql">SELECT
+    date,
+    price,
+    LEAD(price, 1) OVER (ORDER BY date) AS next_price,
+    LEAD(price, 1) OVER (ORDER BY date) - price AS price_change
+FROM stock_prices;
+</code></pre>
+<h3 id="16-3-FIRST-VALUE-LAST-VALUE"><a href="#16-3-FIRST-VALUE-LAST-VALUE" class="headerlink" title="16.3 FIRST_VALUE / LAST_VALUE"></a>16.3 FIRST_VALUE / LAST_VALUE</h3><p>取分区内第一个或最后一个值。</p>
+<pre><code class="sql">SELECT
+    name,
+    dept,
+    salary,
+    FIRST_VALUE(name) OVER (PARTITION BY dept ORDER BY salary DESC) AS highest_paid,
+    LAST_VALUE(name) OVER (
+        PARTITION BY dept
+        ORDER BY salary DESC
+        ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING
+    ) AS lowest_paid
+FROM employees;
+</code></pre>
+<blockquote>
+<p>⚠️ <code>LAST_VALUE</code> 的默认窗口帧是 <code>RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW</code>，这意味着它返回的是”到当前行为止的最后一行”而非分区的最后一行。想取分区最后一行，必须显式指定 <code>ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING</code>。这是最常见的坑。</p>
+</blockquote>
+<hr>
+<h2 id="17-实战场景"><a href="#17-实战场景" class="headerlink" title="17. 实战场景"></a>17. 实战场景</h2><h3 id="17-1-连续登录天数"><a href="#17-1-连续登录天数" class="headerlink" title="17.1 连续登录天数"></a>17.1 连续登录天数</h3><p>表结构：</p>
+<pre><code class="sql">CREATE TABLE login_log (
+    user_id INT,
+    login_date DATE
+);
+</code></pre>
+<pre><code class="sql">WITH grouped AS (
+    SELECT
+        user_id,
+        login_date,
+        ROW_NUMBER() OVER (PARTITION BY user_id ORDER BY login_date) AS rn,
+        DATE_SUB(login_date, INTERVAL ROW_NUMBER() OVER (PARTITION BY user_id ORDER BY login_date) DAY) AS grp
+    FROM (SELECT DISTINCT user_id, login_date FROM login_log) t
+)
+SELECT
+    user_id,
+    MIN(login_date) AS start_date,
+    MAX(login_date) AS end_date,
+    COUNT(*) AS consecutive_days
+FROM grouped
+GROUP BY user_id, grp
+HAVING COUNT(*) &gt;= 3  -- 至少连续 3 天
+ORDER BY consecutive_days DESC;
+</code></pre>
+<blockquote>
+<p>💡 核心思路：如果日期是连续的，那么 <code>login_date - ROW_NUMBER()</code> 得到的值是相同的，这就形成了一个分组标识。</p>
+</blockquote>
+<h3 id="17-2-留存率计算"><a href="#17-2-留存率计算" class="headerlink" title="17.2 留存率计算"></a>17.2 留存率计算</h3><pre><code class="sql">WITH first_visit AS (
+    SELECT
+        user_id,
+        MIN(visit_date) AS first_date
+    FROM visits
+    GROUP BY user_id
+),
+cohort AS (
+    SELECT
+        v.user_id,
+        f.first_date,
+        v.visit_date,
+        DATEDIFF(v.visit_date, f.first_date) AS day_offset
+    FROM visits v
+    JOIN first_visit f ON v.user_id = f.user_id
+)
+SELECT
+    first_date,
+    COUNT(DISTINCT CASE WHEN day_offset = 0 THEN user_id END) AS day0_users,
+    COUNT(DISTINCT CASE WHEN day_offset = 1 THEN user_id END) * 100.0 /
+        COUNT(DISTINCT CASE WHEN day_offset = 0 THEN user_id END) AS day1_retention,
+    COUNT(DISTINCT CASE WHEN day_offset = 7 THEN user_id END) * 100.0 /
+        COUNT(DISTINCT CASE WHEN day_offset = 0 THEN user_id END) AS day7_retention
+FROM cohort
+GROUP BY first_date
+ORDER BY first_date;
+</code></pre>
+<h3 id="17-3-同时在线峰值"><a href="#17-3-同时在线峰值" class="headerlink" title="17.3 同时在线峰值"></a>17.3 同时在线峰值</h3><pre><code class="sql">-- 直播、游戏等场景 → 计算任意时刻的最大同时在线人数
+WITH events AS (
+    SELECT enter_time AS event_time, 1 AS delta FROM online_log
+    UNION ALL
+    SELECT leave_time AS event_time, -1 AS delta FROM online_log
+)
+SELECT
+    event_time,
+    SUM(delta) OVER (ORDER BY event_time ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS concurrent_users
+FROM events
+ORDER BY concurrent_users DESC
+LIMIT 1;
+</code></pre>
+<blockquote>
+<p>💡 不用 <code>GROUP BY</code>，不用自连接——SQL 就是这么优雅。</p>
+</blockquote>
+<hr>
+<h2 id="18-常见陷阱与最佳实践"><a href="#18-常见陷阱与最佳实践" class="headerlink" title="18. 常见陷阱与最佳实践"></a>18. 常见陷阱与最佳实践</h2><h3 id="陷阱-🕳️"><a href="#陷阱-🕳️" class="headerlink" title="陷阱 🕳️"></a>陷阱 🕳️</h3><ol>
+<li><p><strong><code>RANK</code> 和 <code>DENSE_RANK</code> 搞混</strong></p>
+<p>面试中问”怎么取排名前 10”，用 <code>RANK</code> 还是 <code>DENSE_RANK</code>？</p>
+<ul>
+<li>如果成绩相同占用名额 → <code>DENSE_RANK</code></li>
+<li>如果允许并列导致超过 10 人 → <code>RANK</code>（取 <code>rank &lt;= 10</code>）</li>
+</ul>
+</li>
+<li><p><strong><code>LAST_VALUE</code> 的窗口帧问题</strong></p>
+<p>如前所述，不指定窗口帧会得到错误结果。建议直接用 <code>FIRST_VALUE(... ORDER BY ... DESC)</code> 代替。</p>
+</li>
+<li><p><strong><code>ORDER BY</code> 在窗口函数和查询中的区别</strong></p>
+<pre><code class="sql">SELECT name, salary,
+       RANK() OVER (ORDER BY salary DESC) AS rk
+FROM employees
+ORDER BY name ASC;  -- 这里的 ORDER BY 只影响最终结果的显示顺序，不影响窗口函数
+</code></pre>
+</li>
+<li><p><strong>窗口函数不能用在 <code>WHERE</code> 中</strong></p>
+<pre><code class="sql">-- ❌ 错误
+SELECT * FROM employees
+WHERE ROW_NUMBER() OVER (ORDER BY salary DESC) &lt;= 10;
+
+-- ✅ 正确：用子查询或 CTE 包一层
+SELECT * FROM (
+    SELECT *, ROW_NUMBER() OVER (ORDER BY salary DESC) AS rn
+    FROM employees
+) t WHERE rn &lt;= 10;
+</code></pre>
+<blockquote>
+<p>💡 窗口函数在 SQL 执行顺序中位于 <code>WHERE</code> <strong>之后</strong>、<code>ORDER BY</code> <strong>之前</strong>，所以不能在 <code>WHERE</code> 里直接过滤。</p>
+</blockquote>
+</li>
+<li><p><strong><code>PARTITION BY</code> + <code>ORDER BY</code> 忘了写，窗口变成全表</strong></p>
+<pre><code class="sql">-- 没写 PARTITION BY → 整个表是一个窗口
+SUM(salary) OVER ()  -- 全表总和
+
+-- 写了 PARTITION BY → 每个部门独立窗口
+SUM(salary) OVER (PARTITION BY dept)  -- 部门总和
+</code></pre>
+</li>
+</ol>
+<h3 id="最佳实践-✅"><a href="#最佳实践-✅" class="headerlink" title="最佳实践 ✅"></a>最佳实践 ✅</h3><table>
+<thead>
+<tr>
+<th>建议</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>复杂查询拆成 CTE 逐步调试</td>
+<td>窗口函数嵌套难以一眼看出结果</td>
+</tr>
+<tr>
+<td><code>ROW_NUMBER</code> + 子查询组合拳</td>
+<td>取 Top N、去重、分页都很实用</td>
+</tr>
+<tr>
+<td>优先用 <code>LAG</code>/<code>LEAD</code> 做环比</td>
+<td>比自连接清晰太多</td>
+</tr>
+<tr>
+<td><code>PARTITION BY</code> 别太多列</td>
+<td>分区太多几乎没有实用价值</td>
+</tr>
+<tr>
+<td>生产环境注意数据量</td>
+<td>窗口函数需要排序 + 内存，大表注意性能</td>
+</tr>
+</tbody></table>
+<h3 id="SQL-执行顺序（完整版）"><a href="#SQL-执行顺序（完整版）" class="headerlink" title="SQL 执行顺序（完整版）"></a>SQL 执行顺序（完整版）</h3><pre><code>FROM → WHERE → GROUP BY → HAVING → 窗口函数 → SELECT → DISTINCT → ORDER BY → LIMIT
+</code></pre>
+<p>记住：<strong>窗口函数在 <code>HAVING</code> 之后，<code>SELECT</code> 之前</strong>。所以不能在 <code>WHERE</code>/<code>GROUP BY</code>/<code>HAVING</code> 中使用窗口函数的结果。</p>
+<hr>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>窗口函数是 SQL 从”能用”到”好用”的关键一步。掌握了它，以前要写几十行子查询、临时表的复杂统计，现在几行 SQL 搞定。</p>
+<p>这套 SQL 学习笔记系列到此涵盖了：</p>
+<table>
+<thead>
+<tr>
+<th>笔记</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>笔记一</td>
+<td>建库建表、字符类型</td>
+</tr>
+<tr>
+<td>笔记二</td>
+<td>IF EXISTS / IF NOT EXISTS</td>
+</tr>
+<tr>
+<td>笔记三</td>
+<td>WHERE、JOIN、GROUP BY、子查询、视图、索引、事务</td>
+</tr>
+<tr>
+<td>笔记四</td>
+<td>存储过程</td>
+</tr>
+<tr>
+<td>笔记五</td>
+<td>触发器、自定义函数</td>
+</tr>
+<tr>
+<td><strong>笔记六</strong></td>
+<td><strong>窗口函数</strong></td>
+</tr>
+</tbody></table>
+<p>从基础到进阶的 SQL 知识体系基本完整了。后续如果遇到特定场景（性能调优、分库分表等），再单独开篇。</p>
+<p>—﻿—<br>title: SQL学习笔记六<br>date: 2026-07-19 10:00:00<br>categories:</p>
+<ul>
+<li>SQL<br>tags:</li>
+<li>SQL</li>
+<li>窗口函数</li>
+</ul>
+<hr>
+<h2 id="SQL学习笔记六：窗口函数-1"><a href="#SQL学习笔记六：窗口函数-1" class="headerlink" title="SQL学习笔记六：窗口函数"></a>SQL学习笔记六：窗口函数</h2><p>窗口函数是 SQL 进阶的分水岭——面试必考、数据分析必备。它和普通聚合函数最大的区别是：<strong>聚合函数把多行压成一行，窗口函数保留每一行，同时还能做跨行计算。</strong></p>
+<hr>
+<h2 id="13-窗口函数基础-1"><a href="#13-窗口函数基础-1" class="headerlink" title="13. 窗口函数基础"></a>13. 窗口函数基础</h2><h3 id="13-1-什么是窗口函数-1"><a href="#13-1-什么是窗口函数-1" class="headerlink" title="13.1 什么是窗口函数"></a>13.1 什么是窗口函数</h3><pre><code class="sql">-- 普通聚合：每个部门只返回一行
+SELECT dept, AVG(salary)
+FROM employees
+GROUP BY dept;
+
+-- 窗口函数：每个员工都还在，但旁边多了部门平均工资
+SELECT
+    name,
+    dept,
+    salary,
+    AVG(salary) OVER (PARTITION BY dept) AS dept_avg
+FROM employees;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>dept</th>
+<th>salary</th>
+<th>dept_avg</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>张三</td>
+<td>技术</td>
+<td>15000</td>
+<td>14000</td>
+</tr>
+<tr>
+<td>李四</td>
+<td>技术</td>
+<td>13000</td>
+<td>14000</td>
+</tr>
+<tr>
+<td>王五</td>
+<td>销售</td>
+<td>12000</td>
+<td>11000</td>
+</tr>
+<tr>
+<td>赵六</td>
+<td>销售</td>
+<td>10000</td>
+<td>11000</td>
+</tr>
+</tbody></table>
+<p>每个人都在，多了一列”部门平均薪资”——这就是窗口函数的核心价值。</p>
+<h3 id="13-2-基本语法-1"><a href="#13-2-基本语法-1" class="headerlink" title="13.2 基本语法"></a>13.2 基本语法</h3><pre><code class="sql">函数名() OVER (
+    PARTITION BY 列名      -- 分区：按什么分组计算
+    ORDER BY 列名          -- 排序：分区内按什么排序
+    窗口帧子句             -- 范围：取分区内的哪几行
+)
+</code></pre>
+<p><code>PARTITION BY</code> 可以理解为 <code>GROUP BY</code> 的窗口版，但它不合并行，只是划定计算范围。</p>
+<h3 id="13-3-窗口函数分类-1"><a href="#13-3-窗口函数分类-1" class="headerlink" title="13.3 窗口函数分类"></a>13.3 窗口函数分类</h3><table>
+<thead>
+<tr>
+<th>类别</th>
+<th>函数</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>排名</td>
+<td><code>ROW_NUMBER</code>, <code>RANK</code>, <code>DENSE_RANK</code>, <code>NTILE</code></td>
+<td>排序、分组编号</td>
+</tr>
+<tr>
+<td>聚合</td>
+<td><code>SUM</code>, <code>AVG</code>, <code>COUNT</code>, <code>MAX</code>, <code>MIN</code></td>
+<td>移动求和、累计值</td>
+</tr>
+<tr>
+<td>偏移</td>
+<td><code>LAG</code>, <code>LEAD</code>, <code>FIRST_VALUE</code>, <code>LAST_VALUE</code></td>
+<td>前后行对比</td>
+</tr>
+<tr>
+<td>分析</td>
+<td><code>CUME_DIST</code>, <code>PERCENT_RANK</code></td>
+<td>百分比排名</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="14-排名函数-1"><a href="#14-排名函数-1" class="headerlink" title="14. 排名函数"></a>14. 排名函数</h2><h3 id="14-1-ROW-NUMBER-RANK-DENSE-RANK-对比-1"><a href="#14-1-ROW-NUMBER-RANK-DENSE-RANK-对比-1" class="headerlink" title="14.1 ROW_NUMBER / RANK / DENSE_RANK 对比"></a>14.1 ROW_NUMBER / RANK / DENSE_RANK 对比</h3><pre><code class="sql">SELECT
+    name,
+    score,
+    ROW_NUMBER() OVER (ORDER BY score DESC) AS row_num,
+    RANK()       OVER (ORDER BY score DESC) AS rank_num,
+    DENSE_RANK() OVER (ORDER BY score DESC) AS dense_num
+FROM students;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>score</th>
+<th>row_num</th>
+<th>rank_num</th>
+<th>dense_num</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>张三</td>
+<td>95</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>李四</td>
+<td>95</td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>王五</td>
+<td>88</td>
+<td>3</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr>
+<td>赵六</td>
+<td>88</td>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr>
+<td>孙七</td>
+<td>72</td>
+<td>5</td>
+<td>5</td>
+<td>3</td>
+</tr>
+</tbody></table>
+<p>三者的区别一目了然：</p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>同分处理</th>
+<th>编号连续性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>ROW_NUMBER</code></td>
+<td>随机排先后</td>
+<td>连续（1, 2, 3, 4）</td>
+</tr>
+<tr>
+<td><code>RANK</code></td>
+<td>相同排名</td>
+<td>跳号（1, 1, 3, 3, 5）</td>
+</tr>
+<tr>
+<td><code>DENSE_RANK</code></td>
+<td>相同排名</td>
+<td>不跳号（1, 1, 2, 2, 3）</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>💡 面试常见题：”查每个部门工资最高的员工”——用 <code>ROW_NUMBER</code> + <code>PARTITION BY dept ORDER BY salary DESC</code>，然后取 <code>row_num = 1</code>。</p>
+</blockquote>
+<h3 id="14-2-分组内排名-1"><a href="#14-2-分组内排名-1" class="headerlink" title="14.2 分组内排名"></a>14.2 分组内排名</h3><pre><code class="sql">-- 每个部门内按工资排名
+SELECT
+    name,
+    dept,
+    salary,
+    ROW_NUMBER() OVER (PARTITION BY dept ORDER BY salary DESC) AS dept_rank
+FROM employees;
+</code></pre>
+<h3 id="14-3-NTILE：分桶-1"><a href="#14-3-NTILE：分桶-1" class="headerlink" title="14.3 NTILE：分桶"></a>14.3 NTILE：分桶</h3><pre><code class="sql">-- 把学生按成绩分成 4 组（四分位）
+SELECT
+    name,
+    score,
+    NTILE(4) OVER (ORDER BY score DESC) AS quartile
+FROM students;
+</code></pre>
+<p>常用场景：按消费金额把用户分成高/中/低价值群体。</p>
+<hr>
+<h2 id="15-聚合窗口函数-1"><a href="#15-聚合窗口函数-1" class="headerlink" title="15. 聚合窗口函数"></a>15. 聚合窗口函数</h2><h3 id="15-1-累计求和（Running-Total）-1"><a href="#15-1-累计求和（Running-Total）-1" class="headerlink" title="15.1 累计求和（Running Total）"></a>15.1 累计求和（Running Total）</h3><pre><code class="sql">SELECT
+    date,
+    amount,
+    SUM(amount) OVER (ORDER BY date) AS running_total
+FROM sales
+ORDER BY date;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>date</th>
+<th>amount</th>
+<th>running_total</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>01-01</td>
+<td>100</td>
+<td>100</td>
+</tr>
+<tr>
+<td>01-02</td>
+<td>200</td>
+<td>300</td>
+</tr>
+<tr>
+<td>01-03</td>
+<td>150</td>
+<td>450</td>
+</tr>
+<tr>
+<td>01-04</td>
+<td>300</td>
+<td>750</td>
+</tr>
+</tbody></table>
+<p>每一行的 <code>running_total</code> 都是从开头到当前行的总和。</p>
+<h3 id="15-2-移动平均-1"><a href="#15-2-移动平均-1" class="headerlink" title="15.2 移动平均"></a>15.2 移动平均</h3><pre><code class="sql">-- 近 3 天的移动平均
+SELECT
+    date,
+    amount,
+    AVG(amount) OVER (ORDER BY date ROWS BETWEEN 2 PRECEDING AND CURRENT ROW) AS ma_3
+FROM sales;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>date</th>
+<th>amount</th>
+<th>ma_3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>01-01</td>
+<td>100</td>
+<td>100</td>
+</tr>
+<tr>
+<td>01-02</td>
+<td>200</td>
+<td>150</td>
+</tr>
+<tr>
+<td>01-03</td>
+<td>150</td>
+<td>150</td>
+</tr>
+<tr>
+<td>01-04</td>
+<td>300</td>
+<td>216.7</td>
+</tr>
+</tbody></table>
+<p>移动平均用于平滑波动，是销售预测、异常检测的基础。</p>
+<h3 id="15-3-各部门占比-1"><a href="#15-3-各部门占比-1" class="headerlink" title="15.3 各部门占比"></a>15.3 各部门占比</h3><pre><code class="sql">SELECT
+    name,
+    dept,
+    salary,
+    salary * 100.0 / SUM(salary) OVER (PARTITION BY dept) AS dept_pct
+FROM employees;
+</code></pre>
+<h3 id="15-4-窗口帧子句详解-1"><a href="#15-4-窗口帧子句详解-1" class="headerlink" title="15.4 窗口帧子句详解"></a>15.4 窗口帧子句详解</h3><pre><code class="sql">ROWS BETWEEN &#123;起点&#125; AND &#123;终点&#125;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>写法</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>UNBOUNDED PRECEDING</code></td>
+<td>分区第一行</td>
+</tr>
+<tr>
+<td><code>n PRECEDING</code></td>
+<td>当前行前 n 行</td>
+</tr>
+<tr>
+<td><code>CURRENT ROW</code></td>
+<td>当前行</td>
+</tr>
+<tr>
+<td><code>n FOLLOWING</code></td>
+<td>当前行后 n 行</td>
+</tr>
+<tr>
+<td><code>UNBOUNDED FOLLOWING</code></td>
+<td>分区最后一行</td>
+</tr>
+</tbody></table>
+<p><strong>常用组合：</strong></p>
+<pre><code class="sql">-- 累计：从开头到当前
+ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+
+-- 滑动窗口：前 2 行 + 当前 + 后 2 行
+ROWS BETWEEN 2 PRECEDING AND 2 FOLLOWING
+
+-- 累计到分区末尾（少见）
+ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING
+</code></pre>
+<blockquote>
+<p>💡 聚合窗口函数如果不写 <code>ORDER BY</code>，默认是整个分区；如果写了 <code>ORDER BY</code> 但不写窗口帧子句，默认从分区开头到当前行。</p>
+</blockquote>
+<hr>
+<h2 id="16-偏移函数-1"><a href="#16-偏移函数-1" class="headerlink" title="16. 偏移函数"></a>16. 偏移函数</h2><h3 id="16-1-LAG：向前看-1"><a href="#16-1-LAG：向前看-1" class="headerlink" title="16.1 LAG：向前看"></a>16.1 LAG：向前看</h3><p>取当前行前面第 n 行的值。最经典的场景是<strong>环比计算</strong>。</p>
+<pre><code class="sql">SELECT
+    month,
+    revenue,
+    LAG(revenue, 1) OVER (ORDER BY month) AS prev_month_revenue,
+    revenue - LAG(revenue, 1) OVER (ORDER BY month) AS growth
+FROM monthly_sales;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>month</th>
+<th>revenue</th>
+<th>prev_month_revenue</th>
+<th>growth</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1月</td>
+<td>100</td>
+<td>NULL</td>
+<td>NULL</td>
+</tr>
+<tr>
+<td>2月</td>
+<td>150</td>
+<td>100</td>
+<td>+50</td>
+</tr>
+<tr>
+<td>3月</td>
+<td>130</td>
+<td>150</td>
+<td>-20</td>
+</tr>
+<tr>
+<td>4月</td>
+<td>180</td>
+<td>130</td>
+<td>+50</td>
+</tr>
+</tbody></table>
+<pre><code class="sql">LAG(列名, 偏移量, 默认值) OVER (ORDER BY ...)
+-- 默认值用于第一行（前面没有行时填充）
+</code></pre>
+<h3 id="16-2-LEAD：向后看-1"><a href="#16-2-LEAD：向后看-1" class="headerlink" title="16.2 LEAD：向后看"></a>16.2 LEAD：向后看</h3><p>取当前行后面第 n 行的值。</p>
+<pre><code class="sql">SELECT
+    date,
+    price,
+    LEAD(price, 1) OVER (ORDER BY date) AS next_price,
+    LEAD(price, 1) OVER (ORDER BY date) - price AS price_change
+FROM stock_prices;
+</code></pre>
+<h3 id="16-3-FIRST-VALUE-LAST-VALUE-1"><a href="#16-3-FIRST-VALUE-LAST-VALUE-1" class="headerlink" title="16.3 FIRST_VALUE / LAST_VALUE"></a>16.3 FIRST_VALUE / LAST_VALUE</h3><p>取分区内第一个或最后一个值。</p>
+<pre><code class="sql">SELECT
+    name,
+    dept,
+    salary,
+    FIRST_VALUE(name) OVER (PARTITION BY dept ORDER BY salary DESC) AS highest_paid,
+    LAST_VALUE(name) OVER (
+        PARTITION BY dept
+        ORDER BY salary DESC
+        ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING
+    ) AS lowest_paid
+FROM employees;
+</code></pre>
+<blockquote>
+<p>⚠️ <code>LAST_VALUE</code> 的默认窗口帧是 <code>RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW</code>，这意味着它返回的是”到当前行为止的最后一行”而非分区的最后一行。想取分区最后一行，必须显式指定 <code>ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING</code>。这是最常见的坑。</p>
+</blockquote>
+<hr>
+<h2 id="17-实战场景-1"><a href="#17-实战场景-1" class="headerlink" title="17. 实战场景"></a>17. 实战场景</h2><h3 id="17-1-连续登录天数-1"><a href="#17-1-连续登录天数-1" class="headerlink" title="17.1 连续登录天数"></a>17.1 连续登录天数</h3><p>表结构：</p>
+<pre><code class="sql">CREATE TABLE login_log (
+    user_id INT,
+    login_date DATE
+);
+</code></pre>
+<pre><code class="sql">WITH grouped AS (
+    SELECT
+        user_id,
+        login_date,
+        ROW_NUMBER() OVER (PARTITION BY user_id ORDER BY login_date) AS rn,
+        DATE_SUB(login_date, INTERVAL ROW_NUMBER() OVER (PARTITION BY user_id ORDER BY login_date) DAY) AS grp
+    FROM (SELECT DISTINCT user_id, login_date FROM login_log) t
+)
+SELECT
+    user_id,
+    MIN(login_date) AS start_date,
+    MAX(login_date) AS end_date,
+    COUNT(*) AS consecutive_days
+FROM grouped
+GROUP BY user_id, grp
+HAVING COUNT(*) &gt;= 3  -- 至少连续 3 天
+ORDER BY consecutive_days DESC;
+</code></pre>
+<blockquote>
+<p>💡 核心思路：如果日期是连续的，那么 <code>login_date - ROW_NUMBER()</code> 得到的值是相同的，这就形成了一个分组标识。</p>
+</blockquote>
+<h3 id="17-2-留存率计算-1"><a href="#17-2-留存率计算-1" class="headerlink" title="17.2 留存率计算"></a>17.2 留存率计算</h3><pre><code class="sql">WITH first_visit AS (
+    SELECT
+        user_id,
+        MIN(visit_date) AS first_date
+    FROM visits
+    GROUP BY user_id
+),
+cohort AS (
+    SELECT
+        v.user_id,
+        f.first_date,
+        v.visit_date,
+        DATEDIFF(v.visit_date, f.first_date) AS day_offset
+    FROM visits v
+    JOIN first_visit f ON v.user_id = f.user_id
+)
+SELECT
+    first_date,
+    COUNT(DISTINCT CASE WHEN day_offset = 0 THEN user_id END) AS day0_users,
+    COUNT(DISTINCT CASE WHEN day_offset = 1 THEN user_id END) * 100.0 /
+        COUNT(DISTINCT CASE WHEN day_offset = 0 THEN user_id END) AS day1_retention,
+    COUNT(DISTINCT CASE WHEN day_offset = 7 THEN user_id END) * 100.0 /
+        COUNT(DISTINCT CASE WHEN day_offset = 0 THEN user_id END) AS day7_retention
+FROM cohort
+GROUP BY first_date
+ORDER BY first_date;
+</code></pre>
+<h3 id="17-3-同时在线峰值-1"><a href="#17-3-同时在线峰值-1" class="headerlink" title="17.3 同时在线峰值"></a>17.3 同时在线峰值</h3><pre><code class="sql">-- 直播、游戏等场景 → 计算任意时刻的最大同时在线人数
+WITH events AS (
+    SELECT enter_time AS event_time, 1 AS delta FROM online_log
+    UNION ALL
+    SELECT leave_time AS event_time, -1 AS delta FROM online_log
+)
+SELECT
+    event_time,
+    SUM(delta) OVER (ORDER BY event_time ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS concurrent_users
+FROM events
+ORDER BY concurrent_users DESC
+LIMIT 1;
+</code></pre>
+<blockquote>
+<p>💡 不用 <code>GROUP BY</code>，不用自连接——SQL 就是这么优雅。</p>
+</blockquote>
+<hr>
+<h2 id="18-常见陷阱与最佳实践-1"><a href="#18-常见陷阱与最佳实践-1" class="headerlink" title="18. 常见陷阱与最佳实践"></a>18. 常见陷阱与最佳实践</h2><h3 id="陷阱-🕳️-1"><a href="#陷阱-🕳️-1" class="headerlink" title="陷阱 🕳️"></a>陷阱 🕳️</h3><ol>
+<li><p><strong><code>RANK</code> 和 <code>DENSE_RANK</code> 搞混</strong></p>
+<p>面试中问”怎么取排名前 10”，用 <code>RANK</code> 还是 <code>DENSE_RANK</code>？</p>
+<ul>
+<li>如果成绩相同占用名额 → <code>DENSE_RANK</code></li>
+<li>如果允许并列导致超过 10 人 → <code>RANK</code>（取 <code>rank &lt;= 10</code>）</li>
+</ul>
+</li>
+<li><p><strong><code>LAST_VALUE</code> 的窗口帧问题</strong></p>
+<p>如前所述，不指定窗口帧会得到错误结果。建议直接用 <code>FIRST_VALUE(... ORDER BY ... DESC)</code> 代替。</p>
+</li>
+<li><p><strong><code>ORDER BY</code> 在窗口函数和查询中的区别</strong></p>
+<pre><code class="sql">SELECT name, salary,
+       RANK() OVER (ORDER BY salary DESC) AS rk
+FROM employees
+ORDER BY name ASC;  -- 这里的 ORDER BY 只影响最终结果的显示顺序，不影响窗口函数
+</code></pre>
+</li>
+<li><p><strong>窗口函数不能用在 <code>WHERE</code> 中</strong></p>
+<pre><code class="sql">-- ❌ 错误
+SELECT * FROM employees
+WHERE ROW_NUMBER() OVER (ORDER BY salary DESC) &lt;= 10;
+
+-- ✅ 正确：用子查询或 CTE 包一层
+SELECT * FROM (
+    SELECT *, ROW_NUMBER() OVER (ORDER BY salary DESC) AS rn
+    FROM employees
+) t WHERE rn &lt;= 10;
+</code></pre>
+<blockquote>
+<p>💡 窗口函数在 SQL 执行顺序中位于 <code>WHERE</code> <strong>之后</strong>、<code>ORDER BY</code> <strong>之前</strong>，所以不能在 <code>WHERE</code> 里直接过滤。</p>
+</blockquote>
+</li>
+<li><p><strong><code>PARTITION BY</code> + <code>ORDER BY</code> 忘了写，窗口变成全表</strong></p>
+<pre><code class="sql">-- 没写 PARTITION BY → 整个表是一个窗口
+SUM(salary) OVER ()  -- 全表总和
+
+-- 写了 PARTITION BY → 每个部门独立窗口
+SUM(salary) OVER (PARTITION BY dept)  -- 部门总和
+</code></pre>
+</li>
+</ol>
+<h3 id="最佳实践-✅-1"><a href="#最佳实践-✅-1" class="headerlink" title="最佳实践 ✅"></a>最佳实践 ✅</h3><table>
+<thead>
+<tr>
+<th>建议</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>复杂查询拆成 CTE 逐步调试</td>
+<td>窗口函数嵌套难以一眼看出结果</td>
+</tr>
+<tr>
+<td><code>ROW_NUMBER</code> + 子查询组合拳</td>
+<td>取 Top N、去重、分页都很实用</td>
+</tr>
+<tr>
+<td>优先用 <code>LAG</code>/<code>LEAD</code> 做环比</td>
+<td>比自连接清晰太多</td>
+</tr>
+<tr>
+<td><code>PARTITION BY</code> 别太多列</td>
+<td>分区太多几乎没有实用价值</td>
+</tr>
+<tr>
+<td>生产环境注意数据量</td>
+<td>窗口函数需要排序 + 内存，大表注意性能</td>
+</tr>
+</tbody></table>
+<h3 id="SQL-执行顺序（完整版）-1"><a href="#SQL-执行顺序（完整版）-1" class="headerlink" title="SQL 执行顺序（完整版）"></a>SQL 执行顺序（完整版）</h3><pre><code>FROM → WHERE → GROUP BY → HAVING → 窗口函数 → SELECT → DISTINCT → ORDER BY → LIMIT
+</code></pre>
+<p>记住：<strong>窗口函数在 <code>HAVING</code> 之后，<code>SELECT</code> 之前</strong>。所以不能在 <code>WHERE</code>/<code>GROUP BY</code>/<code>HAVING</code> 中使用窗口函数的结果。</p>
+<hr>
+<h2 id="结语-1"><a href="#结语-1" class="headerlink" title="结语"></a>结语</h2><p>窗口函数是 SQL 从”能用”到”好用”的关键一步。掌握了它，以前要写几十行子查询、临时表的复杂统计，现在几行 SQL 搞定。</p>
+<p>这套 SQL 学习笔记系列到此涵盖了：</p>
+<table>
+<thead>
+<tr>
+<th>笔记</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>笔记一</td>
+<td>建库建表、字符类型</td>
+</tr>
+<tr>
+<td>笔记二</td>
+<td>IF EXISTS / IF NOT EXISTS</td>
+</tr>
+<tr>
+<td>笔记三</td>
+<td>WHERE、JOIN、GROUP BY、子查询、视图、索引、事务</td>
+</tr>
+<tr>
+<td>笔记四</td>
+<td>存储过程</td>
+</tr>
+<tr>
+<td>笔记五</td>
+<td>触发器、自定义函数</td>
+</tr>
+<tr>
+<td><strong>笔记六</strong></td>
+<td><strong>窗口函数</strong></td>
+</tr>
+</tbody></table>
+<p>从基础到进阶的 SQL 知识体系基本完整了。后续如果遇到特定场景（性能调优、分库分表等），再单独开篇。</p>
+<hr>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> sunrtnj@163.com </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2019-2025
+</p>
+<p class="footer-entry">SunRT个人主页</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+    #post .pjax article .article-entry>ol, #post .pjax article .article-entry>ul, #post .pjax article>ol, #post .pjax article>ul{
+        border: #e2dede solid 1px;
+        border-radius: 10px;
+        padding: 10px 32px 10px 56px;
+    }
+    #post .pjax article .article-entry li>ol, #post .pjax article .article-entry li>ul,#post .pjax article li>ol, #post .pjax article li>ul{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    #post .pjax article .article-entry>ol>li, #post .pjax article .article-entry>ul>li,#post .pjax article>ol>li, #post .pjax article>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    #post .pjax article .article-entry li>ol>li, #post .pjax article .article-entry li>ul>li,#post .pjax article li>ol>li, #post .pjax article li>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("https://s2.loli.net/2025/04/23/3Q42YkmwXfxD6HE.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+<!--音乐插件位置
+<div id="musicMouseDrag" style="position:fixed; z-index: 9999; top: 90px; right: 0;">
+    <div id="musicDragArea" style="position: absolute; top: 0; left: 0; width: 100%;height: 10px;cursor: move; z-index: 10;"></div>
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=250 height=52 src="//music.163.com/outchain/player?type=2&id=1988532821&auto=1&height=32"></iframe>
+</div>-->
+<style>
+    /* body {
+       text-align:center;
+    } */
+    .muice {
+    position: relative;
+    }
+    .muice div.qrcode {
+    position: absolute;
+    z-index: 99;
+    width: 250px;
+    max-width: none;
+    height: 52;
+    transform: scale(0);
+    transform-origin: right center;
+    opacity: 0;
+    border: .1rem solid hsla(211, 88%, 64%, 0.579);
+    border-radius: .25rem;
+    -webkit-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    margin-top: -130px;
+    margin-left: 0px;
+    }
+    .muice:hover div.qrcode {
+    transform: scale(1);
+    opacity: 1;
+    }
+    </style>
+    <!--音乐图标-->
+<!-- <div class="social muice" href="javascript:">
+    <div class="qrcode" id="musicMouseDrag" style="position:fixed; z-index: 9999; top: 270px; right: 0;">
+        <div id="musicDragArea" style="position: absolute; top: 0; left: 0; width: 100%;height: 52;cursor: move; z-index: 10;"></div>
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=250 height=52 src="//music.163.com/outchain/player?type=2&id=1988532821&auto=1&height=32"></iframe>
+    </div>
+    <div id="musicMouseDrag" style="position:fixed; z-index: 9999; top: 110px; right: 0;">
+        <div id="musicDragArea" style="position: absolute; top: 0; left: 0; width: 100%;height: 10px;cursor: move; z-index: 10;"></div>
+        <img style="width:30px; height: 30px;" src="img/muice.png" alt="">
+    </div>
+</div> -->
+<!--放一个天气预报 已测试
+<div id="he-plugin-simple"></div>
+<script>
+WIDGET = {
+  "CONFIG": {
+    "modules": "01234",
+    "background": "1",
+    "tmpColor": "FFFFFF",
+    "tmpSize": "16",
+    "cityColor": "FFFFFF",
+    "citySize": "16",
+    "aqiColor": "FFFFFF",
+    "aqiSize": "16",
+    "weatherIconSize": "24",
+    "alertIconSize": "18",
+    "padding": "10px 10px 10px 10px",
+    "shadow": "0",
+    "language": "zh",
+    "fixed": "true",
+    "vertical": "top",
+    "horizontal": "left",
+    "right": "10",
+    "top": "10",
+    "key": "1fb33ab49fc84225a472df94b240d472"
+  }
+}
+</script>
+<script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script>
+-->
+<!--以下代码是为了支持随时拖动音乐控件的位置，如没有需求，可去掉下面代码
+<script>
+var $DOC = $(document)
+$('#musicMouseDrag').on('mousedown', function (e) {
+// 阻止文本选中
+$DOC.bind("selectstart", function () {
+return false;
+});
+$('#musicDragArea').css('height', '100%');
+var $moveTarget = $('#musicMouseDrag');
+$moveTarget.css('border', '1px dashed grey')
+var div_x = e.pageX - $moveTarget.offset().left;
+var div_y = e.pageY - $moveTarget.offset().top;
+$DOC.on('mousemove', function (e) {
+var targetX = e.pageX - div_x;
+var targetY = e.pageY - div_y;
+targetX = targetX < 0 ? 0 : (targetX + $moveTarget.outerWidth() >= window.innerWidth) ? window.innerWidth - $moveTarget.outerWidth() : targetX;
+targetY = targetY < 0 ? 0 : (targetY + $moveTarget.outerHeight() >= window.innerHeight) ? window.innerHeight - $moveTarget.outerHeight() : targetY;
+$moveTarget.css({'left': targetX + 'px', 'top': targetY + 'px', 'bottom': 'inherit', 'right': 'inherit'})
+}).on('mouseup', function () {
+$DOC.unbind("selectstart");
+$DOC.off('mousemove')
+$DOC.off('mouseup')
+$moveTarget.css('border', 'none')
+$('#musicDragArea').css('height', '10px');
+})
+})
+</script>-->
+</html>
