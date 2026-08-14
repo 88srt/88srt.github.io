@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>intouch授权 | 88srt</title>
-  <meta name="keywords" content=" intouch ">
-  <meta name="description" content="intouch授权 | 88srt">
+  <title>dell服务器装机记录 | 88srt</title>
+  <meta name="keywords" content=" 服务器 ">
+  <meta name="description" content="dell服务器装机记录 | 88srt">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="赠人玫瑰，手留余香。">
 <meta property="og:type" content="website">
@@ -718,9 +718,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-intouch授权" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-dell服务器装机记录" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">intouch授权</h1>
+        <h1 class="article-title">dell服务器装机记录</h1>
     
     <div class="article-meta">
         
@@ -730,7 +730,7 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="文档">文档</a>
+            <a  data-rel="服务器">服务器</a>
             
         </span>
         
@@ -738,19 +738,19 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color3">intouch</a>
+            <a class="color4">服务器</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-05-27 23:08:02'>2023-05-25 23:59</time>
+            发布时间 : <time class="date" title='最后更新: 2026-08-14 21:18:57'>2026-08-14 21:16</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:247</span>
+        <span>字数:1.3k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -769,7 +769,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Dell-PowerEdge-R760xs-%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A3%85%E6%9C%BA%E8%AE%B0%E5%BD%95"><span class="toc-text">Dell PowerEdge R760xs 服务器装机记录</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E9%97%AE%E9%A2%98%E8%83%8C%E6%99%AF"><span class="toc-text">一、问题背景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%8E%92%E6%9F%A5%E4%B8%8E%E8%A7%A3%E5%86%B3%E8%BF%87%E7%A8%8B"><span class="toc-text">二、排查与解决过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-RAID-%E9%85%8D%E7%BD%AE%EF%BC%88Lifecycle-Controller%EF%BC%89"><span class="toc-text">1. RAID 配置（Lifecycle Controller）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%88%86%E5%8C%BA%E8%A1%A8%E4%B8%8EEFI%E5%BC%95%E5%AF%BC%E9%97%AE%E9%A2%98"><span class="toc-text">2. 分区表与EFI引导问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-RAID%E9%A9%B1%E5%8A%A8%E7%BC%BA%E5%A4%B1%E5%AF%BC%E8%87%B4%E8%93%9D%E5%B1%8F"><span class="toc-text">3. RAID驱动缺失导致蓝屏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%90%AF%E5%8A%A8%E9%AA%8C%E8%AF%81"><span class="toc-text">4. 启动验证</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%90%8E%E7%BB%AD%E6%93%8D%E4%BD%9C"><span class="toc-text">三、后续操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E5%8C%BA%E8%A7%84%E5%88%92"><span class="toc-text">分区规划</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E9%85%8D%E7%BD%AE"><span class="toc-text">远程桌面配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93"><span class="toc-text">四、经验总结</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -785,34 +785,108 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>第1步骤</p>
-<p>安装虚拟硬狗，即软狗</p>
-<p>1.安装驱动，Virtual USB Multikey64bit driver - Signed</p>
-<p>以管理员身份运行cmd后，在cmd命令窗口中执行：hdwwiz C:\windows\system32&gt;hdwwiz</p>
-<p>点击“下一步”，选择“安装我手动从列表选择的硬件”并点击“下一步”</p>
-<p>“显示所有设备”，点击“下一步”</p>
-<p>点击“从磁盘安装”，选择“浏览”，找到Virtual USB Multikey64bit driver - Signed文件夹内multikey.inf的文件，并选择</p>
-<p>一直下一步，中途选择信任，直至安装完成。</p>
-<p>以下是图例：</p>
-<p><img src="/2023/05/25/intouch%E6%8E%88%E6%9D%83/1.png"></p>
-<p><img src="/2023/05/25/intouch%E6%8E%88%E6%9D%83/2.png"></p>
-<p>上述操作完成后</p>
-<p>导入虚拟狗，双击</p>
-<p>INTOUCH RC 60000文件夹下的 <strong>AC5A0000.reg</strong></p>
-<p>重启电脑</p>
-<p>最后一步安装授权</p>
-<p>找到这个应用</p>
-<p><img src="/2023/05/25/intouch%E6%8E%88%E6%9D%83/clip_image001.png"></p>
-<p>点击File菜单-Install License File，</p>
-<p><img src="/2023/05/25/intouch%E6%8E%88%E6%9D%83/clip_image003.png"></p>
-<p>出现对话框，选择add，到</p>
-<p>INTOUCH RC 60000目录下</p>
-<p>依次安装(1) ArchestrA.lic ;(2) WWSUITE.LIC ;（3）ArchestrAServer.lic</p>
-<p><img src="/2023/05/25/intouch%E6%8E%88%E6%9D%83/clip_image005.png"></p>
-<p>安装出现弹出选中间的</p>
-<p><img src="/2023/05/25/intouch%E6%8E%88%E6%9D%83/clip_image007.jpg"></p>
-<p>最后出现 OK 代表安装结束</p>
-<p>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1QQGkO3HZ6eVQhWMckimy_Q">https://pan.baidu.com/s/1QQGkO3HZ6eVQhWMckimy_Q</a><br>提取码：8srt </p>
+        <h1 id="Dell-PowerEdge-R760xs-服务器装机记录"><a href="#Dell-PowerEdge-R760xs-服务器装机记录" class="headerlink" title="Dell PowerEdge R760xs 服务器装机记录"></a>Dell PowerEdge R760xs 服务器装机记录</h1><p><strong>服务器型号</strong>：Dell PowerEdge R760xs<br><strong>Service Tag</strong>：89G0494<br><strong>RAID控制器</strong>：PERC H755 Front<br><strong>操作系统</strong>：Windows Server 2019 x64</p>
+<hr>
+<h2 id="一、问题背景"><a href="#一、问题背景" class="headerlink" title="一、问题背景"></a>一、问题背景</h2><p>装机初期使用U盘启动进入PE系统，通过GHOST方式还原Windows Server 2019镜像，但出现一系列问题：</p>
+<ol>
+<li>磁盘管理中找不到物理硬盘，只能看到U盘自身分区</li>
+<li>装完系统后开机提示 “No boot device available”（找不到启动设备）</li>
+<li>修复引导后开机变为蓝屏（INACCESSIBLE_BOOT_DEVICE）</li>
+</ol>
+<hr>
+<h2 id="二、排查与解决过程"><a href="#二、排查与解决过程" class="headerlink" title="二、排查与解决过程"></a>二、排查与解决过程</h2><h3 id="1-RAID-配置（Lifecycle-Controller）"><a href="#1-RAID-配置（Lifecycle-Controller）" class="headerlink" title="1. RAID 配置（Lifecycle Controller）"></a>1. RAID 配置（Lifecycle Controller）</h3><p>服务器出厂硬盘未做RAID，需要先创建虚拟磁盘：</p>
+<ul>
+<li>开机进入 <strong>Boot Manager → Launch Lifecycle Controller</strong></li>
+<li>进入 <strong>硬件配置 → 配置向导 → RAID配置</strong></li>
+<li>选择控制器：<strong>PERC H755 Front in SL 5</strong></li>
+<li>RAID类型：<strong>Windows RAID</strong></li>
+<li>选中2块物理盘（Physical Disk 0:1:0 / 0:1:1，各3725.5GB）</li>
+<li>RAID级别：<strong>RAID 0</strong>（追求容量，无容错，如重要数据建议改用RAID 1）</li>
+<li>完成后生成虚拟磁盘，容量约 <strong>7451GB</strong>，重启使配置生效</li>
+</ul>
+<h3 id="2-分区表与EFI引导问题"><a href="#2-分区表与EFI引导问题" class="headerlink" title="2. 分区表与EFI引导问题"></a>2. 分区表与EFI引导问题</h3><p>首次GHOST恢复系统后开机提示找不到启动设备，排查发现磁盘上<strong>没有正确的EFI系统分区（ESP）</strong>，导致UEFI无法识别为可启动盘。</p>
+<p><strong>解决方法</strong>：使用PE自带的 <strong>DiskGenius</strong> 分区工具重建标准UEFI分区结构：</p>
+<ol>
+<li>打开DiskGenius，选中目标磁盘（HD0: DELLPERCH755Front 7451GB）</li>
+<li>删除现有全部分区</li>
+<li>使用 <strong>“快速分区(F6)”</strong> 功能：<ul>
+<li>分区表类型：<strong>GUID (GPT)</strong></li>
+<li>分区数目：自定1个</li>
+<li>勾选 **”创建新ESP分区”**（300MB）</li>
+<li>勾选 **”创建MSR分区”**（16MB）</li>
+<li>勾选 <strong>“重建主引导记录(MBR)”</strong></li>
+</ul>
+</li>
+<li>确定执行，生成标准分区结构：<ul>
+<li>ESP(0) - FAT32 - 300MB</li>
+<li>MSR(1) - 16MB</li>
+<li>系统(C:) - NTFS - 约7451GB</li>
+</ul>
+</li>
+</ol>
+<h3 id="3-RAID驱动缺失导致蓝屏"><a href="#3-RAID驱动缺失导致蓝屏" class="headerlink" title="3. RAID驱动缺失导致蓝屏"></a>3. RAID驱动缺失导致蓝屏</h3><p>重新分区并恢复系统后，能进入引导流程但出现 <strong>蓝屏（INACCESSIBLE_BOOT_DEVICE）</strong>，原因是系统未安装 PERC H755 RAID控制器驱动，Windows无法识别硬盘控制器。</p>
+<p><strong>解决方法</strong>：</p>
+<ol>
+<li><p>从Dell官网下载驱动：</p>
+<ul>
+<li>搜索产品：<strong>PowerEdge R760xs</strong> 或 <strong>PERC控制器</strong></li>
+<li>驱动名称：<strong>适用于PERC控制器的Windows Server 2019驱动程序</strong></li>
+<li>文件名：<code>SAS-RAID_Driver_J21CF_WN64_7.730.02.00_A10.EXE</code></li>
+<li>版本：7.730.02.00，厂商 Broadcom Inc</li>
+</ul>
+</li>
+<li><p>解压该EXE安装包，找到驱动文件所在目录（路径示例：<code>\payload\</code>），核心文件：</p>
+<ul>
+<li><code>megasas35.inf</code></li>
+<li><code>megasas35.sys</code></li>
+<li><code>megasas35.cat</code></li>
+</ul>
+</li>
+<li><p>将驱动文件夹拷贝至U盘，带回服务器PE环境</p>
+</li>
+<li><p>在PE中通过命令行将驱动注入系统盘（<strong>注意确认系统盘实际盘符</strong>，PE环境中盘符可能与预期不同）：</p>
+<pre><code>dism /image:D:\ /add-driver /driver:U:\H755\payload /recurse
+</code></pre>
+<p>（本次实际系统盘为 D 盘，通过 <code>dir 盘符:\Windows</code> 逐个测试确认）</p>
+</li>
+<li><p>提示”操作成功完成”后，拔出U盘重启</p>
+</li>
+</ol>
+<h3 id="4-启动验证"><a href="#4-启动验证" class="headerlink" title="4. 启动验证"></a>4. 启动验证</h3><p>重启后进入 <strong>F11 Boot Menu</strong>，可见启动项：</p>
+<pre><code>RAID Controller in SL 5: EFI Fixed Disk Boot Device 1
+</code></pre>
+<p>选择该项启动，系统成功进入Windows Server 2019，磁盘管理显示：</p>
+<ul>
+<li>系统(C:) — NTFS — Healthy (Boot, Page File, Crash Dump, Primary Partition)</li>
+<li>EFI System Partition — Healthy</li>
+</ul>
+<p>装机成功。</p>
+<hr>
+<h2 id="三、后续操作"><a href="#三、后续操作" class="headerlink" title="三、后续操作"></a>三、后续操作</h2><h3 id="分区规划"><a href="#分区规划" class="headerlink" title="分区规划"></a>分区规划</h3><p>系统盘C当前占满全部7450GB空间，建议通过磁盘管理”压缩卷（Shrink Volume）”划出数据盘：</p>
+<ul>
+<li>系统盘（C:）建议保留 <strong>200GB以上</strong>，避免后续更新、软件安装空间不足</li>
+<li>计算方式：压缩量(MB) = 可压缩总空间 - 保留给C盘的空间(MB)</li>
+<li>压缩完成后，剩余”未分配”空间可新建分区作为数据盘（如D盘）</li>
+</ul>
+<h3 id="远程桌面配置"><a href="#远程桌面配置" class="headerlink" title="远程桌面配置"></a>远程桌面配置</h3><p>若需远程管理该服务器，简单方式（单用户管理）：</p>
+<ol>
+<li>打开”服务器管理器” → “本地服务器” → 找到”远程桌面”</li>
+<li>点击”已禁用”链接 → 勾选”允许远程连接到此计算机” → 确定</li>
+</ol>
+<p>注意：若之前操作过”添加角色和功能”向导并勾选了 Remote Access / Remote Desktop Services（面向多用户/企业级场景），可能导致该设置暂时置灰，建议：</p>
+<ul>
+<li>取消该向导（若未点击”安装”确认）</li>
+<li>重启服务器后再检查远程桌面设置状态</li>
+<li>若仍异常，检查本地组策略（<code>gpedit.msc</code> → 计算机配置 → 管理模板 → Windows组件 → 远程桌面服务）</li>
+</ul>
+<hr>
+<h2 id="四、经验总结"><a href="#四、经验总结" class="headerlink" title="四、经验总结"></a>四、经验总结</h2><ol>
+<li><strong>服务器装机前务必先做RAID配置</strong>，否则装机时看不到硬盘</li>
+<li><strong>GHOST/PE方式装机需确保GPT分区表 + 正确的EFI系统分区</strong>，否则UEFI无法识别为可启动盘</li>
+<li><strong>企业级RAID卡（如PERC系列）驱动不在系统默认驱动库中</strong>，必须从Dell官网下载对应驱动，通过 <code>dism /add-driver</code> 注入系统或在安装Windows时手动加载，否则会出现蓝屏 INACCESSIBLE_BOOT_DEVICE</li>
+<li><strong>PE环境下盘符分配可能与预期不同</strong>，操作前建议用 <code>dir 盘符:\Windows</code> 逐一确认目标系统盘的实际盘符</li>
+<li>驱动下载建议优先选择与操作系统版本严格匹配的驱动（如Windows Server 2019专用驱动），如无匹配版本可尝试相邻版本（如Server 2022）驱动，一般向下兼容</li>
+</ol>
 
       
        <hr><span style="font-style: italic;color: gray;"> sunrtnj@163.com </span>
